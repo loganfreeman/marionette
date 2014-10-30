@@ -1,0 +1,59 @@
+        <div class="loading">
+            Loading...
+        </div>
+        <div class="toolbar">
+            <button id="run-button" data-bind="click: run">
+                Run
+            </button>
+            <span data-bind="visible: didRun">
+                <button id="step-button" data-bind="click: stepPrev">
+                    Prev
+                </button>
+                <button id="step-button" data-bind="click: stepNext">
+                    Next
+                </button>
+                <span class="step-label">
+                    Step <span data-bind="text: curStep"></span>
+                    of <span data-bind="text: numSteps"></span>
+                </span>
+            </span>
+        </div>
+
+        <div class="editor-container">
+<textarea id="code-editor">
+function binarySearch(node, value) {
+  if (!node || node.value == value) {
+    return node;
+  } else if (node.value < value) {
+    return binarySearch(node.right, value);
+  } else {
+    return binarySearch(node.left, value);
+  }
+}
+
+function addNode(tree, value) {
+  if (tree.value &lt; value) {
+    if (tree.right)  {
+      addNode(tree.right, value);
+    } else {
+      tree.setRight(TreeNode(value));
+    }
+  } else {
+    if (tree.left) {
+      addNode(tree.left, value);
+    } else {
+      tree.setLeft(TreeNode(value));
+    }
+  }
+}
+
+var root = buildTree([10, [5, [2], [7]],
+                          [18, [17], [87]]]);
+
+addNode(root, 75);
+binarySearch(root, 75);
+</textarea>
+        </div>
+
+        <div class="tree-container" id="tree-container">
+        </div>

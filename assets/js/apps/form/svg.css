@@ -1,0 +1,436 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+.hardcore-hide {
+  display: none;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+}
+
+.circle-1 {
+  fill: red;
+}
+
+.circle-2 {
+  fill: orange;
+}
+
+.circle-3 {
+  fill: #f06d06;
+}
+
+.svgDemo {
+  padding: 1rem 3rem;
+  font-family: 'Cabin', sans-serif;
+  line-height: 1.4;
+  min-width: 925px;
+}
+
+.svgDemo a {
+  text-decoration: none;
+}
+
+.main-navigation {
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 0 1rem;
+  /*  &::after {
+      content: "";
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      width: 798px;
+      height: 12px;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+      z-index: 5;
+    }*/
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.main-navigation li {
+  float: left;
+  width: 12rem;
+  height: 5rem;
+  margin: 0 0 0 -1rem;
+  position: relative;
+}
+
+.main-navigation li.active {
+  z-index: 6;
+}
+
+.main-navigation a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.main-navigation svg {
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.main-navigation span {
+  position: relative;
+  padding: 1rem 0 0 3.3rem;
+  z-index: 2;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.main-navigation .tab-1 {
+  z-index: 4;
+}
+
+.main-navigation .tab-1 svg {
+  fill: url(#tab-1-bg);
+}
+
+.main-navigation .tab-2 {
+  z-index: 3;
+}
+
+.main-navigation .tab-2 svg {
+  fill: url(#tab-2-bg);
+}
+
+.main-navigation .tab-3 {
+  z-index: 2;
+}
+
+.main-navigation .tab-3 svg {
+  fill: url(#tab-3-bg);
+}
+
+.main-navigation .tab-4 {
+  z-index: 1;
+}
+
+.main-navigation .tab-4 svg {
+  fill: url(#tab-4-bg);
+}
+
+.main-content {
+  position: relative;
+  z-index: 10;
+  background: #76a0c0;
+  margin: -1.6rem 0 0 0;
+  padding: 3rem;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+}
+
+.article {
+  background: white;
+  padding: 5rem;
+  border-radius: 8px;
+}
+
+.article h2 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #76a0c0;
+  margin: 0 0 0.5rem 0;
+}
+
+p {
+ 
+  margin: 0 auto ;
+  width: 550px;
+  line-height: 2.5;
+}
+
+
+xmp {
+  
+  font-family: Consolas, Monaco, monospace;
+  font-size: 85%;
+  color: #666;
+  font-weight: 400;
+}
+
+meter {
+  
+  display: block;
+  margin: 0 auto;
+  
+  width: 550px;
+  height: 25px;
+  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  
+  /* Firefox */
+  background: none; /* Required to get rid of the default background prop. */
+  background-color: whiteSmoke;  
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+meter::-webkit-meter-bar {
+  
+  background: none; /* Important to get rid of default background. */
+  background-color: whiteSmoke;
+  
+  box-shadow: 0 5px 5px -5px #333 inset;
+}
+
+meter::-webkit-meter-optimum-value {
+  
+  transition: width .5s;
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+}
+
+meter::-webkit-meter-optimum-value:hover {
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 20%, 
+                                     #e6d450 20%,
+                                     #e6d450 40%,
+                                     #f28f68 40%,
+                                     #f28f68 60%,
+                                     #cf82bf 60%,
+                                     #cf82bf 80%,
+                                     #719fd1 80%,
+                                     #719fd1 100%);
+  
+  transition: width .5s;
+  width: 100% !important; /* !important keyword used to override the inline style in ebkit browsers. */
+}
+
+meter::-moz-meter-bar {
+  
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+}
+
+.free-space {
+  
+  float: right;
+}
+
+.swatch {
+  
+  margin: 0; padding:0;
+  margin: 5em auto;
+  list-style-type: none;
+  width: 550px;
+  display: block;
+  position: relative;
+}
+
+.swatch::before {
+  
+  content: '';
+  width: 100%;
+  height: 10px;
+  outline: 0px solid #000;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-radius: 2px;
+  
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 20%, 
+                                     #e6d450 20%,
+                                     #e6d450 40%,
+                                     #f28f68 40%,
+                                     #f28f68 60%,
+                                     #cf82bf 60%,
+                                     #cf82bf 80%,
+                                     #719fd1 80%,
+                                     #719fd1 100%);
+
+}
+
+.swatch__elem {
+  
+  outline: 0px solid #c00;
+  float: left;
+  width: 110px;
+  padding-left: 5px;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.used-space {
+  
+  display: block;
+  line-height: 2;
+  font-size: 85%;
+  color: #666;
+}
+
+.meter-gauge {
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    background-color: whiteSmoke;
+    box-shadow: 0 5px 5px -5px #333 inset;
+
+    width: 550px;
+    height: 25px;
+    
+    display: block;
+}
+  
+.meter-gauge > span {
+ 
+  height: inherit;  
+  box-shadow: 0 5px 5px -5px #999 inset;
+  
+  background-color: blue;
+  background-image: linear-gradient( 90deg, 
+                                     #8bcf69 5%, 
+                                     #e6d450 5%,
+                                     #e6d450 15%,
+                                     #f28f68 15%,
+                                     #f28f68 55%,
+                                     #cf82bf 55%,
+                                     #cf82bf 95%,
+                                     #719fd1 95%,
+                                     #719fd1 100%);
+  
+  background-size: 100% 100%;
+
+  display: block;
+  text-indent: -9999px;
+}	
+
+
+img.zoopraximg {
+-webkit-animation-name: spin;
+-webkit-animation-duration: 2.5s;
+-webkit-animation-iteration-count: infinite;
+-webkit-animation-timing-function: linear;
+}
+
+
+
+img.tinycentered {
+display: block;
+margin: 1em auto;
+width: 40%;
+max-width: 15em;
+}
+
+
+
+img.spin {
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+ .run-animation { 
+	     position: relative;
+	     -webkit-animation: fancy-animation 2s ease;
+	    }
+
+      @-webkit-keyframes fancy-animation {
+        
+        from {
+            left: -500px; 
+        }
+        to {
+            left: 0;
+        }
+      
+      }
+      
+      
+#page-wrap { width: 960px; margin: 80px auto; }
+
+#cc {
+  text-align: center;
+  width: 80%;  
+  left: 10%;
+  top: 1em;
+}
+
+#cc span {
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  background: black;
+  color: white;
+  font-size: 1.5em;
+  font-family:monospace;
+  padding: 0.5em;
+  min-height: 1.5em;
+  line-height: 1.5em;
+}
+
+#cc button {
+  font-family:monospace;
+  appearance: none;
+  border: 0;
+  font-size: 1em;
+  background: transparent;
+  color: white;
+}
+
+#cc abbr {
+  background: white;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  display: inline-block;
+  padding: 0 0.25em;
+}

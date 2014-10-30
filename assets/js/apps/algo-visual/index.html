@@ -1,0 +1,23 @@
+      <div class='mainWrap'>
+         <div class='controlsRow'>
+            <button id='reset' value='Reset'><span class='reloadIcon'>Random input</span></button><!--
+            --><button id='manualInput' value='manualInput'>Try your own input</button>
+            <div id='treeKeysWrapper'>
+               <input id='treeKeys' type='text' placeholder='Enter space separated numbers (with upto three digits each)'></input>
+            </div>
+         </div>
+         <div id='drawArea'>
+            <canvas id='layerFg'></canvas>
+            <canvas id='layerBg'></canvas>
+         </div>
+         <div id='navMenu'>
+            <div class='menuSectionHeader'><span>Symbol Tables</span></div>
+            <ol class='menuList'>
+               <li class='menuItem' id='bst'>Binary Search Tree</li>
+               <li class='menuItem' id='23t'>2-3 Tree</li>
+               <li class='menuItem' id='rbt'>Red Black BST</li>
+               <li class='menuItem' id='hashMap'>Hash Maps <span class='italicized'>(coming soon)</span></li>
+            </ol>
+         </div>
+      </div>
+      <div id='message'>This demo works only with Firefox 4+ and Google Chrome 10+</div>

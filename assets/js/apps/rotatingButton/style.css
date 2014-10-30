@@ -1,0 +1,49 @@
+/* The code for the share box starts here: */
+
+
+#stage{
+	/* This is where the animation takes place */
+	position:relative;
+	
+	border-right:1px solid #DDDDDD;
+	width:320px;
+	height:220px;
+	background:white;
+	float:left;
+	margin-bottom: 10px;
+	
+	border-radius:12px;
+	
+	-moz-border-radius:12px;
+	
+	-webkit-border-radius:12px;
+}
+
+#stage .btn{
+	/* This class is assigned to every share button */
+	background-color:white;
+	height:90px;
+	left:0;
+	top:0;
+	width:60px;
+	position:relative;
+	margin:20px 0 0 10px;
+	float:left;
+}
+
+#stage .bcontent{
+	/* Positioned inside the .btn container */
+	position:absolute;
+	top:auto;
+	bottom:20px;
+	left:0;
+}
+
+/* Individual rules for every share button */
+
+.digg{	background:url(img/1.jpg) no-repeat -4px bottom;}
+.reddit{	background:url(img/2.jpg) no-repeat -4px bottom;}
+.facebook{	background:url(img/3.jpg) no-repeat bottom center;}
+.tweetmeme{	background:url(img/4.jpg) no-repeat -5px bottom;}
+.dzone{	background:url(img/5.jpg) no-repeat -7px bottom;}
+

@@ -1,0 +1,40 @@
+.paddingbg {
+	background: #333;
+}
+/* Possible Fix */
+.module > *:last-child,
+.module > *:last-child > *:last-child,
+.module > *:last-child > *:last-child > *:last-child {
+  margin: 0;
+}
+
+.module {
+  width: 20rem;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  background: white;
+}
+.module.see-the-padding {
+  background: lightyellow;
+  background-clip: content-box;
+  position: relative;
+}
+.module.see-the-padding::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+.module.see-the-padding > * {
+  background: rgba(0, 0, 0, 0.2);
+  background-clip: content-box;
+}
+
+#padding {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

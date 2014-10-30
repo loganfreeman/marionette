@@ -1,0 +1,49 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <!-- In Town, use Waypoint to Keep Depths 1 -->
+    <If condition="Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Using Waypoint to Keep Depths 1 for Keep Depths 2 Portal" />
+      <UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="2" />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </If>
+    <!-- In Keep Depths 1, Use Portal to Keep Depths 2 -->
+    <While condition="CurrentLevelAreaId == 75436">
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+      <LogMessage questId="101758" stepId="1" output="Using portal to Keep Depths 2" />
+      <UsePortal questId="101758" stepId="1" portalMarkerHash="-1699330855" destinationWorldId="75434" interactRange="10" statusText="Using portal to Keep Depths 2" />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </While>
+    <!-- In Keep Depths 2, Offset move from portal, populate initial explore area beyond entrance -->
+    <If condition="CurrentWorldId == 75434 and ActorExistsAt(176001, Me.Position.X, Me.Position.Y, Me.Position.Z, 120)">
+      <TrinityOffsetMove questId="101758" stepId="1" offsetX="160" offsetY="0" pathPrecision="40" />
+      <TrinityOffsetMove questId="101758" stepId="1" offsetX="0" offsetY="-160" pathPrecision="40" />
+      <TrinityOffsetMove questId="101758" stepId="1" offsetX="-160" offsetY="0" pathPrecision="40" />
+      <TrinityOffsetMove questId="101758" stepId="1" offsetX="0" offsetY="160" pathPrecision="40" />
+    </If>
+    <!-- In Keep Depths 2, Explore large areas only -->
+    <If condition="CurrentWorldId == 75434">
+      <LogMessage questId="101758" stepId="1" output="Exploring Keep Depths 2" />
+      <TrinityExploreDungeon questId="101758" stepId="1" SetNodesExploredAutomatically="true"
+        until="FullyExplored" boxSize="80" boxTolerance="0.01" pathPrecision="40"
+        timeoutType="GoldInactivity" townPortalOnTimeout="True" timeoutValue="60" 
+        ignoreMarkers="True" ignoreLastNodes="3" minVisitedNodes="10">
+        <IgnoreScenes>
+          <IgnoreScene sceneName="Entrance" />
+          <IgnoreScene sceneName="_N_" />
+          <IgnoreScene sceneName="_S_" />
+          <IgnoreScene sceneName="_E_" />
+          <IgnoreScene sceneName="_W_" />
+        </IgnoreScenes>
+      </TrinityExploreDungeon>
+      <LogMessage questId="101758" stepId="1" output="Finished Exploring Keep Depths 2, returning to town" />
+      <WaitTimer questId="101758" stepId="1" waitTime="2000" />
+      <UseTownPortal questId="101758" stepId="1" />
+    </If>
+    <LogMessage output="Loading next profile..." />
+    <LoadProfile profile="Act3LoadRandom.xml" />
+  </Order>
+</Profile>

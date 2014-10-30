@@ -1,0 +1,8 @@
+body article#main-content {
+    height: 600px;
+	font-size: .85em;
+}
+#tourney-manager-listing footer {
+	position: absolute;
+	bottom: 0;
+}

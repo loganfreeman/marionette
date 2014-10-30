@@ -1,0 +1,29 @@
+#page{
+	width:680px;
+	height:300px;
+	margin:60px auto 80px;
+	position:relative;
+}
+
+.pic{
+	position:absolute;
+	overflow:hidden;
+	border:4px solid #99280e;
+	text-decoration:none;
+	z-index:0;
+}
+
+.pic img{
+	position:absolute;
+	border:none;
+	max-width : none;
+}
+
+.pic:nth-child(2n+1){
+	border-color:#6A2B1C;
+}
+
+.pic:nth-child(3n+2){
+	border-width:5px;
+}
+

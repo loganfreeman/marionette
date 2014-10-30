@@ -1,0 +1,41 @@
+
+<div class='contentWrapper ng-cloak'>
+	<div class='content'>
+		<div class="row-fluid">
+			<ul class="thumbnails">
+				<li class="col-xs-4" style='margin-left: 10px;'
+					ng-repeat="image in images">
+					<div class="thumbnail">
+						<div class="caption">
+							<div class='emage'>
+								<img ng-src="app/img/{{image.thumb}}" />
+							</div>
+							<p>
+							<div class="btn btn-droppable" data-drop="true" ng-model='list1'
+								jqyoui-droppable="{index: {{$index}}, onDrop:'dropCallback',onOver: 'overCallback', onOut: 'outCallback'}">
+								<div class="btn btn-info btn-draggable"
+									ng-show="list1[$index].title"
+									data-drag="{{list1[$index].drag}}"
+									data-jqyoui-options="{revert: 'invalid'}" ng-model="list1"
+									jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">{{list1[$index].title}}</div>
+							</div>
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="navbar-inner">
+	<div class="container form-inline" style="text-align: center;">
+		<div class="btn btn-droppable" ng-repeat="item in list2"
+			data-drop="true" ng-model='list2'
+			jqyoui-droppable="{index: {{$index}}}">
+			<div class="btn btn-info btn-draggable" data-drag="{{item.drag}}"
+				data-jqyoui-options="{revert: 'invalid'}" ng-model="list2"
+				jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'startCallback(item, $index)', onStop: 'stopCallback', onDrag: 'dragCallback'}"
+				ng-hide="!item.title">{{item.title}}</div>
+		</div>
+	</div>
+</div>

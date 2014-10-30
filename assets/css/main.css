@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.blue_fill {
+	background-color: #b0e0e6;
+	width: 100%;
+	height: 900px;
+}
+.tree-dark-a {
+position: absolute;
+width: 140px;
+height: 185px;
+background-image: url(images/tree-dark-a.png);
+	top: 165px;
+}
+
+.tree-dark-b {
+position: absolute;
+width: 140px;
+height: 185px;
+background-image: url(images/tree-dark-b.png);
+	top: 165px;
+}
+.tree-dark-c {
+position: absolute;
+width: 200px;
+height: 240px;
+background-image: url(images/tree-dark-c.png);
+	top: 110px;
+}
+.tree-bright-d {
+position: absolute;
+width: 200px;
+height: 300px;
+background-image: url(images/tree-bright-d.png);
+	top: 50px;
+}
+.tree-bright-e {
+position: absolute;
+width: 200px;
+height: 430px;
+background-image: url(images/tree-bright-e.png);
+	top: -80px;
+}
+
+.ground {
+top: 390px;
+position: absolute;
+width: 100%;
+height: 200px;
+background-image: url(images/ground.png);
+}
+.grass {
+top: 350px;
+position: absolute;
+width: 100%;
+height: 50px;
+background-image: url(images/grass.png);
+}
+
+#tree-1{
+	left: 24px;
+}
+#tree-2{
+	left: 124px;
+}
+#tree-3{
+	left: 824px;
+}
+#tree-4{
+	left: 624px;
+}
+#tree-5{
+	left: 424px;
+}
+#tree-6{
+	left: 524px;
+}
+
+.font_3 {
+	font: normal normal normal 49px/1.1em 'times new roman', times, serif;
+	color: rgb(68, 68, 68);
+}
+
+.togo {
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	position: absolute;
+	background-color: rgb(255, 193, 25);
+	border-radius: 50%;
+}
+
+.togo.a{
+	width: 160px;
+	height: 160px;
+	top: 23px;
+	left: 34px;
+
+}
+
+.togo.b{
+	width: 60px;
+	height: 60px;
+	top: 230px;
+	left: 260px;
+
+}
+
+.togo.c{
+	width: 160px;
+	height: 160px;
+	top: 23px;
+	left: 620px;
+
+}
+
+.togo.d{
+	width: 80px;
+	height: 80px;
+	top: 350px;
+	left: 350px;
+
+}
+
+.togo.e{
+	width: 120px;
+	height: 120px;
+	top: 230px;
+	left: 350px;
+
+}
+
+.togo.f{
+	width: 160px;
+	height: 160px;
+	top: 90px;
+	left: 395px;
+
+}
+
+div.logo {
+	position: absolute;
+	top: -150px;
+	left: 10%;
+	
+}
+
+.fork {
+border: 0;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+#forkme {
+	background-color: white;
+	border: 1px solid white;
+	overflow: hidden;
+	position: fixed;
+	right: -50px;
+	top: 50px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-moz-box-shadow: 0 0 40px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.4);
+	-o-box-shadow: 0 0 40px rgba(0,0,0,0.4);
+	-ms-box-shadow: 0 0 40px rgba(0,0,0,0.4);
+	box-shadow: 0 0 40px rgba(0,0,0,0.4);
+	z-index: 30;
+	border-image: initial;
+}
+
+#forkme a {
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	color: black;
+	display: block;
+	font: bold 13px Helvetica, Arial, sans-serif;
+	margin: 0.05em 0 0.075em 0;
+	padding: 0.3em 3.5em;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 0 0.5em rgba(0,0,0,0.1);
+	border-image: initial;
+}
+
+#main {
+    height: 800px;
+    background-color: #F0F0F0;
+}
+
+#main-region {
+	height: 100%;
+}
+
+.board {
+    width: 400px;
+    height: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+div.card {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    display: inline-block;
+}
+
+.card .front {
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    z-index: 900;
+    border-style: solid;
+    border-color: #000000;
+    moz-border-radius: 6px;
+    webkit-border-radius: 6px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #FF0000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.card.flip .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.card .back {
+    position: absolute;
+    top: 0;
+    width: inherit;
+    height: inherit;
+    z-index: 800;
+    border-style: solid;
+    border-color: #000000;
+    moz-border-radius: 6px;
+    webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.card.flip .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+
+.widget-row.row-fluid {
+    margin: 1em 0;
+    width: auto;
+}
+.widget-row.row-fluid a {
+  display: block;
+    background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 40px;
+  line-height: 40px;   
+}
+
+
+@media (max-width: 1500px) {
+  .row-fluid [class*="span"] {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+  }
+  
+  .container-fluid.center {
+  	width: 100%;
+  }
+}
+
+ .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=80);
+}
+

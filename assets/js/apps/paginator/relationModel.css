@@ -1,0 +1,51 @@
+div#sidebar {
+	background: #fff;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 240px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding: 15px 15px 30px 30px;
+	border-right: 1px solid #bbb;
+	-webkit-box-shadow: 0 0 20px #ccc;
+	-moz-box-shadow: 0 0 20px #ccc;
+	box-shadow: 0 0 20px #ccc;
+}
+
+div#sidebar a,a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+div#sidebar a:hover {
+	text-decoration: underline;
+}
+
+a.toc_title,a.toc_title:visited {
+	display: block;
+	font-weight: bold;
+	margin: 1em 0 .2em;
+}
+
+div#sidebar .version {
+	font-size: 10px;
+	font-weight: normal;
+}
+
+div#sidebar ul {
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: .5em;
+}
+
+div#sidebar ul ul {
+	margin: 0 0 0 1em;
+}
+
+div#sidebar li.link_out:before {
+	content: "\00BB";
+}

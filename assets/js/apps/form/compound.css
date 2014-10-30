@@ -1,0 +1,661 @@
+/* can't assume only one "header" element in HTML5 */
+.header-top {
+  /* pin to top - 0 is default */
+  position: absolute;
+  /* raise z-index to cover, higher here to allow 
+     a range of z-indexes in the scrolling content */
+  z-index: 100;
+  /* height overflows */
+  width: 100%;
+}
+
+/* match these backgrounds to blend */
+/* OPTIONAL, extend header bg color across top */
+.header-top,
+.header-bg:before,
+.header-wrap,
+.header-wrap:before,
+.header-content:before {
+  background: white;
+  /* white */
+}
+
+/* match widths, margins & padding */
+.page-wrap, .header-wrap {
+  width: 90%;
+  min-width: 540px;
+  max-width: 810px;
+  /* center content */
+  margin: 0 auto;
+  /* separate content from window edge -- 
+     padding-top and -bottom specified below.
+     Here (not on body) to work with fixed header */
+  padding: 0 10px;
+}
+
+/* padding-left and -right added above */
+.header-wrap {
+  /* child elements abaolute */
+  position: relative;
+  /* a "min-height" for shorter right side */
+  height: 108px;
+}
+
+/* extend bg into padding-to-window gap on taller left side - 
+   not needed if extending bg using optional .header-bg div */
+.header-wrap:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* extra 2px width to cover tiny gap when iOS zooms */
+  width: 12px;
+  height: 162px;
+  /* OPTIONAL, extend padding-to-window "frame" all the way down - 
+     may want to do the same on right with an :after pseudo-element:
+   height: 100000px; */
+}
+
+/* OPTIONAL, if we want to differentiate header and body - 
+   .header-bg:before extends taller bg all the way left  */
+.header-bg {
+  /* child elements absolute */
+  position: relative;
+  /* tuck behind header framing */
+  z-index: -1;
+  width: 100%;
+}
+
+/* OPTIONAL, extends bg to left on taller left side  */
+.header-bg:before {
+  content: "";
+  /* remove from layout */
+  position: absolute;
+  /* start from the right and extend left */
+  right: 100%;
+  /* height of shorter right side */
+  height: 162px;
+  /* crazy wide - absolutely positioned 
+     to start at left edge and go left */
+  width: 100000px;
+}
+
+.header-content {
+  /* child elements absolute */
+  position: relative;
+  height: 192px;
+  width: 100%;
+  padding-top: 10px;
+  /* crop shadows at the sides and top */
+  overflow: hidden;
+}
+
+/* add taller left-side "overhang" bg + shadow  */
+.header-content:before {
+  content: "";
+  /* remove from layout */
+  position: absolute;
+  /* tuck behind .header-wrap and .nav-main ul
+     so right-edge shadow is covered up */
+  z-index: -1;
+  height: 152px;
+  width: 270px;
+  padding: 0;
+  border-radius: 0 0 10px 0;
+  -webkit-box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* INVERTED ROUNDED CORNER under overhang L */
+.header-content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* tuck behind header bg */
+  z-index: -1;
+  height: 20px;
+  width: 20px;
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+  top: 152px;
+  left: -10px;
+  /* top left */
+  border-radius: 20px 0 0 0;
+}
+
+/* match backgrounds to blend */
+.header-logo, .header-social {
+  background-color: #aed2cc;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23379/bg-map-bluegreen.jpg);
+  -webkit-box-shadow: inset 0 0 20px rgba(10, 8, 6, 0.75);
+  -moz-box-shadow: inset 0 0 20px rgba(10, 8, 6, 0.75);
+  box-shadow: inset 0 0 20px rgba(10, 8, 6, 0.75);
+}
+
+.header-logo {
+  position: absolute;
+  /* cover .header-content-social */
+  /* z-index: 1; */
+  height: 138px;
+  width: 184px;
+  border-radius: 10px 0 10px 10px;
+}
+
+.header-logo h1, .header-logo h2 {
+  position: relative;
+  /* overlap .header-logo-patch */
+  z-index: 2;
+  text-shadow: 0 2px 1px rgba(255, 255, 255, 0.3), 0 0 10px rgba(204, 232, 229, 0.5);
+}
+
+.header-logo h1 {
+  padding: 10px 0 0 18px;
+  font-size: 36px;
+}
+
+.header-logo a {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+.header-logo h2 {
+  margin-top: -2px;
+  padding: 0 0 0 18px;
+  font-size: 24px;
+}
+
+/* "patch" to cover shadow "seam" of overlapping shapes - 
+   can't nest pseudo-elements, so need extra div here -  
+   overflow:hidden to crop shadow of rounded corner overlay (below) */
+.header-logo-patch {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 59px;
+  height: 30px;
+  width: 194px;
+  background-color: #aed2cc;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23379/bg-map-bluegreen.jpg);
+  background-position: 0 -49px;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 20px 0 20px -20px rgba(10, 8, 6, 0.75);
+  -moz-box-shadow: inset 20px 0 20px -20px rgba(10, 8, 6, 0.75);
+  box-shadow: inset 20px 0 20px -20px rgba(10, 8, 6, 0.75);
+}
+
+/* rounded corner overlay (with outset shadow to match "well") */
+.header-logo-patch:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 10px 0 0 0;
+  /* "opacify" and "transparentize" value between 0 and 1 - 
+     .20 more opaque for outset box-shadow to match inset (webkit, by my eye anyway) */
+  -webkit-box-shadow: 0 0 20px rgba(10, 8, 6, 0.95);
+  -moz-box-shadow: 0 0 20px rgba(10, 8, 6, 0.95);
+  box-shadow: 0 0 20px rgba(10, 8, 6, 0.95);
+}
+
+.header-social {
+  position: absolute;
+  top: 10px;
+  height: 69px;
+  width: 100%;
+  border-radius: 10px 10px 10px 0;
+}
+
+/* NAV */
+.horizontal-nav ul, .horizontal-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-nav li {
+  float: left;
+}
+
+.horizontal-nav li a {
+  display: block;
+  text-decoration: none;
+}
+
+.nav-main {
+  /* child elements absolute */
+  position: relative;
+  padding-left: 270px;
+  padding-top: 76px;
+  padding-bottom: 0;
+  background: none;
+}
+
+/* INVERTED ROUNDED CORNER under menu - right */
+.nav-main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* tuck behind nav-main a:hover */
+  z-index: -1;
+  height: 20px;
+  width: 20px;
+  border-top: 10px solid white;
+  border-right: 10px solid white;
+  bottom: -10px;
+  right: -10px;
+  /* top right */
+  border-radius: 0 20px 0 0;
+}
+
+.nav-main ul {
+  padding: 0 0 4px 2px;
+  /* nudge links right */
+  background: white;
+  /* clear floats without extra div or 
+     using pseudo-elements needed below - 
+     cannot use with position:relative */
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+/* dropshadow tracks with menu height if links exceed 1 line */
+.nav-main ul:before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* stack shadow behind "overhang" */
+  z-index: -2;
+  /* same size as parent */
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  -webkit-box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* INVERTED ROUNDED CORNER under menu - left */
+.nav-main ul:after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* tuck behind nav-main a:hover */
+  z-index: -1;
+  height: 20px;
+  width: 20px;
+  border-top: 10px solid white;
+  border-left: 10px solid white;
+  bottom: -10px;
+  left: 260px;
+  /* top left */
+  border-radius: 20px 0 0 0;
+}
+
+.nav-main a,
+.nav-main:visited {
+  display: block;
+  height: 19px;
+  padding: 0 .5em;
+  line-height: 19px;
+  color: #008fbe;
+  font-size: 0.8125em;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.nav-main a:active,
+.nav-main a:focus,
+.nav-main a:hover {
+  color: #005572;
+  background: #58d6ff;
+}
+
+/* nudge down 1px for uppercase vertical centering */
+.nav-main a span {
+  display: block;
+  position: relative;
+  top: 1px;
+}
+
+a.big-btn, a.big-btn:visited {
+  position: absolute;
+  z-index: 1;
+  height: 62px;
+  width: 72px;
+  top: 76px;
+  left: 191px;
+  background: #2ab3e1;
+  padding: 0 6px;
+  color: white !important;
+  text-align: center;
+  line-height: 1;
+  font-size: 1em;
+  font-weight: 200;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.35);
+  transition: background .2s ease;
+}
+
+a.big-btn:focus,
+a.big-btn:hover {
+  background: #25c9ff;
+}
+
+a.big-btn:active {
+  background: #2ab3e1;
+  /* color snaps back on button press */
+  transition: none;
+}
+
+a.big-btn span {
+  display: table-cell;
+  vertical-align: middle;
+  /* undo menu item nudging  */
+  top: 0;
+  height: 62px;
+  width: 72px;
+}
+
+.nav-social {
+  /* overlap .header-logo-patch */
+  position: relative;
+  z-index: 1;
+  float: right;
+  padding-right: .875em;
+}
+
+.icon-twitter-sign,
+.icon-twitter-sign:visited,
+.icon-facebook-sign,
+.icon-facebook-sign:visited {
+  position: relative;
+  opacity: 0.75;
+  text-shadow: 0 2px 1px rgba(255, 255, 255, 0.4), 0 0 10px rgba(204, 232, 229, 0.5);
+}
+
+.icon-twitter-sign:focus,
+.icon-facebook-sign:focus,
+.icon-twitter-sign:hover,
+.icon-facebook-sign:hover {
+  top: -1px;
+  opacity: 1;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.icon-twitter-sign:active,
+.icon-facebook-sign:active {
+  top: 0;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.icon-twitter-sign:before, .icon-facebook-sign:before {
+  display: block;
+  padding-left: .25em;
+  font-family: 'FontAwesome';
+  font-size: 44px;
+  /* vertically align middle */
+  line-height: 69px;
+}
+
+.icon-twitter-sign:before {
+  content: "\f081";
+  color: #2caae1;
+}
+
+.icon-facebook-sign:before {
+  content: "\f082";
+  color: #3c5a98;
+}
+
+/* MAIN */
+.main {
+  background-color: #f1e0c5;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23379/bg-wood-lighter.jpg);
+  /* padding-top = height of header on right (column-2) */
+  padding: 108px 2em 2em 2em;
+}
+
+/* extra padding-top for header "overhang" */
+.column-1 {
+  padding: 172px 2em 2em 2em;
+}
+
+/* elements that reach the edges of .main need to fall 
+   under edge shadow to maintain "cut-out" illusion */
+.well-left, well-right, .well-sides {
+  position: relative;
+  overflow: hidden;
+}
+
+/* corrected from article - left and right needed pseudos */
+.well-left:before,
+.well-right:after,
+.well-sides:before,
+.well-sides:after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* higher than any z-index in .main, lower than header */
+  z-index: 99;
+  top: -20px;
+  height: 120%;
+  width: 20px;
+  background: transparent;
+}
+
+.well-left:before, .well-sides:before {
+  left: 0;
+  -webkit-box-shadow: inset 20px -20px 20px -20px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset 20px -20px 20px -20px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 20px -20px 20px -20px rgba(0, 0, 0, 0.35);
+}
+
+.well-right:after, .well-sides:after {
+  right: 0;
+  -webkit-box-shadow: inset -20px 20px 20px -20px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: inset -20px 20px 20px -20px rgba(0, 0, 0, 0.35);
+  box-shadow: inset -20px 20px 20px -20px rgba(0, 0, 0, 0.35);
+}
+
+/* UTILITY */
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+.visuallyhidden, .screen-reader-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active, .screen-reader-text.focusable:active,
+.visuallyhidden.focusable:focus, .screen-reader-text.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* MEDIA QUERIES */
+/* Mobile example - e.g., iPhone5 landscape width = 568px */
+@media only screen and (max-device-width: 599px) {
+  .header-top {
+    /* unpin header so it scrolls with content */
+    position: absolute;
+  }
+
+  /* even if you keep the header fixed, you might 
+     change width to 100% for better mobile zooming */
+  .page-wrap, .header-wrap {
+    width: 100%;
+  }
+}
+/* A full-on responsive layout would reconfigure the 
+   layout - this is just a gesture as an example */
+/* lose countoured bottom at smaller width - 
+   when menu items overflow 2 lines */
+@media only screen and (max-width: 512px) {
+  .nav-main ul {
+    height: 76px;
+    background: none;
+  }
+
+  /* taller left-side "tab" bg + shadow  */
+  .header-content:before,
+  .nav-main ul:after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .header-top {
+    /* unpin header so it scrolls with content */
+    position: absolute;
+  }
+
+  /* even if you keep the header fixed, you might 
+     change width to 100% for better mobile zooming */
+  .page-wrap, .header-wrap {
+    width: 100%;
+  }
+}
+/* Presentational CSS Below */
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  line-height: 1.3125;
+}
+
+/* ensure there's enough to scroll */
+.main {
+  padding-bottom: 30em;
+}
+
+figure {
+  margin: 1.5em auto 1em;
+  padding: 8px;
+  background: #eaeaea;
+  text-align: center;
+}
+
+figcaption {
+  margin: .5em 0;
+  color: #999;
+  text-align: center;
+  font-size: 85%;
+  font-style: italic;
+}
+
+h1 {
+  margin: 0;
+  line-height: 1.0625;
+}
+
+h2 {
+  color: #777;
+  font-weight: 300;
+}
+
+header h2 {
+  margin: 0;
+  color: #666;
+}
+
+a, a:visited {
+  color: #008fbe;
+}
+
+a:active, a:focus, a:hover {
+  color: #005572;
+}
+
+code {
+  background: lightyellow;
+  padding: 1px .25em;
+  font-family: Menlo, Monaco, monospace;
+  font-size: 90%;
+}
+
+pre[rel] {
+  position: relative;
+  padding: .875em 0 0;
+}
+
+pre[rel]:before {
+  content: attr(rel);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e18728;
+  font-family: sans-serif;
+  padding: 5px 0;
+  text-indent: 15px;
+}
+
+pre code {
+  display: block;
+  padding: 1.5em;
+}
+
+pre code i {
+  color: #bba;
+  font-style: italic;
+  font-weight: 200;
+}
+
+pre code i span {
+  color: #2cb;
+}
+
+.nowrap, nobreak, .nobr {
+  white-space: nowrap;
+}

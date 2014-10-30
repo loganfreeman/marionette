@@ -1,0 +1,58 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <QuestToolsSetVariable questId="101758" stepId="1" key="DebugLogging" value="True" />
+    <!-- In Town, use Waypoint to Stonefort -->
+    <If condition="Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Using Waypoint to Stonefort for Skycrown Portal" />
+      <UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="1" />
+      <WaitTimer questId="101758" stepId="1" waitTime="2000" />
+    </If>
+    <!-- In Stonefort -->
+    <While condition="CurrentWorldId == 93099">
+      <LogMessage questId="101758" stepId="1" output="Using portal to Skycrown" />
+      <MoveToActor questId="101758" stepId="1" actorId="176002" destinationWorldId="81019" interactRange="10" statusText="Using portal to Skycrown" x="4270.269" y="4188.521" z="-24.9" />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </While>
+    <!-- Move South in Skycrown -->
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 2711, 2677, 25, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 1" />
+      <SafeMoveTo questId="101758" stepId="1" x="2779" y="3211" z="0" statusText="Clearing Skycrown pt 1" pathPrecision="50" unsafeRandomDistance="15" pathPointLimit="50" />
+    </If>
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 2779, 3211, 0, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 2" />
+      <SafeMoveTo questId="101758" stepId="1" x="3025" y="3214" z="25" statusText="Clearing Skycrown pt 2" pathPrecision="50" unsafeRandomDistance="15" pathPointLimit="50"  />
+    </If>
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 3025, 3214, 25, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 3" />
+      <SafeMoveTo questId="101758" stepId="1" x="3012" y="3503" z="25" statusText="Clearing Skycrown pt 3" pathPrecision="50" unsafeRandomDistance="15" pathPointLimit="150" />
+    </If>
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 3012, 3503, 25, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 4" />
+      <SafeMoveTo questId="101758" stepId="1" x="3474" y="3511" z="0" statusText="Clearing Skycrown pt 4" pathPrecision="50" unsafeRandomDistance="15" pathPointLimit="50" />
+    </If>
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 3474, 3511, 0, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 5" />
+      <SafeMoveTo questId="101758" stepId="1" x="3478" y="3695" z="25" statusText="Clearing Skycrown pt 5" pathPrecision="50" unsafeRandomDistance="15" pathPointLimit="50"  />
+    </If>
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 3478, 3695, 0, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Skycrown pt 6" />
+      <SafeMoveTo questId="101758" stepId="1" x="3804" y="3787" z="-24" statusText="Clearing Skycrown pt 6" pathPrecision="15" unsafeRandomDistance="5" pathPointLimit="50"  />
+    </If>
+    <!-- Skycrown Bottom, back to town -->
+    <If condition="CurrentWorldId == 81019 and ActorExistsAt(Me.ActorSNO, 3741, 3726, 0, 300)">
+      <LogMessage questId="101758" stepId="1" output="Using Town Portal from Skycrown bottom" />
+      <WaitTimer questId="101758" stepId="1" waitTime="2000" />
+      <UseTownPortal questId="101758" stepId="1" />
+    </If>
+    <If condition="CurrentWorldId == 93099">
+      <LogMessage questId="101758" stepId="1" output="Something went wrong, reloading profile" />
+      <ReloadProfile questId="1" />
+    </If>
+    <LogMessage output="Loading next profile..." />
+    <LoadProfile profile="Act3LoadRandom.xml" />
+  </Order>
+</Profile>

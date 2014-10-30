@@ -1,0 +1,57 @@
+<h1>CodeMirror: Formatting demo</h1>
+
+    <form class='container'><pre><textarea id="code" name="code">		Transition.SubView = Marionette.ItemView.extend({
+			
+	        template: subViewTpl,
+	        getSelectedRange: function() {
+	            return { from: this.editor.getCursor(true), to: this.editor.getCursor(false) };
+	          },
+	        events: {
+	        	'click #codeEditor': 'transform',
+	        	'click #autoformat': 'autoFormat',
+	        	'click #commentSelection': 'commentSelection',
+	        	'click #unCommentSelection': 'unCommentSelection'
+	        },
+	        autoFormat: function(){
+	            var range = this.getSelectedRange();
+	            this.editor.autoFormatRange(range.from, range.to);
+	        },
+	        commentSelection: function(){
+	        	var range = this.getSelectedRange();
+	            this.editor.commentRange(true, range.from, range.to);
+	        },
+	        unCommentSelection: function(){
+	        	var range = this.getSelectedRange();
+	            this.editor.commentRange(false, range.from, range.to);
+	        },
+
+
+
+	    });</textarea></pre></form>
+
+<p>Select a piece of code and click one of the links below to apply automatic formatting to the selected text or comment/uncomment the selected text. Note that the formatting behavior depends on the current block's mode.
+    <table class='container'>
+      <tr>
+         <td>
+          <a id='codeEditor'>
+            Turn into Code Editor
+          </a>
+        </td> 
+        <td>
+          <a id='autoformat'>
+            Autoformat Selected
+          </a>
+        </td>
+        <td>
+          <a id='commentSelection'>
+            Comment Selected
+          </a>
+        </td>
+        <td>
+          <a id='unCommentSelection'>
+            Uncomment Selected
+          </a>
+        </td>
+      </tr>
+    </table>
+</p>   

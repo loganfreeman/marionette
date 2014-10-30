@@ -1,0 +1,21 @@
+.margin_left_60 {
+	margin-left: 60px !important;
+}
+
+.margin_bottom_60 {
+	margin-bottom: 40px !important;
+}
+
+input.valide {
+	color: blue !important;
+}
+
+input.error {
+	color: red !important;
+}
+
+input.correct {
+	color: green !important;
+	cursor: not-allowed !important;
+	background: #EBE6DF !important;
+}

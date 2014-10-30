@@ -1,0 +1,3 @@
+    <div class="pagination">
+        <ul></ul>
+    </div>

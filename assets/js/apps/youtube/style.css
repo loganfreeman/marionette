@@ -1,0 +1,38 @@
+pre{
+	background-color:#fafafa;
+	border-left:2px solid #eee;
+	font-family:Arial,Helvetica,sans-serif;
+	margin:0 25px 15px;
+	padding:8px;	
+}
+
+.flashContainer{
+	border:2px solid #fff;
+	margin:40px auto;
+	outline:1px solid #aaa;
+}
+
+#page{
+	/* This the main container div */
+	width:700px;
+	margin:0 auto;
+	position:relative;
+	padding-top:1px;
+}
+
+blockquote{
+	background-color:#fafafa;
+	padding:18px;
+	margin:0 25px 15px;
+	border-right: 5px solid #eeeeee;
+}
+
+blockquote p{
+	margin:0;
+	padding-bottom:0;
+}
+
+#player{
+	margin:0 25px 15px;
+	padding:8px;
+}

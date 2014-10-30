@@ -1,0 +1,61 @@
+/* Important part */
+.box {
+	display: inline-block;
+	position: relative;
+	width: 20%;
+	margin: 5% 5% 0 0;
+	float: left;
+	font-size: 12px;
+}
+
+.box:before {
+	content: "";
+	display: block;
+	padding-top: 100%; /* initial ratio of 1:1*/
+}
+
+/* Other ratios */
+.ratio2_1:before {
+	padding-top: 50%;
+}
+
+.ratio1_2:before {
+	padding-top: 200%;
+}
+
+.ratio4_3:before {
+	padding-top: 75%;
+}
+
+.ratio16_9:before {
+	padding-top: 56.25%;
+}
+
+.content {
+	/* Positioning */
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	/* Styling */
+	background: black;
+	padding: 30px;
+	text-align: center;
+	vertical-align: center;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.content span {
+	font-weight: bold;
+	font-size: 3em;
+	display: block;
+}
+
+.french-flag {
+  margin: -8.5em 0 0 -12.5em;
+  height: 17em;
+  width: 25em;
+  background: linear-gradient(to right, #0000ff 33.33%, #ffffff 33.33%, #ffffff 66.66%, #ff0000 66.66%);
+}

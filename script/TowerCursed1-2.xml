@@ -1,0 +1,61 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <!-- Use Waypoint to Tower of the Cursed Level 1 -->
+    <If condition="Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Using Waypoint to Tower of the Cursed Level 1" />
+      <UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="9" />
+    </If>
+    <!-- Tower of the Cursed Level 1 -->
+    <If condition="CurrentWorldId == 119641">
+      <LogMessage questId="101758" stepId="1" output="Clearing Tower of the Cursed Level 1" />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="5" x="1041.647" y="880.3066" z="-18.94079" useNavigator="True" />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="15" x="1102" y="1049" z="-116" useNavigator="True" />
+      <!-- Use port to Tower of the Cursed Level 2 -->
+      <MoveToActor questId="101758" stepId="1" actorId="176001" isPortal="True" destinationWorldId="139272"  />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </If>
+    <!-- Tower of the Cursed Level 2 Version 1 -->
+    <If condition="CurrentWorldId == 139272 and IsSceneLoaded(141803)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Tower of the Cursed Level 2 Version 1" />
+      <SafeMoveTo questId="101758" stepId="1" pathprecision="10" x="1256" y="1169" z="20" />
+      <SafeMoveTo questId="101758" stepId="1" pathprecision="10" x="1218" y="1019" z="10"  />
+      <SafeMoveTo questId="101758" stepId="1" pathprecision="10" x="1040" y="1158" z="-19" />
+      <!--
+			<SafeMoveTo questId="101758" stepId="1" pathprecision="10" x="1030" y="1049" z="0"  />
+			<SafeMoveTo questId="101758" stepId="1" pathprecision="10" x="1125" y="1087" z="-51" />
+			-->
+      <LogMessage questId="101758" stepId="1" output="Finished clearing Tower of the Cursed Level 2 version 1, returning to Town" />
+      <WaitTimer questId="101758" stepId="1" waitTime="5000" />
+      <UseTownPortal questId="101758" stepId="1" />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </If>
+    <!-- Tower of the Cursed Level 2 Version 2 -->
+    <If condition="CurrentWorldId == 139272 and IsSceneLoaded(131458) or IsSceneLoaded(131467)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Tower of the Cursed Level 2 Version 2" />
+
+      <!--<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1145" y="1227" z="0" pathPointLimit="1500"  />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1018" y="1240" z="-9" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="920" y="1104" z="-9" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="922" y="955" z="-20" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1035" y="897" z="-29" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1117" y="1049" z="-29" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1250" y="986" z="-49" pathPointLimit="1500"   />-->
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1258" y="1196" z="-39" pathPointLimit="1500"   />
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1291" y="1101" z="-39" pathPointLimit="1500"   />
+
+      <SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1165" y="889" z="-59" pathPointLimit="1500"   />
+
+      <LogMessage questId="101758" stepId="1" output="Finished clearing Tower of the Cursed Level 2 version 2, returning to Town" />
+      <WaitTimer questId="101758" stepId="1" waitTime="5000" />
+      <UseTownPortal questId="101758" stepId="1" />
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+    </If>
+
+    <LogMessage output="Loading next profile..." />
+    <LoadProfile profile="Act3LoadRandom.xml" />
+  </Order>
+</Profile>

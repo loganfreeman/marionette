@@ -1,0 +1,14 @@
+table {
+	margin: 0 auto;
+}
+
+td {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #ddd;
+}
+
+td.alive {
+	background-color: #000;
+}
+

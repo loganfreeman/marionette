@@ -1,0 +1,243 @@
+/* The maximum number of items a single column can handle.  If a column has more items than the maximum defined here, some items won't display. */
+/* line 5, ../sass/test.scss */
+ol.relative {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0;
+  font-size: 16px;
+}
+
+/* line 12, ../sass/test.scss */
+ol.relative li {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  background: #b3cae5;
+  list-style-position: inside;
+  line-height: 1.5;
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+2) {
+  top: 1.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+3) {
+  top: 3em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+4) {
+  top: 4.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+5) {
+  top: 6em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+6) {
+  top: 7.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+7) {
+  top: 9em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+8) {
+  top: 10.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+9) {
+  top: 12em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+10) {
+  top: 13.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+11) {
+  top: 15em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* line 23, ../sass/test.scss */
+ol li:nth-child(n+12) {
+  top: 16.5em;
+  /* line height is equal to the absolute position top for all items. will only effect first column because overridden later*/
+}
+
+/* Round up puts more items in first column if odd total number of items 
+*/
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+2):nth-last-child(-n+2) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+3):nth-last-child(-n+3) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+4):nth-last-child(-n+4) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+5):nth-last-child(-n+5) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+6):nth-last-child(-n+6) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+7):nth-last-child(-n+7) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+8):nth-last-child(-n+8) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+9):nth-last-child(-n+9) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+10):nth-last-child(-n+10) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+11):nth-last-child(-n+11) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 31, ../sass/test.scss */
+.roundUp li:nth-child(n+12):nth-last-child(-n+12) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* Round Down puts more items into second column if odd total number of items 
+*/
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+3):nth-last-child(-n+2) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+4):nth-last-child(-n+3) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+5):nth-last-child(-n+4) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+6):nth-last-child(-n+5) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+7):nth-last-child(-n+6) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+8):nth-last-child(-n+7) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+9):nth-last-child(-n+8) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+10):nth-last-child(-n+9) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+11):nth-last-child(-n+10) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+12):nth-last-child(-n+11) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}
+
+/* line 41, ../sass/test.scss */
+.roundDown li:nth-child(n+13):nth-last-child(-n+12) {
+  position: static;
+  margin-left: 50%;
+  background: #efcab2;
+}

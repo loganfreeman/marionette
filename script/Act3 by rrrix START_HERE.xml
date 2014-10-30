@@ -1,0 +1,10 @@
+<Profile>
+	<Name>R-A3</Name>
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+	<Order>
+		<LoadProfile profile="Act3LoadRandom.xml" />
+		<WaitTimer waitTime="5000" />
+	</Order>
+</Profile>

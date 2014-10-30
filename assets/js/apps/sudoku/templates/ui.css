@@ -1,0 +1,142 @@
+#file {
+	font-family: sans-serif;
+	text-align: center;
+	background: green;
+	width: 400px; 
+	height: 250px; 
+	position:absolute;  
+	overflow: hidden;
+    padding: 30px 16px 13px 16px;
+    background:#FFFFFF;  
+    z-index:100;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 5px dotted #000;
+}
+
+div.arrow {
+	position:absolute;  
+	overflow: hidden;
+    background:#FFFFFF;  
+    z-index:100;
+}
+
+div#loading {
+	position:absolute;  
+	overflow: hidden;
+    background:#FFFFFF;  
+    z-index:100;
+}
+
+.button{
+ content: 'Select some files';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 15pt;
+  color:#000;
+  text-decoration:none;
+}
+
+.button:hover{
+  border-color: black;
+}
+
+table.q{
+	border-collapse: collapse;
+	border: 3px solid black;
+}
+
+table.q td{
+	border: 2px dashed #e8e8e8;
+	padding: 15px 25px 15px 25px;
+	font-family: "Arial", Arial, "sans-serif";
+	font-size: 35px;
+}
+
+
+table.q td input[type=text]{
+	border: 0px dashed #e8e8e8;
+	width: 40px;
+	font-family: "Arial", Arial, "sans-serif";
+	font-size: 35px;
+}
+
+table.q td.odd input[type=text]{
+	border: 0px dashed #e8e8e8;
+	width: 40px;
+	background-color: #f7f7f7;
+	font-family: "Arial", Arial, "sans-serif";
+	font-size: 35px;
+}
+
+table.q td.empty:hover{
+	background-color:#ededed;
+}
+
+table.q td.empty:hover input[type=text]{
+	background-color:#ededed;
+}
+
+table.q td.odd{
+	background-color: #f7f7f7;
+}
+
+body{
+	margin: 0px auto;
+	padding: 0px auto;
+}
+
+.qHolder{
+	width: 95%;
+	margin: 0px auto;
+	padding: 15px;
+	text-align: left;
+	
+}
+
+img.next{
+	height: 70px;
+	border-radius: 90px;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+}
+
+
+.sol, .solX, .solY {
+	z-index : 255;
+}
+
+.noSolY, .noSolX, .noSol{
+		z-index : 255;
+	border: 1px solid black;
+	margin-top: 20px;
+	padding: 10px 30px;
+	width: 500px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.sol, .solX, .solY {
+	z-index : 255;
+	border: 1px solid black;
+	margin-top: 20px;
+	padding: 10px 30px;
+	width: 500px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.number{
+	background: gray;
+	color: white;
+}
+
+h1 {font-size:250%;}

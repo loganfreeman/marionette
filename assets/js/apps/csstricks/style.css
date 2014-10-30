@@ -1,0 +1,221 @@
+.centerme {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  /*
+  Nope =(
+  margin-left: -25%;
+  margin-top: -25%;
+  */
+
+  /* 
+  Yep!
+  */
+  transform: translate(-50%, -50%);
+  
+  /*
+  Not even necessary really. 
+  e.g. Height could be left out!
+  */
+  width: 40%;
+  height: 50%;
+}
+
+#superLabel li {
+	position: relative
+}
+
+html[data-useragent*='MSIE 10.0'] h1 {
+  color: blue;
+}
+
+h1.ie10 {
+  text-align: center;
+  padding: 20px;
+}
+
+.pizza-link {
+  display: block;
+  width: 230px;
+  border: 1px solid #ccc;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  padding: 1.5em;
+  margin: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.pizza-link h3 {
+  border-bottom: 1px solid #eee;
+  padding: 3.5em 0 0.75em 0;
+  margin: 0 0 0.75em 0;
+  position: relative;
+}
+.pizza-link p {
+  color: #999;
+  margin: 0;
+  position: relative;
+  font-size: 0.9rem;
+}
+.pizza-link h3, .pizza-link p {
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.pizza-link .icon {
+  position: absolute;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  font-size: 1.5em;
+  margin-left: -25px;
+  left: 50%;
+}
+.pizza-link:before {
+  content: "";
+  background: #D62121;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 50%;
+  margin-left: -25px;
+  -moz-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+  -o-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+  -webkit-transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s, height 0.2s;
+  -webkit-transition-delay: 0s, 0s, 0s, 0.2s, 0.2s;
+  transition: width 0.2s, left 0.2s, margin-left 0.2s, top 0.2s 0.2s, height 0.2s 0.2s;
+}
+.pizza-link:hover h3, .pizza-link:active h3 {
+  color: white;
+  border-bottom-color: #E14646;
+}
+.pizza-link:hover p, .pizza-link:active p {
+  color: white;
+}
+.pizza-link:hover:before, .pizza-link:active:before {
+  width: 230px;
+  left: 0;
+  top: 0;
+  margin-left: 0;
+  height: 320px;
+}
+
+
+img.floatleft {
+  float: left;
+  margin: 0 15px 5px 0;
+  border: solid 1px #bbb;
+}
+
+/**
+awesome menu
+*/
+ul#awesome-menu {
+	width: 517px; margin: 20px auto;
+	list-style: none;
+}
+
+ul#awesome-menu li { display: inline; float: left; }
+	
+ul#awesome-menu li a {
+	display: block; height: 56px;
+	background-image: url(menu-sprite.png); text-indent: -9999px;
+}
+
+ul#awesome-menu li a.ninja {
+	width: 96px; background-position: 0 0;	
+}
+
+ul#awesome-menu li a.zombie {
+	width: 108px; background-position: -96px 0;	
+}
+
+ul#awesome-menu li a.robot {
+	width: 97px; background-position: -204px 0;	
+}
+
+ul#awesome-menu li a.assassin {
+	width: 121px; background-position: -301px 0;	
+}
+
+ul#awesome-menu li a.jedi {
+	width: 94px; background-position: -422px 0;	
+}
+
+
+ul#awesome-menu li a.ninja:hover, ul#awesome-menu li a.ninja:focus {
+	background-position: 0 -56px;	
+}
+
+ul#awesome-menu li a.zombie:hover, ul#awesome-menu li a.zombie:focus {
+	background-position: -96px -56px;	
+}
+
+ul#awesome-menu li a.robot:hover, ul#awesome-menu li a.robot:focus {
+	background-position: -204px -56px;	
+}
+
+ul#awesome-menu li a.assassin:hover, ul#awesome-menu li a.assassin:focus {
+	background-position: -301px -56px;	
+}
+
+ul#awesome-menu li a.jedi:hover, ul#awesome-menu li a.jedi:focus {
+	background-position: -422px -56px;	
+}
+
+
+body.droppable .profile-avatar-wrap {
+  border: 5px dashed lightblue;
+  z-index: 9999;
+}
+
+.page-wrap2 {
+  width: 960px;
+  margin: 100px auto;
+}
+
+.profile {
+  width: 50%;
+}
+.profile-avatar-wrap {
+  width: 33.33%;
+  float: left;
+  margin: 0 20px 5px 0;
+  position: relative;
+  pointer-events: none;
+  border: 5px solid transparent;
+}
+.profile-avatar-wrap:after {
+  /* Drag Prevention */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 1em gold, 0 0 1em red;
+}
+.profile-avatar-wrap img {
+  width: 100%;
+  display: block;
+}
+.location {
+  text-transform: uppercase;
+  color: #999;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+  font-size: 90%;
+}
+
+
+ul.tree {
+  list-style: disc;
+  padding-left: 10px;
+  margin-left: 10px;    
+}

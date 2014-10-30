@@ -1,0 +1,56 @@
+#parent {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid #777;
+    background-color: #fbca93;
+    text-align: center;
+  }
+  .positionable {
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+    background-color: #bcd5e6;
+    text-align: center;
+  }
+  #positionable1 {
+    width: 75px;
+    height: 75px;
+  }
+  #positionable2 {
+    width: 120px;
+    height: 40px;
+  }
+  div.left15 select, input {
+    margin-left: 15px;
+  }
+  
+  #img-container {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+  }
+ 
+  div#img-container > img {
+    position: absolute;
+  }
+  
+  
+  .positionDiv {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: green;
+  }
+  
+  #targetElement{
+  margin-top:0px;
+  width:400px;
+  height:600px;
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 2px solid red;
+  }

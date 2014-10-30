@@ -1,0 +1,102 @@
+.absolute li {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 0, 0.4)), color-stop(rgba(255, 0, 0, 0.4))), to(url(http://placekitten.com/g/100/100));
+  background: -webkit-linear-gradient(rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4)), url(http://placekitten.com/g/100/100);
+  background: linear-gradient(rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4)), url(http://placekitten.com/g/100/100);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.absolute li:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.absolute li:nth-child(2) {
+  top: 100px;
+  left: 0;
+}
+
+.absolute li:nth-child(3) {
+  top: 200px;
+  left: 0;
+}
+
+.absolute li:nth-child(4) {
+  top: 0;
+  left: 100px;
+}
+
+.absolute li:nth-child(5) {
+  top: 100px;
+  left: 100px;
+}
+
+.absolute li:nth-child(6) {
+  top: 200px;
+  left: 100px;
+}
+
+ul.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 306px;
+  /* account for borders */
+  width: 200px;
+}
+
+ul.flex > li {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+      rgba(255,0,0,0.4),
+      rgba(255,0,0,0.4)
+    ),
+    url(http://placekitten.com/g/100/100);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+
+ul.text {
+  column-count: 2;
+  column-gap: 0;
+  width: 200px;
+}
+ul.text > li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background:
+    linear-gradient(
+      rgba(255,0,0,0.4),
+      rgba(255,0,0,0.4)
+    ),
+    url(http://placekitten.com/g/100/100);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid white;
+}

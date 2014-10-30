@@ -1,0 +1,379 @@
+<template>
+<style>
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#slider {
+	max-width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#overflow {
+	width: 100%;
+	overflow: hidden;
+}
+
+#slides .inner {
+	width: 400%;
+}
+
+#slides .inner {
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	-ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides article {
+	width: 25%;
+	float: left;
+}
+
+#slide1:checked ~ #slides .inner {
+	margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+	margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+	margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+	margin-left: -300%;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+label {
+	background: #CCC;
+	display: inline-block;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+}
+
+#slide1:checked ~ label[for="slide1"],#slide2:checked ~ label[for="slide2"],#slide3:checked 
+	~ label[for="slide3"],#slide4:checked ~ label[for="slide4"] {
+	background: #333;
+}
+</style>
+<div id="slider">
+	<input checked="" type="radio" name="slider" id="slide1"
+		selected="false"> <input type="radio" name="slider"
+		id="slide2" selected="false"> <input type="radio"
+		name="slider" id="slide3" selected="false"> <input
+		type="radio" name="slider" id="slide4" selected="false">
+	<div id="slides">
+		<div id="overflow">
+			<div class="inner">
+				<article>
+					<content select="img:nth-of-type(1)"></content>
+				</article>
+				<article>
+					<content select="img:nth-of-type(2)"></content>
+				</article>
+				<article>
+					<content select="img:nth-of-type(3)"></content>
+				</article>
+				<article>
+					<content select="img:nth-of-type(4)"></content>
+				</article>
+			</div>
+			<!-- .inner -->
+		</div>
+		<!-- #overflow -->
+	</div>
+	<label for="slide1"></label> <label for="slide2"></label> <label
+		for="slide3"></label> <label for="slide4"></label>
+</div>
+</template>
+
+<div class="img-slider">
+  <img src="assets/js/apps/form/rock.jpg" alt="an interesting rock">
+  <img src="assets/js/apps/form/grooves.jpg" alt="some neat grooves">
+  <img src="assets/js/apps/form/arch.jpg" alt="a rock arch">
+  <img src="assets/js/apps/form/sunset.jpg" alt="a dramatic sunset">
+</div>
+
+<div class="tinted-image"></div>
+
+# Email Domain Datalist Helper
+
+Shows a list of suggestions after you've hit the @.
+
+<label for="email">Email</label>
+<input id="email" name="email" type="email" placeholder="your@email.com" style='height:40px;'>
+
+
+<header class="header-top">
+  
+    <!-- match .page-wrap width, padding, etc. - 
+         :before fills in padding-to-window gap on left - 
+         can also extend all the way left (see .header-bg below) -->
+  <div class="header-wrap">
+  
+    <!-- OPTIONAL, if differentiating header and body bg -   
+         :before extends taller bg all the way left -->
+    <!--<div class="header-bg"></div>-->
+
+    <!-- oveflow:hidden to crop shadows (why we need extra div) - 
+         :before adds taller "overhang" on left (z:-1) - 
+         :after adds rounded corner under left side (z:-1) -->
+    <div class="header-content">
+
+      <div class="header-logo">
+        <h1><a href="#top">Logo</a></h1> <!-- (z:2) -->
+        <h2>Tagline</h2> <!-- (z:2) -->
+      </div>
+      
+      <!-- oveflow:hidden to crop shadows - 
+           :after overlays rounded corner -->
+      <div class="header-logo-patch"></div>
+      
+      <!-- :after adds corner R (z:-1)-->
+      <nav class="nav-main horizontal-nav">
+        
+        <!-- :before adds dropshadow (z:-2) -
+        :after adds corner under L (z:-1)-->
+        <ul>
+          <li>
+            <!--big button (z:1)-->
+            <a class="big-btn" href="#"><span>Sign Up</span></a>
+          </li> 
+          <li><a href="#"><span>About</span></a></li>
+          <li><a href="#"><span>Team</span></a></li>
+          <li><a href="#"><span>Store</span></a></li>
+          <li><a href="#"><span>Contact</span></a></li>
+        </ul>
+      </nav> <!-- end .nav-main -->
+
+      <div class="header-social">
+        <nav class="nav-social horizontal-nav"> <!--(z:1)-->
+          <ul>
+            <li>
+              <a class="icon-twitter-sign" href="#"><span class="screen-reader-text"Twitter</span></a>
+            </li>
+            <li>
+              <a class="icon-facebook-sign" href="#"><span class="screen-reader-text">Facebook</span></a>
+            </li>
+          </ul>
+        </nav> <!-- end .nav-social -->
+      </div> <!-- end .header-social -->
+    
+    </div> <!-- end .header-content -->
+  </div> <!-- end .header-wrap -->
+
+</header>
+
+<!-- #top link here, not in fixed header -->
+<div id="top" class="page-wrap"> 
+  
+  <!-- :before adds "well" shadow L (z:99) - 
+  :after adds "well" shadow R (z:99)-->
+  <section class="main well-sides column-1">
+    
+    <!-- SCROLLING CONTENT, EXAMPLE HTML -->
+    
+    <h2>Well Rounded: Compound Shapes <span class="nobr">in CSS</span></h2>
+    <p>Here's the full layout. There's also a CodePen with <a href="http://codepen.io/parkerbennett/pen/tjiou" target="_blank">just the gist</a> (right-click to open in new tab). 
+
+    <pre rel="HTML"><code class="language-html">
+<i>&lt;!-- header width:100% position:fixed --></i>
+&lt;header class="header-top"> <i>&lt;!--<span>(z:100)</span>--></i>
+
+  <i>&lt;!-- match .page-wrap width, padding, etc. - 
+  :before fills padding-to-window gap left --></i>
+  &lt;div class="header-wrap"> 
+
+    <i>&lt;!-- oveflow:hidden to crop shadows - 
+    :before adds "overhang" on left <span>(z:-1)</span> - 
+    :after adds round corner left <span>(z:-1)</span>--></i>
+    &lt;div class="header-content">
+
+      &lt;div class="header-logo">
+        &lt;h1>Logo&lt;/h1> <i>&lt;!--<span>(z:2)</span>--></i>
+      &lt;/div>
+  
+      <i>&lt;!-- oveflow:hidden to crop shadows - 
+      :after overlays rounded corner --></i>
+      &lt;div class="header-logo-patch">&lt;/div> <span class="nobr"><i>&lt;!--<span>(z:1)</span>--></i></span>
+ 
+      <i>&lt;!-- :after adds corner R <span>(z:-1)</span>--></i>
+      &lt;nav class="nav-main">
+
+        <i>&lt;!-- :before adds dropshadow <span>(z:-2)</span> -
+        :after adds corner under L <span>(z:-1)</span>--></i>
+        &lt;ul>
+          &lt;li>
+            &lt;a class="big-btn" href="#">Sign Up&lt;/a> <span class="nobr"><i>&lt;!--<span>(z:1)</span>--></i></span>
+          &lt;/li>
+          &lt;li>&lt;a href="#">About&lt;/a>&lt;/li>
+          <i>&lt;!-- etc... --></i>
+        &lt;/ul>
+
+      &lt;/nav> <i>&lt;!-- end .nav-main --></i> 
+    
+      &lt;div class="header-social">
+        &lt;nav class="nav-social"> <i>&lt;!--<span>(z:1)</span>--></i>
+          &lt;ul>
+            &lt;li>&lt;a class="icon-twitter-sign" href="#">
+    &lt;span class="screen-reader-text">Twitter&lt;/span>&lt;/a>&lt;/li>
+            &lt;li>&lt;a class="icon-facebook-sign" href="#">
+    &lt;span class="screen-reader-text">Facebook&lt;/span>&lt;/a>&lt;/li>
+          &lt;/ul>
+        &lt;/nav> <i>&lt;!-- end .nav-social --></i>
+      &lt;/div> <i>&lt;!-- end .header-social --></i>
+    
+    &lt;/div> <i>&lt;!-- end .header-content --></i>
+  &lt;/div> <i>&lt;!-- end .header-wrap --></i>
+&lt;/header>
+  
+<i>&lt;!-- #top link here, not in fixed header --></i>
+&lt;div id="top" class="page-wrap">
+
+  <i>&lt;!-- :before adds "well" shadow L <span>(z:99)</span> - 
+  :after adds "well" shadow R <span>(z:99)</span>--></i>
+  &lt;section class="main well-sides">
+  &lt;/section> <i>&lt;!-- end .main --></i>
+
+&lt;/div> <i>&lt;!-- end .page-wrap --></i>
+
+</code></pre>
+    
+    <a href="#top">Back to top</a>
+  </section>
+
+</div> <!-- end .page-wrap -->
+
+
+<ul class='absolute' style='position: static'>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+
+
+<ol class="roundDown relative">
+  <li>Aloe</li>
+  <li>Bergamot</li>
+  <li>Calendula</li>
+  <li>Damiana</li>
+  <li>Elderflower</li>
+  <li>Feverfew</li>
+  <li>Ginger</li>
+  <li>Hops</li>
+  <li>Iris</li>
+  <li>Juniper</li>
+  <li>Kava kava</li>
+  <li>Lavender</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+  <li>Pennyroyal</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+  <li>Pennyroyal</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+</ol>
+
+<h3>2<sup>nd</sup> Column contains more items if there are a total odd number of items</h3>
+<ol class="roundUp relative">
+  <li>Aloe</li>
+  <li>Bergamot</li>
+  <li>Calendula</li>
+  <li>Damiana</li>
+  <li>Elderflower</li>
+  <li>Feverfew</li>
+  <li>Ginger</li>
+  <li>Hops</li>
+  <li>Iris</li>
+  <li>Juniper</li>
+  <li>Kava kava</li>
+  <li>Lavender</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+  <li>Pennyroyal</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+  <li>Pennyroyal</li>
+  <li>Marjoram</li>
+  <li>Nutmeg</li>
+  <li>Oregano</li>
+</ol>
+
+<h3> How it works</h3>
+<p>All items are absolutely positioned based on the line height using nth-child.  The items in the second column are selected with nth-child using a clever trick to select half the items.  This overrides the initial absolute position styling.  The second columns is staticly positioned and pushed right with margin.   I've used Sass to make generating these rules easier but its not required. One caveat is that you'll need to know the maximum number of items that might be held in a single column.  It will work for any number of items below that value.  In addition, this positioning will only work with items that will fit on a single line.</p>
+
+<ul class='flex'>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+
+
+<ul class='text'>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+</ul>
+
+
+<div class="wheel">
+  <ul class="umbrella">
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+    <li class="color"></li>
+  </ul>
+</div>
+
+<p class="dotted-border">
+   <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original Graphic" /> 
+   <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left"> 
+   <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle"> 
+   <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+</p>

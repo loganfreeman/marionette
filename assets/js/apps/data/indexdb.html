@@ -1,0 +1,82 @@
+<div id='indexdb-container'>
+        <div>
+            <h2>My Web Store
+                <div class = "action">
+                    <a id='loadAll'>Load all LocalDBs</a>
+                    <a id='deleteDb'>Delete DB</a>
+                </div>
+            </h2>
+        </div>
+        <div id = "tables">
+            <div class = "table-container">
+                <div class = "controls">
+                    <h2>Catalog</h2>
+                    <a id='loadFromLocal'>Load from Local DB</a>
+                    <a id='syncDb'>Sync to DB</a>
+                </div>
+                <table id = "catalog" width="400">
+                    <tr>
+                        <th class = "header key">
+                            Id
+                        </th>
+                        <th class = "header actions">
+                            Actions
+                        </th>
+                        <th class = "header value action">
+                            Object
+                            <div style ="float:right; width : 200px">
+                                <a id='showAll'>Show all</a>
+                                <a id='sortByPrice'>Sort by Price</a>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class = "table-container">
+                <div class = "controls">
+                    <h2>Cart</h2>
+                    <a id='loadCart'>Load from Local DB</a>
+                    <a id='cleartTable'>Clear Table</a>
+                </div>
+                <table id = "cart">
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                        <th>
+                            Object
+                            <div class = "action" style ="float:right; width : 200px">
+                                <a id='showAllCart'>Show all</a>
+                                <a id='sortByItemId'>Sort by ItemId</a>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div class = "table-container">
+                <div class = "controls">
+                    <h2>wishlist</h2>
+                    <a id='loadWhiteList'>Load from Local DB</a>
+                    <a id='cleatWhiteList'>Clear Table</a>
+                </div>
+                <table id = "wishlist">
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                        <th>
+                            Object
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id = "console">
+        </div>
+</div>

@@ -1,0 +1,11 @@
+#img-container {
+    overflow: hidden;
+    position: relative;
+    height: 440px;
+    width: 540px;
+    padding: 40px;
+  }
+ 
+  #img-container img {
+    position: absolute;
+  }

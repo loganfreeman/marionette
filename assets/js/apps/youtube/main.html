@@ -1,0 +1,29 @@
+<div id="page">
+
+
+<pre>$('#element').youTubeEmbed('http://www.youtube.com/watch?v=u1zgFlCw8Aw');
+
+// Or:
+
+$('#element').youTubeEmbed({
+	video			: 'http://www.youtube.com/watch?v=u1zgFlCw8Aw',
+	width			: 600, 		// Height is calculated automatically
+	progressBar	: false		// Hide the progress bar
+});
+</pre>
+
+	<p>The plugin uses YouTube's chromeless player, which allows you to build your own player controls. Changing the play/pause buttons or the progress bar is as easy as changing a couple of CSS values.</p>
+    
+    <blockquote>
+    <p>To test the plugin, fill in a YouTube Video URL in the textbox below and hit "Embed".</p>
+    <form action="" id='form'>
+        <fieldset>
+        	<input type="text" id="url" />
+            <input type="submit" id="submitButton" value="Embed" />
+            <small>(if embedding has been disabled on the video, it will not show up)</small>
+        </fieldset>
+    </form>
+	</blockquote>
+	<div id="player"></div>
+
+</div>

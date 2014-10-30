@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+<title>Angular-RequireJS sample app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="app/css/app.css" />
+<link href="app/css/bootstrap.min.css" rel="stylesheet">
+
+<link
+	href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+	rel="stylesheet">
+</head>
+<body>
+
+
+
+
+	<div class="container-fluid">
+
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+
+			<div class="container">
+				<div class="navbar-header">
+					<a href="../index.html" class="navbar-brand">Home</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown"><a href="" class="dropdown-toggle"
+							style="cursor: pointer" data-toggle="dropdown">Google Chart<b
+								class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#/generic/BarChart"><i class="fa fa-bars"></i>
+										Bar chart</a></li>
+								<li><a href="#/generic/ColumnChart"><i
+										class="fa fa-bar-chart-o"></i> Column chart</a></li>
+								<li><a href="#/generic/PieChart"><i
+										class="fa fa-circle"></i> Pie chart</a></li>
+								<li><a href="#/generic/LineChart">Line chart</a></li>
+								<li><a href="#/annotation">Annotation chart</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">All together</li>
+								<li><a href="#/fat">Mutli charts sample</a></li>
+							</ul>
+						</li>
+						<!-- Leaflet -->
+						<li class="dropdown"><a href="" class="dropdown-toggle"
+							style="cursor: pointer" data-toggle="dropdown">Leaflet<b
+								class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#/leaflet/DynamicLayers"><i class="fa fa-bars"></i>
+										Dynamic Layers</a></li>	
+										<li><a href="#/leaflet/Default"><i class="fa fa-bars"></i>
+										Default</a></li>	
+										<li><a href="#/leaflet/BaseLayers"><i class="fa fa-bars"></i>
+										Base Layers</a></li>	
+										<li><a href="#/leaflet/CombineTypeLayers"><i class="fa fa-bars"></i>
+										Combined Type Layers</a></li>								
+							</ul>
+						</li>
+						<!-- bootstrap ui -->
+						<li class="dropdown"><a href="" class="dropdown-toggle"
+							style="cursor: pointer" data-toggle="dropdown">BootStrap UI<b
+								class="caret"></b></a>
+							<ul class="dropdown-menu">								
+								<li><a href="#/carousel">Carousel</a></li>
+								<li><a href="#/modal" class="disabled-link">Modal</a></li>
+							</ul>
+						</li>
+						<li><a href="#/colorgame">Color Game</a></li>
+						<!--/ bootstrap ui -->
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+
+	<div class="row-fluid main">
+
+		<div class="span12">
+			<div class="row-fluid">
+				<div class="span12">
+					<h1>AngularJS + RequireJS</h1>
+					<ul class="menu">
+						<li><a href="#/view1">View 1</a></li>
+						<li><a href="#/view2">View 2</a></li>
+						<li><a href="#/memorygame">Memory Game</a></li>
+						<li><a href="#/treeview">TreeView</a></li>
+						<li><a href="#/dnddemo">Drag & Drop</a></li>
+						<li><a href="#/sudoku">Sudoku</a></li>
+					</ul>
+					<div ng-view></div>
+				</div>
+				<!--/span-->
+
+			</div>
+			<!--/row-->
+		</div>
+		<!--/span-->
+	</div>
+	<!--/row-->
+
+	<hr>
+
+	</div>
+
+	<script data-main="app/js/main" src="../assets/js/vendor/require.js"></script>
+</body>
+</html>

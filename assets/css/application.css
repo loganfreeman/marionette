@@ -1,0 +1,24 @@
+body {
+  padding-top: 0px; /* 60px to make the container make room for the navigation bar */
+}
+input {
+    padding: 5px;
+}
+.foo {
+    margin: 2px;
+}
+.center
+{
+margin-left:auto;
+margin-right:auto;
+width:70%;
+background-color:#b0e0e6;
+}
+canvas {
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
+.tetris {
+	background-color:white;
+}

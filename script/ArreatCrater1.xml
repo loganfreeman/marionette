@@ -1,0 +1,35 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <!-- In Town, use Waypoint to Arreat Crater 1 -->
+    <If condition="Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Using Waypoint to Arreat Crater Level 1" />
+      <UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="6" />
+    </If>
+    <!-- In Arreat Crater 1, Explore large areas only -->
+    <If condition="CurrentWorldId == 81049">
+      <WaitTimer questId="101758" stepId="1" waitTime="1000" />
+      <LogMessage questId="101758" stepId="1" output="Exploring Arreat Crater Level 1" />
+      <TrinityExploreDungeon questId="101758" stepId="1" until="ExitFound" 
+                             exitNameHash="2083727832" boxSize="80" SetNodesExploredAutomatically="true"
+                             boxTolerance="0.01" pathPrecision="40" timeoutType="GoldInactivity" townPortalOnTimeout="True" timeoutValue="60">
+        <PrioritizeScenes>
+          <PriorityScene sceneName="S_Exit_02_E01_N01" pathPrecision="40" />
+          <PriorityScene sceneName="S_Exit_01_E01_N01" pathPrecision="40" />
+        </PrioritizeScenes>
+        <IgnoreScenes>
+          <IgnoreScene sceneId="120062" />
+          <IgnoreScene sceneName="Entrance" />
+        </IgnoreScenes>
+      </TrinityExploreDungeon>
+      <LogMessage questId="101758" stepId="1" output="Finished Arreat Crater Level 1, returning to town" />
+      <WaitTimer questId="101758" stepId="1" waitTime="2000" />
+      <UseTownPortal questId="101758" stepId="1" />
+    </If>
+    <LogMessage output="Loading next profile..." />
+    <LoadProfile profile="Act3LoadRandom.xml" />
+  </Order>
+</Profile>

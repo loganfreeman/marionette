@@ -1,0 +1,19 @@
+.box {
+    width: 20%;
+    height: 25%;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in;
+    -webkit-transform: translateZ(0);
+}
+
+#particlescanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}

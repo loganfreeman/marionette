@@ -1,0 +1,51 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+	<Order>
+		<!-- In Town, use Waypoint to Tower of the Damned 1 -->
+		<If condition="Me.IsInTown">
+			<LogMessage questId="101758" stepId="1" output="Using Waypoint to Tower of the Damned Level 1" />
+			<UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="7" />
+		</If>
+		<!-- Clear Tower of the Damned 1, Use portal to Tower of the Damned Level 2 -->
+		<If condition="CurrentWorldId == 79401">
+			<LogMessage questId="101758" stepId="1" output="Clearing Tower of the Damned Level 1" />
+			<SafeMoveTo questId="101758" stepId="1" x="1223.544" y="1058.872" z="-19.9" pathPointLimit="1500" />
+			<SafeMoveTo questId="101758" stepId="1" x="1124.477" y="1275.91" z="-39.06898" pathPointLimit="1500" />
+			<SafeMoveTo questId="101758" stepId="1" x="947.6447" y="1105.327" z="-29.90001" pathPointLimit="1500" />
+			<SafeMoveTo questId="101758" stepId="1" x="1105.643" y="1046.139" z="-78.24919" pathPointLimit="1500" />
+			<LogMessage questId="101758" stepId="1" output="Using portal to Tower of the Damned Level 2" />
+      <WaitTimer questId="101758" stepId="1" waitTime="5000" />
+      <MoveToActor questId="101758" stepId="1" actorId="176001" isPortal="True" interactRange="20"  destinationWorldId="80763" x="1105.643" y="1046.139" z="-78.24919" pathPointLimit="1500" />
+		</If>
+		<!-- Clear Tower of the Damned 2 Version 1 -->
+		<If condition="CurrentWorldId == 80763 and IsSceneLoaded(120300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Tower of the Damned Level 2 Version 2" />
+
+      <SafeMoveTo questId="101758" stepId="1" x="1104" y="1048" z="-68" pathPointLimit="1500" allowLongDistance="True" />
+      
+			<LogMessage questId="101758" stepId="1" output="Finished clearing Tower of the Damned Level 2 version 2, returning to Town" />
+			<WaitTimer questId="101758" stepId="1" waitTime="5000" /> 
+			<UseTownPortal questId="101758" stepId="1" />
+		</If>
+		<!-- Clear Tower of the Damned 2 Version 2 -->
+		<If condition="CurrentWorldId == 80763 and IsSceneLoaded(129725)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Tower of the Damned Level 2 Version 2" />
+			<!--<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1044" y="892" z="-39" statusText="TD2-2-1" />
+			<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="943" y="1090" z="-39" statusText="TD2-2-2" />
+			<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1108" y="1275" z="-59" statusText="TD2-2-3" />
+			<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1234" y="1202" z="-59"  statusText="TD2-2-4" />
+
+			<SafeMoveTo questId="101758" stepId="1" pathPrecision="20" x="1271" y="1016" z="-69" statusText="TD2-2-5" />-->
+			<SafeMoveTo questId="101758" stepId="1" x="1100" y="880" z="-104" pathPointLimit="1500" statusText="TD2-2-6" />
+
+			<LogMessage questId="101758" stepId="1" output="Finished clearing Tower of the Damned Level 2 version 2, returning to Town" />			
+			<WaitTimer questId="101758" stepId="1" waitTime="5000" /> 
+			<UseTownPortal questId="101758" stepId="1" />
+		</If>
+		<LogMessage output="Loading next profile..." />
+		<LoadProfile profile="Act3LoadRandom.xml" />
+	</Order>
+</Profile>

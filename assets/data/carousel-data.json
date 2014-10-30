@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "src": "assets/js/apps/carousel/img/img1.jpg",
+            "title": "Image 1"
+        },
+        {
+            "src": "assets/js/apps/carousel/img/img2.jpg",
+            "title": "Image 2"
+        },
+        {
+            "src": "assets/js/apps/carousel/img/img3.jpg",
+            "title": "Image 3"
+        },
+        {
+            "src": "assets/js/apps/carousel/img/img4.jpg",
+            "title": "Image 4"
+        },
+        {
+            "src": "assets/js/apps/carousel/img/img5.jpg",
+            "title": "Image 5"
+        },
+        {
+            "src": "assets/js/apps/carousel/img/img6.jpg",
+            "title": "Image 6"
+        }
+    ]
+}

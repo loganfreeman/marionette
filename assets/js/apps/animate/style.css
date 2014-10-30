@@ -1,0 +1,67 @@
+/*----------------------------
+	Photos
+-----------------------------*/
+
+
+#photos{
+	margin:0 auto;
+	padding-top:120px;
+	width:450px;
+	position:relative;
+}
+
+#photos li{
+	position:absolute;
+	width:450px;
+	height:450px;
+	overflow:hidden;
+	background-color:#fff;
+	box-shadow: 1px 1px 1px #ccc;
+	z-index:10;
+	
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+#photos li a{
+	position:absolute;
+	top:6px;
+	left:6px;
+	right:6px;
+	bottom:6px;
+	background-size: cover;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+
+/*----------------------------
+	Previous / Next arrows
+-----------------------------*/
+
+
+a.arrow{
+	width:33px;
+	height:33px;
+	background:url('img/arrows.png') no-repeat;
+	position:absolute;
+	top:340px;
+	opacity:0.9;
+}
+
+a.arrow:hover{
+	opacity:1;
+}
+
+a.arrow.previous{
+	left:50%;
+	background-position:0 0;
+	margin-left:-340px;
+}
+
+a.arrow.next{
+	right:50%;
+	background-position:-33px 0;
+	margin-right:-340px;
+}

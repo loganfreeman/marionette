@@ -1,0 +1,36 @@
+#stellar-container {
+	background-color: #051729;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#051729)); 
+	background-image: -webkit-linear-gradient(top, #000000, #051729); 
+	background-image:    -moz-linear-gradient(top, #000000, #051729); 
+	background-image:     -ms-linear-gradient(top, #000000, #051729); 
+	background-image:      -o-linear-gradient(top, #000000, #051729); 
+	background-image:         linear-gradient(top, #000000, #051729);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	color: white;
+	font: 20px/30px helvetica, arial, sans-serif;
+}
+
+
+.sun {
+	background-color: #5C550A;
+	border-radius: 100px;
+	box-shadow: 0 0 30px #5C550A;
+	height: 200px;
+	left: 1150px;
+	position: fixed;
+	top: 0px;
+	width: 200px;
+	z-index: 0;
+}
+.planet {
+	background-color: #000000;
+	border-radius: 1000px;
+	left: -650px;
+	height: 2000px;
+	position: fixed;
+	top: 0px;
+	width: 2000px;
+	z-index: 0;
+}

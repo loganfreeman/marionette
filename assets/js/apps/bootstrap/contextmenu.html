@@ -1,0 +1,62 @@
+    <div class="container">
+    	<div class="span7">
+        <h1>Demo</h1>
+	      <p>Right click inside the box to trigger the menu</p>
+
+        <h5>Demo 1</h5>
+        <p>Using <code>data-toggle="context"</code> to attach a context-menu</p>
+	      <!-- Element div that needs a custom context menu -->
+	      <div id="context" data-toggle="context" data-target="#context-menu" style="height:300px;width:650px;border:1px solid #ddd">
+	      </div>
+
+	      <!-- Your custom menu with dropdown-menu as default styling -->
+	      <div id="context-menu">
+	      	<ul class="dropdown-menu" role="menu">
+            <li><a tabindex="-1">Action</a></li>
+	           <li><a tabindex="-1">Another action</a></li>
+	           <li><a tabindex="-1">Something else here</a></li>
+	           <li class="divider"></li>
+	           <li><a tabindex="-1">Separated link</a></li>
+	      	</ul>
+	      </div>
+
+        <h5>Demo 2</h5>
+        <div id="main">This is an area where the context menu is active <span style="background-color: #cecece">However, we wont allow it here.</span> But anywhere else in this text should be perfectly fine. This one is started with only javascript</div>
+   
+        <div id="context-menu2">
+          <ul class="dropdown-menu" role="menu">
+              <li><a tabindex="-1">Action</a></li>
+              <li><a tabindex="-1">Another action</a></li>
+              <li><a tabindex="-1">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1">Separated link</a></li>
+          </ul>
+        </div>
+
+        <h5>Demo 3</h5>
+        <p>Show the menu name of the item that was selected</p>
+        <!-- Element div that needs a custom context menu -->
+        <div id="context2" style="height:300px;width:650px;border:1px solid #ddd">
+        </div>
+
+	      <h2>Usage</h2>
+	      <h3>Via data attributes</h3>
+	      <p>Add <code>data-toggle="context"</code> to an element that needs a context menu.</p>
+	      <pre class="prettyprint linenums">
+&lt;div id="context" data-toggle="context" data-target="#context-menu"&gt;
+  ...
+&lt;/div&gt;</pre>
+			<p>Your menu <code>&lt;ul&gt;</code> element must have a <code>dropdown-menu</code> class.
+			<pre class="prettyprint linenums">
+&lt;div id="context-menu"&gt;
+  &lt;ul class="dropdown-menu" role="menu"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+	...
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+		<h3>Via Javascript</h3>
+	    <p>Call the context menus via Javascript:</p>
+	    <pre class="prettyprint linenums">
+$('.context').contextmenu();</pre>
+    </div> <!-- /container -->

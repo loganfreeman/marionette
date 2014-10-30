@@ -1,0 +1,133 @@
+{
+
+	"tags": {
+
+		"platform": {
+
+			"html":   "platform/html",
+			"nodejs": "platform/nodejs",
+			"v8gl":   "platform/v8gl",
+			"webgl":  "platform/webgl"
+
+		}
+
+	},
+
+	"tree": {
+
+		"Jukebox": [ "js" ],
+
+		"platform": {
+
+			"html": {
+
+				"net": {
+					"Client": [ "js" ]
+				},
+
+				"Input": [ "js" ],
+				"Renderer": [ "js" ],
+				"Track": [ "js" ],
+				"Viewport": [ "js" ]
+
+			},
+
+			"nodejs": {
+
+				"net": {
+					"Protocol": [ "js" ],
+					"Remote": [ "js" ],
+					"Server": [ "js" ]
+				},
+
+				"Input": [ "js" ],
+				"Renderer": [ "js" ],
+				"Track": [ "js" ],
+				"Viewport": [ "js" ]
+
+			},
+
+			"v8gl": {
+
+				"game": {
+					"Loop": [ "js" ]
+				},
+
+				"Input": [ "js" ],
+				"Renderer": [ "js" ],
+				"Track": [ "js" ],
+				"Viewport": [ "js" ]
+
+			},
+
+			"webgl": {
+
+			}
+
+		},
+
+		"data": {
+			"BitON": [ "js" ],
+			"PO": [ "js" ]
+		},
+
+		"event": {
+			"Bus": [ "js" ],
+			"Emitter": [ "js" ],
+			"Promise": [ "js" ]
+		},
+
+		"game": {
+			"Background": [ "js" ],
+			"Entity": [ "js" ],
+			"Jukebox": [ "js" ],
+			"Layer": [ "js" ],
+			"Loop": [ "js" ],
+			"Main": [ "js" ],
+			"Sprite": [ "js" ],
+			"State": [ "js" ]
+		},
+
+		"math": {
+			"Matrix4": [ "js" ],
+			"Quaternion": [ "js" ],
+			"Vector2": [ "js" ],
+			"Vector3": [ "js" ],
+			"Vector4": [ "js" ]
+		},
+
+		"net": {
+
+			"client": {
+				"RoomService": [ "js" ]
+			},
+
+			"remote": {
+				"RoomService": [ "js" ]
+			}
+
+		},
+
+		"ui": {
+			"Button": [ "js" ],
+			"Connector": [ "js" ],
+			"Entity": [ "js" ],
+			"Input": [ "js" ],
+			"Layer": [ "js" ],
+			"Select": [ "js" ],
+			"Slider": [ "js" ],
+			"Textarea": [ "js" ]
+		},
+
+		"verlet": {
+			"AngleConstraint": [ "js" ],
+			"DistanceConstraint": [ "js" ],
+			"Particle": [ "js" ],
+			"Tire": [ "js" ],
+			"Vector2": [ "js" ],
+			"World": [ "js" ]
+		}
+
+	}
+
+}

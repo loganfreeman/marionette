@@ -1,0 +1,48 @@
+button.submit {
+	width: 100%;
+	padding: 10px 0;
+	cursor: pointer;
+	margin: 0;
+}
+
+button.submit em {
+	font-size: 11px;
+	font-style: normal;
+	color: #999;
+}
+
+td label {
+	cursor: pointer;
+	display: inline-block;
+}
+
+select {
+	width: 220px;
+}
+
+table#options {
+	float: right;
+}
+
+table#options td {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.CodeMirror {
+	border: 1px solid #ccc;
+	height: 450px;
+	font-size: 90%;
+	margin-bottom: 6px;
+	background: white;
+}
+
+#source {
+	width: 100%;
+}
+
+td p {
+	margin-left: 40px;
+	margin-right: 40px;
+	display: inline-block;
+}

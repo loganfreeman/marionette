@@ -1,0 +1,40 @@
+<div class="row">
+	<h2>This is a map with dynamic addition and deletion of layers</h2>
+</div>
+<div class="row">
+	<p>
+		<leaflet center="mapDynamicLayers.london"
+			layers="mapDynamicLayers.layers" height="480px" width="640px"></leaflet>
+	</p>
+</div>
+<div class="row">
+	<p>
+		<button type="button" class="btn btn-default"
+			ng-click="removeOsmLayer()" ng-disabled="!existsOsmLayer()">Remove
+			OSM Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="removeCycleLayer()" ng-disabled="!existsCycleLayer()">Remove
+			Cycle Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="removeCloud1Layer()" ng-disabled="!existsCloud1Layer()">Remove
+			Cloudmade 1 Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="removeCloud2Layer()" ng-disabled="!existsCloud2Layer()">Remove
+			Cloudmade 2 Layer</button>
+	</p>
+</div>
+<div class="row">
+	<p>
+		<button type="button" class="btn btn-default" ng-click="addOsmLayer()"
+			ng-disabled="existsOsmLayer()">Add OSM Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="addCycleLayer()" ng-disabled="existsCycleLayer()">Add
+			Cycle Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="addCloud1Layer()" ng-disabled="existsCloud1Layer()">Add
+			Cloudmade 1 Layer</button>
+		<button type="button" class="btn btn-default"
+			ng-click="addCloud2Layer()" ng-disabled="existsCloud2Layer()">Add
+			Cloudmade 2 Layer</button>
+	</p>
+</div>

@@ -1,0 +1,41 @@
+<p>Try it out:</p>
+
+<div id="dropzone"><form action="post_file.php" class="dropzone" id="demo-upload">
+</form></div>
+
+<p>Download the standalone <a href="https://raw.github.com/enyo/dropzone/master/downloads/dropzone.js">dropzone.js</a>
+and include it like this:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;./path/to/dropzone.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+<p>Dropzone is now activated and available as <code>window.Dropzone</code>.</p>
+
+<blockquote>
+<p>Dropzone does <em>not</em> handle your file uploads on the server. You have to implement
+the code to receive and store the file yourself.</p>
+</blockquote>
+
+<h2 id="toc_2">With RequireJS</h2>
+
+<p>Dropzone is also available as an <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMD module</a>
+for <a href="http://requirejs.org">RequireJS</a>.</p>
+
+<p>You can find the <a href="https://raw.github.com/enyo/dropzone/master/downloads/dropzone-amd-module.js">dropzone-amd-module</a>
+in the downloads folder.</p>
+
+<h1 id="toc_3">Usage</h1>
+
+<p>The typical way of using dropzone is by creating a form element with the class <code>dropzone</code>:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;/file-upload&quot;</span>
+      <span class="na">class=</span><span class="s">&quot;dropzone&quot;</span>
+      <span class="na">id=</span><span class="s">&quot;my-awesome-dropzone&quot;</span><span class="nt">&gt;&lt;/form&gt;</span>
+</code></pre></div>
+<p>That&#39;s it. Dropzone will find all form elements with the class dropzone,
+automatically attach itself to it, and upload files dropped into it to the
+specified <code>action</code> attribute. The uploaded files can be handled just as if
+there would have been a html input like this:</p>
+
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span> <span class="na">name=</span><span class="s">&quot;file&quot;</span> <span class="nt">/&gt;</span>
+</code></pre></div>
+
+<p>If you want another name than <code>file</code> you can <a href="#toc_6">configure dropzone</a>
+with the option <code>paramName</code>.</p>

@@ -1,0 +1,14 @@
+<div id="bounds" style="height: 2000px; width: 4000px; ">
+   <div id="offset" style="position: fixed; "></div>
+   <div class="scrolling" style="position: absolute; top: 50%; left: 50%; border: 1px solid silver; background-color: lime; "></div>
+</div>
+
+
+<div style="position: fixed; left: 300px; top: 60px; width: 800px; ">
+
+   Adjust the <code>offset</code> option to affect the logical size of the viewport.
+   This will determine when the element is inside/outside of that area.  The box below
+   represents the adjusted bounds of the window using a 40% offset for both left and top.
+   Scrolling the box out of this area will trigger the out event which will use the goto
+   method to animate it back to the center.
+</div>

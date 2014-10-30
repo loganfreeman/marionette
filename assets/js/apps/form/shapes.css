@@ -1,0 +1,319 @@
+.circle { 
+width: 140px;
+height: 140px;
+background: #cb1d1e; 
+-moz-border-radius: 70px; 
+-webkit-border-radius: 70px; 
+border-radius: 70px;
+margin: 15px 0 0 20px;
+}
+
+
+.square {
+width: 120px; 
+height: 120px; 
+background: #2d9dcd; 
+margin: 3px 0 0 30px;
+}
+
+
+.oval {
+width: 160px; 
+height: 80px; 
+background: #a434d8; 
+-moz-border-radius: 80px / 40px; 
+-webkit-border-radius: 80px / 40px; 
+border-radius: 80px / 40px; 
+margin: 40px 0 0 10px;
+}
+
+.up-triangle {
+width: 0; 
+height: 0; 
+border-left: 60px solid transparent; 
+border-right: 60px solid transparent; 
+border-bottom: 120px solid #73bd2c;
+margin: 20px 0 0 30px; 
+}
+
+
+.down-triangle { 
+width: 0; 
+height: 0; 
+border-left: 60px solid transparent; 
+border-right: 60px solid transparent; 
+border-top: 120px solid #e24ebe;
+margin: 20px 0 0 30px; 
+} 
+
+
+.left-triangle {
+width: 0;
+height: 0;
+border-top: 60px solid transparent;
+border-right: 120px solid #eda634;
+border-bottom: 60px solid transparent;
+margin: 20px 0 0 30px; 
+}
+
+.right-triangle {
+width: 0;
+height: 0;
+border-top: 60px solid transparent;
+border-left: 120px solid #cb1d1e;
+border-bottom: 60px solid transparent;
+margin: 20px 0 0 30px; 
+}
+
+.trapezium {
+height: 0; 
+width: 80px;
+border-bottom: 80px solid #2d9dcd;
+border-left: 40px solid transparent;
+border-right: 40px solid transparent;
+margin: 30px 0 0 10px; 
+}
+
+.diamond {
+width: 100px; 
+height: 100px; 
+background: #a434d8;
+margin: 80px 0 0 90px;
+/* Rotate */
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+/* Rotate Origin */
+-webkit-transform-origin: 0 100%;
+-moz-transform-origin: 0 100%;
+-ms-transform-origin: 0 100%;
+-o-transform-origin: 0 100%;
+transform-origin: 0 100%;
+}
+
+
+.rectangle {
+width: 140px; 
+height: 80px; 
+background: #73bd2c;
+margin: 20px 0 0 20px;
+}
+
+
+.parallelogram {
+width: 130px; 
+height: 75px;
+background: #e24ebe;
+-webkit-transform: skew(20deg); 
+-moz-transform: skew(20deg); 
+-o-transform: skew(20deg);
+transform: skew(20deg);
+margin: 30px 0 0 25px;  
+}
+
+
+.twelve-point-star {
+  height: 100px;
+  width: 100px;
+  background: #eda634;
+  position: absolute;
+margin: 40px 0 0 30px;
+}
+
+
+.twelve-point-star:before {
+   content:"";
+   position: absolute;
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  height: 100px;
+  width: 100px;
+  background: #eda634;
+}
+
+
+.twelve-point-star:after {
+  content:"";
+  position: absolute;
+  -moz-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  height: 100px;
+  width: 100px;
+  background: #eda634;
+}
+
+
+.six-point-star {
+   position: absolute;
+   width: 0; 
+   height: 0; 
+   border-left: 50px solid transparent; 
+   border-right: 50px solid transparent; 
+   border-bottom: 80px solid #cb1d1e;
+   margin: 20px 0 0 30px;
+}
+
+
+.six-point-star:after {
+   content:"";
+   position: absolute;
+   width: 0; 
+   height: 0; 
+   border-left: 50px solid transparent; 
+   border-right: 50px solid transparent; 
+   border-top: 80px solid #cb1d1e;
+   margin: 30px 0 0 -50px;
+}
+
+
+.octagon {
+   width: 100px; 
+   height: 100px; 
+   background: #2d9dcd; 
+   margin: 30px 0 0 40px;
+}
+
+.octagon:before {
+   content:"";
+   position: absolute; 
+   border-bottom: 30px solid #2d9dcd; 
+   border-left: 30px solid #fff; 
+   border-right: 30px solid #fff; 
+   width: 40px;
+   height: 0;
+}
+
+.octagon:after {
+   content:"";
+   position: absolute; 
+   border-top: 30px solid #2d9dcd; 
+   border-left: 30px solid #fff; 
+   border-right: 30px solid #fff; 
+   width: 40px;
+   margin: 70px 0 0 0;
+   height: 0;
+}
+
+
+.speech-bubble {
+   width: 120px; 
+   height: 80px; 
+   background: #a434d8;
+   margin: 20px 0 0 30px;
+   position: absolute;
+   -moz-border-radius: 10px; 
+   -webkit-border-radius: 10px; 
+   border-radius: 10px;
+}
+
+.speech-bubble:before {
+   content:"";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-top: 13px solid transparent;
+   border-right: 26px solid #a434d8;
+   border-bottom: 13px solid transparent;
+   margin: 13px 0 0 -25px;
+}
+
+
+
+.easter-egg {
+   display:block;
+   width:126px; /* width has to be 70% of height */
+   /* could use width:70%; in a square container */
+   height:180px;
+   background-color:#73bd2c;
+
+   /* beware that Safari needs actual px for border radius (bug) */
+   -webkit-border-radius:63px 63px 63px 63px/108px 108px 72px 72px;
+
+   /* fails in Safari, but overwrites in Chrome */
+   border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+margin: 20px 0 0 20px;
+}
+
+
+.eq-triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 104px solid #e24ebe;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+margin: 20px 0 0 30px;
+}
+
+.biohazard {
+margin: 20px 0 0 20px;
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid black;
+  border-top: 60px solid black;
+  border-left: 60px solid yellow;
+  border-right: 60px solid yellow;
+  -moz-border-radius: 60px; 
+  -webkit-border-radius: 60px; 
+  border-radius: 60px;
+}
+
+.pacman {
+margin: 20px 0 0 20px;
+  width: 0px;
+  height: 0px;
+  border-right: 60px solid transparent;
+  border-top: 60px solid yellow;
+  border-left: 60px solid yellow;
+  border-bottom: 60px solid yellow;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+
+}
+
+.heart { 
+	position: relative;
+	margin: 20px 0 0 20px;
+}
+.heart:before, .heart:after {
+	position: absolute;
+	content: "";
+	left: 70px; top: 0;
+	width: 70px;
+	height: 115px;
+	background: red;
+	-moz-border-radius: 50px 50px 0 0;
+	border-radius: 50px 50px 0 0;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-transform-origin: 0 100%;
+	-moz-transform-origin: 0 100%;
+	-ms-transform-origin: 0 100%;
+	-o-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+}
+.heart:after { 
+	left: 0; 
+	-webkit-transform: rotate(45deg); 
+	-moz-transform: rotate(45deg); 
+	-ms-transform: rotate(45deg); 
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	-ms-transform-origin: 100% 100%;
+	-o-transform-origin: 100% 100%;
+	transform-origin :100% 100%;
+}

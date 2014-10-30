@@ -1,0 +1,1 @@
+<textarea id="cities" cols='60' rows='10'></textarea>

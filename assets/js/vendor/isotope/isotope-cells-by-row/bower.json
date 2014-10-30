@@ -1,0 +1,17 @@
+{
+  "name": "isotope-cells-by-row",
+  "main": "cells-by-row.js",
+  "version": "0.1.2",
+  "authors": [
+    "David DeSandro"
+  ],
+  "description": "cellsByRow layout mode for Isotope",
+  "dependencies": {
+    "isotope": ">=2.0.0-beta.6"
+  },
+  "keywords": [
+    "layout",
+    "mode",
+    "isotope"
+  ]
+}

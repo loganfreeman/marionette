@@ -1,0 +1,16 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <WaitTimer waitTime="5000" />
+
+    <If condition="not Me.IsInTown">
+      <UseTownPortal questId="1" />
+      <LoadProfile questId="1" profile="Act3LoadRandom.xml" leaveGame="True" />
+    </If>
+    <LoadProfile questId="1" profile="Act3LoadRandom.xml" leaveGame="False" />
+    <WaitTimer waitTime="5000" />
+  </Order>
+</Profile>

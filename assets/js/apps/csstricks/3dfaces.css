@@ -1,0 +1,227 @@
+.separator {
+  margin-top: 40px;
+}
+
+/* 3D Cube */
+
+.space3d {
+  -webkit-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  display: inline-block;
+}
+
+._3dbox {
+  display: inline-block;
+  -webkit-transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-15deg) rotateY(15deg);
+  -ms-transform: rotateX(-15deg) rotateY(15deg);
+  transform: rotateX(-15deg) rotateY(15deg);
+}
+
+._3dface {
+  overflow: hidden;
+  position: absolute;
+  border: 1px solid #888;
+  background: #FFF;
+  -webkit-box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.3);
+  color: #333;
+  line-height: 250px;
+  opacity: 0.8;
+}
+
+._3dface--front {
+  width: 250px;
+  height: 250px;
+  -webkit-transform: translate3d(0, 0, 125px);
+  -ms-transform: translate3d(0, 0, 125px);
+  transform: translate3d(0, 0, 125px);
+}
+
+._3dface--top {
+  width: 250px;
+  height: 250px;
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 125px);
+  -ms-transform: rotateX(90deg) translate3d(0, 0, 125px);
+  transform: rotateX(90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--bottom {
+  width: 250px;
+  height: 250px;
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 125px);
+  -ms-transform: rotateX(-90deg) translate3d(0, 0, 125px);
+  transform: rotateX(-90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--left {
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  margin-left: -125px;
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 125px);
+  -ms-transform: rotateY(-90deg) translate3d(0, 0, 125px);
+  transform: rotateY(-90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--right {
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  margin-left: -125px;
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, 125px);
+  -ms-transform: rotateY(90deg) translate3d(0, 0, 125px);
+  transform: rotateY(90deg) translate3d(0, 0, 125px);
+}
+
+._3dface--back {
+  width: 250px;
+  height: 250px;
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 125px);
+  -ms-transform: rotateY(180deg) translate3d(0, 0, 125px);
+  transform: rotateY(180deg) translate3d(0, 0, 125px);
+}
+
+#radio-left:checked ~ .space3d ._3dbox {
+  -webkit-transform: rotateY(90deg);
+  -ms-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+#radio-right:checked ~ .space3d ._3dbox {
+  -webkit-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+
+#radio-bottom:checked ~ .space3d ._3dbox {
+  -webkit-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+}
+
+#radio-top:checked ~ .space3d ._3dbox {
+  -webkit-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+#radio-back:checked ~ .space3d ._3dbox {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+._3dface--front {
+  background: url(http://2.bp.blogspot.com/-JxKfUObT4L8/UYYaRhRNJmI/AAAAAAAAAUY/243IlIOKj2c/s320/brahama.jpg);
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+._3dface--left {
+  background: url(http://4.bp.blogspot.com/-HGFGdCGFTkw/UXVq6PNmS4I/AAAAAAAAAUE/hBNmVCOVlu4/s400/durga+wm.jpg);
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+._3dface--right {
+  background: url(http://2.bp.blogspot.com/-yrnBD8wJ-g0/UNRtPF8pR7I/AAAAAAAAATE/YSpLvqTNyoQ/s320/A+P+J+abdul+kalam_+swm+.jpg);
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+._3dface--top {
+  background: url(http://3.bp.blogspot.com/-mySu8dy4ux4/ULiVKS4YBbI/AAAAAAAAAR0/vBMi_4dAPDE/s400/rajiv+dixit+s.jpg);
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+._3dface--bottom {
+  background: url(http://2.bp.blogspot.com/-B9QWFtc9bVY/UHFs7y9GqkI/AAAAAAAAARI/YLDkoHYr3g4/s400/Gau+wm.jpg);
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+._3dface--back {
+  background: url(http://3.bp.blogspot.com/-ofufG97PpiU/UBzXu-1AisI/AAAAAAAAAP0/iDnhOh-vrb8/s400/shiv+ji.jpg);
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+}
+
+.cube {
+  margin: 100px;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  -webkit-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: red;
+  opacity: 0.7;
+}
+
+.cube-face-front {
+  background: yellow;
+  -webkit-transform: translate3d(0, 0, 75px);
+  -ms-transform: translate3d(0, 0, 75px);
+  transform: translate3d(0, 0, 75px);
+}
+
+.cube-face-back {
+  background: orange;
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 75px);
+  -ms-transform: rotateY(180deg) translate3d(0, 0, 75px);
+  transform: rotateY(180deg) translate3d(0, 0, 75px);
+}
+
+.cube-face-left {
+  background: green;
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 75px);
+  -ms-transform: rotateY(-90deg) translate3d(0, 0, 75px);
+  transform: rotateY(-90deg) translate3d(0, 0, 75px);
+}
+
+.cube-face-right {
+  background: magenta;
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, 75px);
+  -ms-transform: rotateY(90deg) translate3d(0, 0, 75px);
+  transform: rotateY(90deg) translate3d(0, 0, 75px);
+}
+
+.cube-face-top {
+  background: blue;
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 75px);
+  -ms-transform: rotateX(90deg) translate3d(0, 0, 75px);
+  transform: rotateX(90deg) translate3d(0, 0, 75px);
+}
+
+.cube-face-bottom {
+  background: red;
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 75px);
+  -ms-transform: rotateX(-90deg) translate3d(0, 0, 75px);
+  transform: rotateX(-90deg) translate3d(0, 0, 75px);
+}

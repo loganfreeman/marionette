@@ -1,0 +1,731 @@
+<Profile>
+	<Name>Act 4 Bounties and Rift</Name>
+	<GameParams act="OpenWorld" resumeFromSave="False" isPrivate="True" numGames="-1"  />
+	<KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+
+	<TargetBlacklists>
+	<!-- <TargetBlacklist actorId="365097"/> Cursed Chest -->
+	<TargetBlacklist actorId="355635"/> <!-- Furnace -->
+	<TargetBlacklist actorId="103919"/> <!-- Demonic Vessels -->
+	<TargetBlacklist actorId="58317"/> <!-- Tool/Weapon Rack -->
+	<TargetBlacklist actorId="289794"/> <!-- X1_PandExt_ArmorRack-7385 -->
+	<TargetBlacklist actorId="212491"/> <!-- Pony Clouds -->
+	<TargetBlacklist actorId="289756"/> <!-- Armor Racks -->
+	<TargetBlacklist actorId="5758"/> <!-- some buged chest -->
+	<TargetBlacklist actorId="464"/> <!-- some buged chest -->
+	<TargetBlacklist actorId="357299"/> <!-- Weapon Rack -->
+	<TargetBlacklist actorId="357297"/> <!-- Weapon Rack -->
+	<TargetBlacklist actorId="357295"/> <!-- Weapon Rack -->
+	<TargetBlacklist actorId="357306"/> <!-- Weapon Rack -->
+	<TargetBlacklist actorId="357301"/> <!-- Weapon Rack -->
+	<TargetBlacklist actorId="291743"/> <!-- Weapon Rack -->
+	</TargetBlacklists>
+
+<Order>
+<WaitTimer questId="1" stepId="1" waitTime="500" />
+<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" /> 
+<While condition="True">
+<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	<!-- Act 4 Bounties -->
+	<LogMessage quest="1" step="1" output="Act 4 Bounties" /> 
+	
+	<!-- Waypoint [41] -->
+
+	<HaveBounty questId="369900">
+		<While condition="CurrentWorldId != 109513">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>  				
+		<If condition="CurrentWorldId == 109513">		
+			<ToggleTargeting questId="1" combat="true" looting="true" killRadius="15" lootRadius="10" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="368169" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+			<PrioritizeScenes>
+				<PriorityScene sceneName="a4dun_garden_level_01_E01_S04" pathPrecision="40" />
+				<PriorityScene sceneName="a4dun_garden_level_01_E03_S03" pathPrecision="40" />
+				<PriorityScene sceneName="a4dun_garden_level_01_E04_S02" pathPrecision="40" />          
+			</PrioritizeScenes>
+			<IgnoreScenes>
+				<IgnoreScene sceneName="a4dun_garden_level_01_E04S05" />
+				<IgnoreScene sceneName="a4dun_garden_level_01_E05S05" />
+				<IgnoreScene sceneName="a4dun_garden_level_01_E05S04" />
+				<IgnoreScene sceneName="a4dun_garden_level_01_E04S04" />    
+			</IgnoreScenes>
+			</TrinityExploreDungeon>
+			<MoveToActor questId="1" stepId="1" actorId="368169"/>
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="90" lootRadius="90" />
+			<While condition="ActorExistsAt(368169, Me.Position.X, Me.Position.Y, Me.Position.Z, 150)">
+				<MoveToActor questId="1" stepId="1" actorId="368169"/>
+			</While>
+		</If>
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349262">	
+		<While condition="CurrentWorldId != 109513 and CurrentWorldId != 166640">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+   		<If condition="CurrentWorldId == 109513">
+      			<MoveToActor questId="1" stepId="1" actorId="161276" isPortal="True" destinationWorldId="166640" x="990" y="268" z="18" />
+      			<WaitTimer questId="1" stepId="1" waitTime="1000" />
+    		</If>
+    		<If condition="CurrentWorldId == 166640">
+      			<SafeMoveTo questId="1" stepId="1" name="Rakanoth" pathPrecision="10" x="358" y="352" z="0" />
+	  		<While condition="Me.IsInBossEncounter">
+				<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	  		</While>  
+      			<SafeMoveTo questId="1" stepId="1" name="Rakanoth" pathPrecision="10" x="358" y="352" z="0" />
+    		</If>
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>	
+
+	<HaveBounty  questId="349258">
+		<While condition="CurrentWorldId != 109513">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty  questId="349256">
+		<While condition="CurrentWorldId != 109513">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+	
+	<HaveBounty  questId="349260">
+		<While condition="CurrentWorldId != 109513">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty  questId="357131">
+		<While condition="CurrentWorldId != 109513">
+			<UseWaypoint waypointNumber="41" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<!-- Waypoint [42] -->
+	
+	<HaveBounty questId="357129">
+		<While condition="CurrentWorldId != 219659">
+			<UseWaypoint waypointNumber="42" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.55" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>		
+
+	<HaveBounty questId="357127">
+		<While condition="CurrentWorldId != 219659">
+			<UseWaypoint waypointNumber="42" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.55" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>	
+
+	<HaveBounty questId="349254">
+		<While condition="CurrentWorldId != 219659">
+			<UseWaypoint waypointNumber="42" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.55" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>	
+
+	<HaveBounty questId="349252">
+		<While condition="CurrentWorldId != 219659">
+			<UseWaypoint waypointNumber="42" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.55" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>	
+
+	<!-- Waypoint [43] -->
+	
+	<HaveBounty questId="364336">
+		<While condition="CurrentWorldId != 109526 and CurrentWorldId != 109530 and CurrentWorldId != 109525 and CurrentWorldId != 109530">
+			<UseWaypoint waypointNumber="43" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+    		<LogMessage quest="1" step="2" output="Looking for Portal." />
+		<ToggleTargeting questId="1" combat="true" looting="true" killRadius="10" lootRadius="10" />  
+		<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="224890" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+			<PrioritizeScenes>
+				<PriorityScene sceneName="a3dun_Crater_E_Dead_End_02_E01_N01" pathPrecision="40" />          
+			</PrioritizeScenes>
+		</TrinityExploreDungeon>
+		<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+		<WaitTimer questId="1" stepId="1" waitTime="2500" />	
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>
+		<If condition="CurrentWorldId == 109525">
+			<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500" />
+		</If>
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>	
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+	
+	<HaveBounty questId="364333">
+		<While condition="CurrentWorldId != 109526 and CurrentWorldId != 109530 and CurrentWorldId != 109525 and CurrentWorldId != 109530">
+			<UseWaypoint waypointNumber="43" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+    		<LogMessage quest="1" step="2" output="Looking for Portal." />
+		<ToggleTargeting questId="1" combat="true" looting="true" killRadius="10" lootRadius="10" />  
+		<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="224890" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+			<PrioritizeScenes>
+				<PriorityScene sceneName="a3dun_Crater_E_Dead_End_02_E01_N01" pathPrecision="40" />          
+			</PrioritizeScenes>
+		</TrinityExploreDungeon>
+		<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+		<WaitTimer questId="1" stepId="1" waitTime="2500" />	
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>
+		<If condition="CurrentWorldId == 109525">
+			<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500" />
+		</If>
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>	
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="362140">
+		<While condition="CurrentWorldId != 109526 and CurrentWorldId != 109530 and CurrentWorldId != 109525 and CurrentWorldId != 109530">
+			<UseWaypoint waypointNumber="43" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+    		<LogMessage quest="1" step="2" output="Looking for Portal." />
+		<ToggleTargeting questId="1" combat="true" looting="true" killRadius="10" lootRadius="10" />  
+		<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="224890" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+			<PrioritizeScenes>
+				<PriorityScene sceneName="a3dun_Crater_E_Dead_End_02_E01_N01" pathPrecision="40" />          
+			</PrioritizeScenes>
+		</TrinityExploreDungeon>
+		<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+		<WaitTimer questId="1" stepId="1" waitTime="2500" />	
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>
+		<If condition="CurrentWorldId == 109525">
+			<MoveToActor questId="1" stepId="1" actorId="224890" isPortal="True"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500" />
+		</If>
+		<If condition="CurrentWorldId == 109530">
+			<LogMessage quest="1" step="1" output="Clearing level 2." />	
+			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="40" lootRadius="90" />  
+			<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.45" boxSize="15" ignoreMarkers="False"/>
+		</If>	
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<!-- Waypoint [44] -->
+	
+	<HaveBounty questId="361421">
+		<While condition="CurrentWorldId != 121579 and CurrentWorldId != 214956">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<If condition="CurrentWorldId == 121579">
+      			<TrinityExploreDungeon questId="1" stepId="1"  until="ObjectFound" objectDistance="150" actorId="225195" boxTolerance="0.35" boxSize="15" pathPrecision="40" ignoreMarkers="false">
+        			<PrioritizeScenes>
+          				<PriorityScene sceneName="Exit" />
+        			</PrioritizeScenes>
+        			<IgnoreScenes>
+          				<IgnoreScene sceneName="_N_" />
+          				<IgnoreScene sceneName="_S_" />
+          				<IgnoreScene sceneName="_E_" />
+          				<IgnoreScene sceneName="_W_" />
+        			</IgnoreScenes>
+      			</TrinityExploreDungeon>
+      			<MoveToActor questId="1" stepId="1" actorId="225195" isPortal="True" destinationWorldId="214956" interactRange="20" />
+      			<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	 	</If>
+    		<If condition="CurrentWorldId == 214956">
+      			<WaitTimer questId="1" stepId="1" waitTime="1000" />
+      			<SafeMoveTo questId="1" stepId="1" name="Izual" pathPrecision="10" x="583" y="558" z="0" />
+	  		<While condition="Me.IsInBossEncounter">
+				<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	  		</While>
+	  		<SafeMoveTo questId="1" stepId="1" name="Izual" pathPrecision="10" x="583" y="558" z="0" />
+    		</If>
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="357133">
+		<While condition="CurrentWorldId != 121579">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="357135">
+		<While condition="CurrentWorldId != 121579">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349280">
+		<While condition="CurrentWorldId != 121579">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349276">
+		<While condition="CurrentWorldId != 121579">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349278">
+		<While condition="CurrentWorldId != 121579">
+			<UseWaypoint waypointNumber="44" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+	
+	<!-- Waypoint [45] -->
+	
+	<HaveBounty questId="357139">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349272">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349274">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349282">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349270">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="357137">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.35" boxSize="15" ignoreMarkers="False" />
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="369878">
+		<While condition="CurrentWorldId != 129305">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<HaveBounty questId="369878">
+			<If condition="CurrentWorldId == 129305">
+				<ToggleTargeting questId="1" combat="true" looting="true" killRadius="15" lootRadius="10" />  
+				<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="365097" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+					<PrioritizeScenes>
+        					<PriorityScene sceneName="a4dun_spire_corrupt_SE_02" pathPrecision="40" />          
+    					</PrioritizeScenes>
+				</TrinityExploreDungeon>
+      				<MoveToActor questId="1" stepId="1" actorId="365097"/>
+	  			<WaitTimer questId="1" stepId="1" waitTime="500" />
+	  			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="90" lootRadius="90" />  
+				<While condition="ActorExistsAt(364559, Me.Position.X, Me.Position.Y, Me.Position.Z, 150)">
+					<MoveToActor questId="1" stepId="1" actorId="365097"/>
+				</While>
+	  		</If>
+		</HaveBounty>
+		<HaveBounty questId="369878">
+			<If condition="CurrentWorldId == 129305">
+				<ToggleTargeting questId="1" combat="true" looting="true" killRadius="15" lootRadius="10" />  
+				<TrinityExploreDungeon questId="1" stepId="1" until="ObjectFound" objectDistance="300" actorId="365097" boxTolerance="0.45" boxSize="15" ignoreMarkers="False">
+					<PrioritizeScenes>
+        					<PriorityScene sceneName="a4dun_spire_corrupt_SE_02" pathPrecision="40" />          
+    					</PrioritizeScenes>
+				</TrinityExploreDungeon>
+      				<MoveToActor questId="1" stepId="1" actorId="365097"/>
+	  			<WaitTimer questId="1" stepId="1" waitTime="500" />
+	  			<ToggleTargeting questId="1" combat="True" looting="True" killRadius="90" lootRadius="90" />  
+				<While condition="ActorExistsAt(364559, Me.Position.X, Me.Position.Y, Me.Position.Z, 150)">
+					<MoveToActor questId="1" stepId="1" actorId="365097"/>
+				</While>
+	  		</If>
+		</HaveBounty>
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<HaveBounty questId="349288">
+		<While condition="CurrentWorldId != 129305 and CurrentWorldId != 205399">
+			<UseWaypoint waypointNumber="45" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="2500"/>
+		</While>
+		<If condition="CurrentWorldId == 129305">
+      		<TrinityExploreDungeon questId="1" stepId="1"  until="ObjectFound" objectDistance="150" actorId="210763" boxTolerance="0.7" boxSize="10" pathPrecision="40" ignoreMarkers="False">
+        		<PrioritizeScenes>
+          			<PriorityScene sceneName="Exit" />
+        		</PrioritizeScenes>
+        		<IgnoreScenes>
+          			<IgnoreScene sceneName="_N_0" />
+          			<IgnoreScene sceneName="_S_0" />
+          			<IgnoreScene sceneName="_E_0" />
+          			<IgnoreScene sceneName="_W_0" />
+        		</IgnoreScenes>
+      		</TrinityExploreDungeon>
+		<MoveToActor questId="1" stepId="1" actorId="210763" isPortal="True" interactRange="20"/>
+		<WaitTimer questId="1" stepId="1" waitTime="1000" />
+		</If>
+    		<If condition="CurrentWorldId == 205399">
+	  		<MoveToActor questId="1" stepId="1" actorId="161279" isPortal="True" interactRange="20"/>
+	  		<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	  		<SafeMoveTo questId="1" stepId="1" name="Diablo" pathPrecision="10" x="360" y="358" z="40"/>
+	  		<While condition="Me.IsInBossEncounter">
+	  			<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	  		</While>
+	  		<SafeMoveTo questId="1" stepId="1" name="Diablo" pathPrecision="10" x="360" y="358" z="40"/>	  
+    		</If>
+		<TrinityLoadProfile nodelay="True" file="Bounties and Rift.xml" />
+	</HaveBounty>
+
+	<LogMessage quest="1" step="1" output="Checking if we have all bounties complete" /> 
+
+	<ActBountiesComplete act="A4">
+	<LogMessage quest="1" step="1" output="Seems like we have 5 complete" />
+		<If condition="Me.IsInTown==False">   
+			<LogMessage quest="1" step="1" output="Going back to town to turn it in." />
+			<TrinityTownPortal questId="1" /> 
+		</If>
+		<WaitTimer questId="1" stepId="1" waitTime="1000"/>	
+		<LogMessage quest="1" step="1" output="Lets make sure we are actually in the right town" />
+		<While condition="CurrentWorldId != 172909">
+			<LogMessage quest="1" step="1" output="Doesn't look like we are! using the waypoint" />
+			<UseWaypoint waypointNumber="26" questId="1"/>
+			<WaitTimer questId="1" stepId="1" waitTime="7500"/>
+		</While>
+		<LogMessage quest="1" step="1" output="Attempting to interact with Tyrael" />
+		<MoveToActor questId="1" stepId="1" actorId="114622" x="379" y="422" z="0"  />
+		<LogMessage quest="1" step="1" output="Should have interacted with him by now." />
+		<WaitTimer questId="1" stepId="1" waitTime="2000"/>
+	</ActBountiesComplete>
+
+	<While condition="CurrentWorldId != 304235">
+		<UseWaypoint waypointNumber="46" questId="1"/>
+	</While>
+
+	<WaitTimer questId="1" stepId="1" waitTime="5000"/>
+	<MoveToActor questId="1" stepId="1" x="594" y="508" z="3" actorId="364715" interactRange="11" name="x1_OpenWorld_LootRunObelisk_B-596"  pathPrecision="5" pathPointLimit="250" statusText="Moving to Nephalem Obelisk" isPortal="True"/> 
+	<WaitTimer questId="1" stepId="1" waitTime="1000" />
+	<MoveToActor questId="1" stepId="1" x="594" y="508" z="3" actorId="345935" interactRange="9" name="X1_OpenWorld_LootRunPortal-1589" isPortal="True" pathPrecision="5" pathPointLimit="250" statusText="Entering Rift" />  
+
+	<!-- Rift Boss check -->
+	<!-- Credit goes to "Meet" on forums and community -->
+	<While condition="not ActorExistsAt(358489, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(343743, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(343751, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(343759, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(343767, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(344119, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(344389, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(345004, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(346563, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(353535, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(353823, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(353874, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(354050, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(354144, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(354652, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(357917, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(358208, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(358429, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(358614, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(359094, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(360281, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(360636, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		and not ActorExistsAt(359688, ZetaDia.Me.Position.X, ZetaDia.Me.Position.Y, ZetaDia.Me.Position.Z, 100)
+		">
+	
+	<!-- Level 1 Start -->
+	<If condition="CurrentWorldId == 288454">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876094" boxTolerance="0.1" boxSize="25" ignoreMarkers="False"/>
+	<While condition="CurrentWorldId == 288454">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876094" InteractAttempts="5" destinationWorldId="288685" interactRange="20" statusText="Moving to Level 2!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288685" statusText="Moving to Level 2" />
+	</While>
+	</If>
+	<!-- Level 1 End -->
+	
+<!-- Switched from Level 1 to Level 2 -->
+
+	<!-- Level 2 Start -->
+	<If condition="CurrentWorldId == 288685">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876095" boxTolerance="0.1" boxSize="25" ignoreMarkers="False"/>
+	<While condition="CurrentWorldId == 288685">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876095" InteractAttempts="5" destinationWorldId="288687" interactRange="20" statusText="Moving to Level 3!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288687" statusText="Moving to Level 3" />
+	</While>
+	</If>
+	<!-- Level 2 End -->
+	
+<!-- Switched from Level 2 to Level 3 -->
+
+	<!-- Level 3 Start -->
+	<If condition="CurrentWorldId == 288687">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876096" boxTolerance="0.1" boxSize="25" ignoreMarkers="False"/>
+	<While condition="CurrentWorldId == 288687">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876096" InteractAttempts="5" destinationWorldId="288798" interactRange="20" statusText="Moving to Level 4!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288798" statusText="Moving to Level 4" />
+	</While>
+	</If>
+	<!-- Level 3 End -->
+	
+<!-- Switched from Level 3 to Level 4 -->
+
+	<!-- Level 4 Start -->
+	<If condition="CurrentWorldId == 288798">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876097" boxTolerance="0.1" boxSize="25" ignoreMarkers="False"/>
+	<While condition="CurrentWorldId == 288798">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876097" InteractAttempts="5" destinationWorldId="288800" interactRange="20" statusText="Moving to Level 5!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288800" statusText="Moving to Level 5" />
+	</While>
+	</If>
+	<!-- Level 4 End -->
+	
+<!-- Switched from Level 4 to Level 5 -->
+
+	<!-- Level 5 Start -->
+	<If condition="CurrentWorldId == 288800">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876098" boxTolerance="0.1" boxSize="25" ignoreMarkers="False" />
+	<While condition="CurrentWorldId == 288800">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876098" InteractAttempts="5" destinationWorldId="288802" interactRange="10" statusText="Moving to Level 6!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288802" statusText="Moving to Level 6" />
+	</While>
+	</If>
+	
+	<!-- Level 6 Start -->
+	<If condition="CurrentWorldId == 288802">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876099" boxTolerance="0.1" boxSize="25" ignoreMarkers="False" />
+	<While condition="CurrentWorldId == 288802">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876099" InteractAttempts="5" destinationWorldId="288804" interactRange="10" statusText="Moving to Level 7!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288804" statusText="Moving to Level 7" />
+	</While>
+	</If>
+	<!-- Level 6 End -->
+
+	<!-- Level 7 Start -->
+	<If condition="CurrentWorldId == 288804">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="ExitFound" objectDistance="300" exitNameHash="1938876100" boxTolerance="0.1" boxSize="25" ignoreMarkers="False" />
+	<While condition="CurrentWorldId == 288804">
+	<MoveToMapMarker questId="1" stepId="1" exitNameHash="1938876100" InteractAttempts="5" destinationWorldId="288810" interactRange="10" statusText="Moving to Level 7!" />
+	<MoveToActor  questId="1" stepId="1" actorId="175467" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="175482" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="176001" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="176002" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="176007" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="185067" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="204747" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="204901" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="210758" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="256728" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="277401" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	<MoveToActor  questId="1" stepId="1" actorId="176038" isPortal="True" destinationWorldId="288810" statusText="Moving to Level 8" />
+	</While>
+	</If>
+	<!-- Level 7 End -->
+		
+	<!-- Level 8 Start -->
+	<If condition="CurrentWorldId == 288810">
+	<ToggleTargeting questId="1" stepId="1" combat="True" looting="True" lootRadius="100" killRadius="80" />
+	<TrinityExploreDungeon questId="1" stepId="1" until="FullyExplored" boxTolerance="0.1" boxSize="25" />
+	<TrinityTownPortal questId="1" stepId="1" />
+	<LeaveGame reason="No Riftboss :(" />  
+	</If>
+	<!-- Level 8 End -->
+
+	<!-- End of Rift Guardian check -->
+	</While>
+	
+	<MoveToActor  questId="1" stepId="1" actorId="358489" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="343743" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="343751" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="343759" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="343767" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="344119" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="344389" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="345004" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="346563" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="353535" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="353823" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="353874" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="354050" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="354144" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="354652" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="357917" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="358208" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="358429" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="358614" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="359094" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="360281" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="360636" statusText="Found Rift Guardian!" />
+	<MoveToActor  questId="1" stepId="1" actorId="359688" statusText="Found Rift Guardian!" />
+	
+	<WaitTimer questId="1" stepId="1" waitTime="8000"/>
+	
+	<LogMessage output="Boss Defeated" />
+	
+	<TrinityTownPortal questId="1" stepId="1" />
+	
+	<While condition="CurrentWorldId != 304235">
+		<UseWaypoint waypointNumber="46" questId="1"/>
+		<WaitTimer questId="1" stepId="1" waitTime="500"/>
+	</While>
+	
+	<!-- Finishing Rift -->
+	<MoveToActor questId="1" stepId="1" x="588" y="518" z="3" actorId="363744" interactRange="9" name="X1_LR_Nephalem-14254"  pathPrecision="5" pathPointLimit="250" statusText="Completing Rift" /> 
+	<WaitTimer questId="1" stepId="1" waitTime="3000"/>
+	
+	<LeaveGame reason="Finished" />  
+
+</While>
+</Order>
+</Profile>

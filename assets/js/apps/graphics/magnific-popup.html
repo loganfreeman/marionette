@@ -1,0 +1,97 @@
+<div class='row'>
+	<div class='span6'>
+		<h3>Single image lightbox</h3>
+		<p>
+			Three simple popups with different scaling settings.<br /> 1 &mdash;
+			fits horizontally and vertically,<br /> 2 &mdash; only horizontally,<br />
+			3 &mdash; no gaps, zoom animation, close icon in top-right corner.<br />
+		</p>
+		<div class="html-code grid-of-images">
+			<a class="image-popup-vertical-fit"
+				href="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_b.jpg"
+				title="Caption. Can be aligned it to any side and contain any HTML.">
+				<img
+				src="http://farm9.staticflickr.com/8241/8589392310_7b6127e243_s.jpg"
+				width="75" height="75" />
+			</a> <a class="image-popup-fit-width"
+				href="http://farm9.staticflickr.com/8379/8588290361_ecf8c27021_b.jpg"
+				title="This image fits only horizontally."> <img
+				src="http://farm9.staticflickr.com/8379/8588290361_ecf8c27021_s.jpg"
+				width="75" height="75" />
+			</a> <a class="image-popup-no-margins"
+				href="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg">
+				<img
+				src="http://farm4.staticflickr.com/3721/9207329484_ba28755ec4_o.jpg"
+				width="107" height="75" />
+			</a>
+		</div>
+	</div>
+	<div class='span6'>
+		<h3>Lightbox gallery</h3>
+		<p>
+			You may put any HTML content in each gallery item and <a
+				href="http://codepen.io/dimsemenov/pen/vKrqs">mix content types</a>.
+			In this example lazy-loading of images is enabled for the next image
+			based on move direction. If you wish to add touch-swipe support,
+			check <a
+				href="http://coding.smashingmagazine.com/2013/05/02/truly-responsive-lightbox/">my
+				article</a> on the Smashing Magazine.
+		</p>
+		<div class="html-code grid-of-images">
+			<div class="popup-gallery">
+				<a
+					href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg"
+					title="The Cleaner"><img
+					src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg"
+					title="Winter Dance"><img
+					src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_b.jpg"
+					title="The Uninvited Guest"><img
+					src="http://farm9.staticflickr.com/8225/8558295635_b1c5ce2794_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_b.jpg"
+					title="Oh no, not again!"><img
+					src="http://farm9.staticflickr.com/8383/8563475581_df05e9906d_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_b.jpg"
+					title="Swan Lake"><img
+					src="http://farm9.staticflickr.com/8235/8559402846_8b7f82e05d_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_b.jpg"
+					title="The Shake"><img
+					src="http://farm9.staticflickr.com/8235/8558295467_e89e95e05a_s.jpg"
+					width="75" height="75" /></a> <a
+					href="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_b.jpg"
+					title="Who's that, mommy?"><img
+					src="http://farm9.staticflickr.com/8378/8559402848_9fcd90d20b_s.jpg"
+					width="75" height="75" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class='row'>
+	<div class='span6'>
+		 <h3>Zoom-gallery</h3> 
+    <p>If you wish to open the popup only after image is fully loaded, you may preload image via JS. Or use scaled down image instead of thumbnail. Zoom effect works only with images, for now.</p>
+    <div class="html-code grid-of-images">
+      <div class="zoom-gallery">
+        <!--
+
+        Width/height ratio of thumbnail and the main image must match to avoid glitches.
+
+        If ratios are different, you may add CSS3 opacity transition to the main image to make the change less noticable.
+
+         -->
+        <a href="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" data-source="http://500px.com/photo/32736307" title="Into The Blue" style="width:193px;height:125px;">
+          <img src="http://farm4.staticflickr.com/3763/9204547649_7de96ee188_t.jpg" width="193" height="125" />
+        </a>
+        <a href="http://farm3.staticflickr.com/2856/9207329420_7f2a668b06_o.jpg" data-source="http://500px.com/photo/32554131" title="Light Sabre" style="width:82px;height:125px;">
+          <img src="http://farm3.staticflickr.com/2856/9207329420_e485948b01_t.jpg" width="82px" height="125" />
+        </a>
+      </div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+#astar-container {
+   position: relative;
+   border: solid 1px yellow;
+   background-color: #A3D6DE;
+   z-index: 5;
+}
+
+#astar-container div {
+   position: absolute;	
+   font-size: 8px;
+   z-index: 16;
+}
+#astar-container div:hover { border: dashed 1px gray;}
+
+
+#hiro {
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   background-color: yellow;
+   z-index: 100;
+}
+
+#enemy{
+   position: absolute;
+   left: 40px;
+   width: 30px;
+   height: 30px;
+   background-color: green;
+   z-index: 100;
+}
+
+.astar-menu {display: block; clear: both; position: relative; height: 3.5em;}
+.astar-menu.button {
+   position: relative;
+   border: dotted 2px black;
+   padding: 0.5em;
+   text-align: center;
+   font-weight: bold;
+   color: gray;
+   display:block;
+   font-size: larger;
+   float: left;
+}
+.astar-menu.button:hover {cursor: pointer; background-color: #efafaf;}
+
+#findBtn {
+   position: relative;
+   border: dotted 2px black;
+   padding: 0.5em;
+   width: 100px;	
+}
+
+#resetBtn {
+   position: relative;
+   border: dotted 2px black;
+   padding: 0.5em;
+   width: 100px;	
+}
+
+#agentContainer {
+   display: block;
+   position: relative;
+   height: 40px;
+   width: 80px;
+}
+
+.movePossible {
+   border: solid 1px green;
+}
+
+.pth {background-color: gray;}
+.dn {display: none;}

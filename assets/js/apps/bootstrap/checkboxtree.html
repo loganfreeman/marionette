@@ -1,0 +1,91 @@
+ <div class="container">
+    <div class="page-header"><h1>Collapsible Checkbox Tree</h1></div>
+    <div class="row">
+      <div class="span8">
+        <h2>Example</h2>
+
+        <form action="" method="post" class="well">
+          <ul class="checkbox-tree root">
+            <li>
+              <input type="checkbox" name="" checked="checked" />
+              <label>Manchester United</label>
+              <ul class="manu">
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Ryan Giggs</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Paul Scholes</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Wayne Rooney</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" name="" />
+              <label>Chelsea</label>
+              <ul class="chelsea">
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Joe Cole</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Frank Lampard</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Didier Drogba</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>John Terry</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" name="" />
+              <label>Liverpool</label>
+              <ul class="liverpool">
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Fernando Torres</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="" />
+                  <label>Steven Gerrard</label>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </form>
+
+        <div class="btn-group" data-toggle="buttons-radio">
+          <button id="tree-expand" type="button" class="btn btn-default">Expand All</button>
+          <button id="tree-collapse" type="button" class="btn btn-default">Collapse All</button>
+          <button id="tree-default" type="button" class="btn btn-default">Default</button>
+        </div>
+        <p></p>
+        <div class="btn-group">
+          <button id="tree-select-all" type="button" class="btn btn-default">Select all</button>
+          <button id="tree-deselect-all" type="button" class="btn btn-default">Deselect all</button>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <h2>Usage</h2>
+        <pre class='prettyprint'>
+          $('.checkbox-tree').checkboxTree({
+            checkChildren : true
+          });
+        </pre>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+#autocomplete_wrapper {
+  background-image: data-uri('logo.png');
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

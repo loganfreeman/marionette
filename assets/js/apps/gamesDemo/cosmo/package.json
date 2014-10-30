@@ -1,0 +1,40 @@
+{
+	"tags": {},
+
+	"tree": {
+
+		"entity": {
+			"lycheeJS": [ "js", "png" ],
+
+			"Background": [ "js", "png" ],
+			"Blackhole": [ "js", "json", "png" ],
+			"Enemy": [ "js", "json", "png" ],
+			"Lazer": [ "js", "json", "png" ],
+			"Meteor": [ "js", "json", "png" ],
+			"Shield": [ "js", "png" ],
+			"Ship": [ "js", "json", "png" ],
+
+			"Button": [ "js", "json", "png" ],
+			"Font": [
+				"js",
+				"headline.fnt",
+				"normal.fnt"
+			]
+		},
+
+		"logic": {
+			"Game": [ "js" ],
+			"Level": [ "js", "json" ]
+		},
+
+		"state": {
+			"Game": [ "js" ],
+			"Menu": [ "js" ]
+		},
+
+		"DeviceSpecificHacks": [ "js" ],
+		"Jukebox": [ "js" ],
+		"Main": [ "js", "css" ]
+
+	}
+}

@@ -1,0 +1,89 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <!-- Set QuestTools Variables -->
+    <QuestToolsSetVariable questId="101758" stepId="1" key="ReloadProfileOnDeath" value="False" />
+    <QuestToolsSetVariable questId="101758" stepId="1" key="DebugLogging" value="True" />
+
+    <!-- If we try and load a random profile from a known dungeon location, just load the profile for that dungeon instead! -->
+    <If condition="CurrentWorldId == 81019">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Skycrown. Using Skycrown profile instead." />
+      <LoadProfile profile="Skycrown.xml" />
+    </If>
+    <If condition="CurrentWorldId == 93099">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Stonefort. Using Stonefort profile instead." />
+      <LoadProfile profile="Stonefort.xml" />
+    </If>
+    <If condition="CurrentWorldId == 95804">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Field of Slaughter or Rakkis Crossing. Using FoS-Rakkis profile instead." />
+      <LoadProfile profile="FoS-Rakkis.xml" />
+    </If>
+    <If condition="CurrentWorldId == 75434">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Keep Depths 2. Using KeepDepths2 profile instead." />
+      <LoadProfile profile="KeepDepths2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 136415">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Keep Depths 3. Using KeepDepths3 profile instead." />
+      <LoadProfile profile="KeepDepths3.xml" />
+    </If>
+    <If condition="CurrentWorldId == 81049">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Arreat Crater 1. Using ArreatCrater1 profile instead." />
+      <LoadProfile profile="ArreatCrater1.xml" />
+    </If>
+    <If condition="CurrentWorldId == 81934">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Arreat Crater 2. Using ArreatCrater2 profile instead." />
+      <LoadProfile profile="ArreatCrater2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 79401">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Tower of the Damned1-2. Using TowerDamned1-2 profile instead." />
+      <LoadProfile profile="TowerDamned1-2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 80763">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Tower of the Damned1-2. Using TowerDamned1-2 profile instead." />
+      <LoadProfile profile="TowerDamned1-2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 119641">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Tower of the Cursed1-2. Using TowerCursed1-2 profile instead." />
+      <LoadProfile profile="TowerCursed1-2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 139272">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within Tower of the Cursed1-2. Using TowerCursed1-2 profile instead." />
+      <LoadProfile profile="TowerCursed1-2.xml" />
+    </If>
+    <If condition="CurrentWorldId == 119290">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile from within CoreOfArreat. Using CoreOfArreat profile instead." />
+      <LoadProfile profile="CoreOfArreat.xml" />
+    </If>
+
+
+    <If condition="not Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Attempted to load random profile outside of town, from an unknown location! Returning to town now..." />
+      <UseTownPortal questId="101758" stepId="1" />
+    </If>
+
+    <!-- Big Thanks to Nesox for the XML Tricks! -->
+    <!-- This XML tag will load a random profile from the list, but only once during this game session -->
+
+    <!--<ForceTownRun questId="101758" stepId="1" />-->
+
+    <TrinityLoadOnce questId="101758" stepId="1" >
+      <ProfileList>
+        <!--<LoadProfileOnce profile="Stonefort.xml" />
+        <LoadProfileOnce profile="Skycrown.xml" />
+        <LoadProfileOnce profile="FoS-Rakkis.xml" />-->
+        <LoadProfileOnce profile="KeepDepths2.xml" />
+        <LoadProfileOnce profile="KeepDepths3.xml" />
+        <!--<LoadProfileOnce profile="ArreatCrater1.xml" />
+        <LoadProfileOnce profile="ArreatCrater2.xml" />
+        <LoadProfileOnce profile="TowerDamned1-2.xml" />-->
+      </ProfileList>
+    </TrinityLoadOnce>
+
+    <LogMessage quest="101758" step="1" output="All profiles have been loaded! Nothing left to do." />
+    <WaitTimer quest="101758" step="1" waitTime="10000" />
+    <LeaveGame quest="101758" step="1" reason="All profiles have been loaded! Nothing left to do." stayInParty="True" />
+  </Order>
+</Profile>

@@ -1,0 +1,36 @@
+
+<!-- content -->
+<div class="row-fluid card-main">
+
+	<div class="span12">
+		<div class="row-fluid">
+			<div class="span12">
+
+				<div class='card-header page-header'>
+					<div>{{game.message}}</div>
+
+					<h3>Pairs left to match: {{game.unmatchedPairs}}</h3>
+					<div>Matching: {{game.firstPick.title}}</div>
+				</div>
+
+
+				<table>
+					<tr ng-repeat="row in game.grid">
+						<td ng-repeat="tile in row" class="card-container well">
+							<div class="card" ng-class="{flipped: tile.flipped}"
+								ng-click="game.flipTile(tile)">
+								<img class="front" ng-src="app/img/back.png"> <img
+									class="back" ng-src="app/img/{{tile.title}}.png">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!--/span-->
+
+		</div>
+		<!--/row-->
+	</div>
+	<!--/span-->
+</div>
+<!--/row-->

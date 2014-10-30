@@ -1,0 +1,26 @@
+ul.bubbleSlideshow{
+	position:relative;
+	list-style:none;
+	overflow:hidden;
+}
+
+.bubbleSlideshow li{
+	position:absolute;
+	top:0;
+	left:0;
+	line-height: 0px;
+}
+
+.bubbleSlideshow li img{
+	display:block;
+}
+
+.bubbleSlideshow li div.bubble{
+	-moz-border-radius:50%;
+	-webkit-border-raidus:50%;
+	border-radius:50%;
+	
+	background-repeat:no-repeat;
+	display:none;
+	position:absolute;
+}

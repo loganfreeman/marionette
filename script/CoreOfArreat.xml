@@ -1,0 +1,25 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+	<Order>
+		<!-- Use Waypoint to Core of Arreat -->
+		<If condition="Me.IsInTown">
+			<LogMessage questId="101758" stepId="1" output="Using Waypoint to The Core of Arreat" />
+			<UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="10" />
+		</If>
+		<!-- The Core of Arreat -->
+		<If condition="CurrentWorldId == 119290">
+			<LogMessage questId="101758" stepId="1" output="Clearing The Core of Arreat" />
+			<SafeMoveTo questId="101758" stepId="1" x="169" y="718" z="-50" localNavDistance="125" />
+			<WaitTimer questId="101758" stepId="1" waitTime="2000" /> 
+			<LogMessage questId="101758" stepId="1" output="Finished clearing the Core of Arreat, returning to Town" />
+			<WaitTimer questId="101758" stepId="1" waitTime="5000" /> 
+			<UseTownPortal questId="101758" stepId="1" />
+		</If>
+
+    <LogMessage output="Loading next profile..." />
+		<LoadProfile profile="Act3LoadRandom.xml" />
+	</Order>
+</Profile>

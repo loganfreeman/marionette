@@ -1,0 +1,31 @@
+<div>
+		<h1>
+			<span class="text-product">Easel<strong>JS</strong></span> Cache as
+			Bitmap Example
+		</h1>
+
+		<div class='panel panel-default'>
+			<div class="panel-body">
+				This example demonstrates the effect of <strong>DisplayObject.cache()</strong>
+				and <strong>snapToPixel</strong> on performance. Caching can provide
+				performance benefits for some types of content because the complex
+				vector shapes do not have to be re-rendered each tick. Different
+				browsers have different thresholds for when caching makes sense. The
+				results for snapToPixel vary between browsers, but in general it
+				will have no effect on the un-cached shapes, but a significant
+				effect when cached.
+			</div>
+
+		</div>
+
+</div>
+
+
+<div class="controls row">
+	<input type="checkbox"
+		id="toggleCache" /><label for="toggleCache">cache enabled</label><br />
+	<strong>Note that Safari 6+ performs worse in this demo with
+		caching due to how it handles vectors very well, and small textures
+		very poorly.</strong>
+</div>
+<canvas id="testCanvas" width="960" height="350"></canvas>

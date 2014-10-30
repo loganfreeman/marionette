@@ -1,0 +1,27 @@
+#faces {
+	width: 400px;
+	height: 533px;
+	margin: 0 auto;
+	border: 8px solid white;
+}
+
+#faces .the_faces {
+	height: 533px;
+	width: 14.2857143%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#the_faces_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 400px;
+}
+
+#face-area {
+	height: 533px;
+	width: 400px;
+	position: relative;
+}

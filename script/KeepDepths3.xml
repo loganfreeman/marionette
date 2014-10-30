@@ -1,0 +1,39 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+  <PickupLoot>True</PickupLoot>
+  <GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+  <Order>
+    <!-- In Town, use Waypoint to Keep Depths 3 -->
+    <If condition="Me.IsInTown">
+      <LogMessage questId="101758" stepId="1" output="Using Waypoint to Keep Depths 3" />
+      <UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="3" />
+    </If>
+    <!-- In Keep Depths 3, Offset move south from waypoint -->
+    <If condition="CurrentWorldId == 136415 and ActorExistsAt(6442, Me.Position.X, Me.Position.Y, Me.Position.Z, 50)">
+      <LogMessage questId="101758" stepId="1" output="Moving offset X" />
+      <TrinityOffsetMove questId="101758" stepId="1" offsetX="400" offsetY="0" pathPrecision="50" />
+    </If>
+    <!-- In Keep Depths 3, Explore large areas only -->
+    <If condition="CurrentWorldId == 136415">
+      <TrinityExploreDungeon questId="101758" stepId="1" SetNodesExploredAutomatically="true"
+        until="FullyExplored" boxSize="50" boxTolerance="0.01" 
+        timeoutType="GoldInactivity" townPortalOnTimeout="True" timeoutValue="60" 
+        ignoreMarkers="True" pathPrecision="30">
+        <IgnoreScenes>
+          <IgnoreScene sceneName="_Exit_01" />
+          <IgnoreScene sceneName="_Hall_01" />
+          <IgnoreScene sceneName="_N_" />
+          <IgnoreScene sceneName="_S_" />
+          <IgnoreScene sceneName="_E_" />
+          <IgnoreScene sceneName="_W_" />
+        </IgnoreScenes>
+      </TrinityExploreDungeon>
+      <LogMessage questId="101758" stepId="1" output="Finished Exploring Keep Depths 3, returning to town" />
+      <WaitTimer questId="101758" stepId="1" waitTime="2000" />
+      <UseTownPortal questId="101758" stepId="1" />
+    </If>
+    <LogMessage output="Loading next profile..." />
+    <LoadProfile profile="Act3LoadRandom.xml" />
+  </Order>
+</Profile>

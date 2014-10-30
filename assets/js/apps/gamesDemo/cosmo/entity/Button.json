@@ -1,0 +1,20 @@
+{
+
+	"states": {
+		"continue":  {},
+		"cancel":    {}
+	},
+
+	"map": {
+
+		"continue": [
+			{ "x":   0, "y":   0, "w": 256, "h": 64, "width": 256, "height": 64 }
+		],
+
+		"cancel": [
+			{ "x":   0, "y":  64, "w": 256, "h": 64, "width": 256, "height": 64 }
+		]
+
+	}
+
+} 

@@ -1,0 +1,1 @@
+<figure id="filter-canvas"></figure>

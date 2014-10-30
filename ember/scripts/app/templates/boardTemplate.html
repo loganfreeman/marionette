@@ -1,0 +1,61 @@
+<h2>Board</h2>
+
+    {{#if inProgress}}
+        <nav id='controls'>
+          {{#if showClearWord}}
+            <button {{action clearWord target="model"}} class='clear'>Clear</button>
+          {{/if}}
+          {{#if showSubmitWord}}
+            <button {{action submitWord}} class='submit'>Submit</button>
+          {{/if}}
+        </nav>
+
+        <summary id='score'>
+          {{view MyExampleApp.PlayerView contentBinding="player1"}}
+          {{view MyExampleApp.PlayerView contentBinding="player2"}}
+        </summary>
+
+        <section id='word'>
+          {{#each word}}
+            {{view MyExampleApp.WordLetterView contentBinding="this"}}
+          {{/each}}
+        </section>
+
+        <section id='board'>
+          {{#each rows}}
+            <div class='row'>{{#each this}}{{view MyExampleApp.BoardLetterView contentBinding="this"}}{{/each}}</div>
+          {{/each}}
+        </section>
+
+        <section id='turn-controls'>
+          <button {{action skipTurn target="controller"}}>Skip Turn</button>
+          <button {{action resign target="controller"}}>Resign</button>
+        </section>
+      {{else}}
+        <h1>Game Over!</h1>
+
+        <div id='winner'>
+          {{#if winner}}
+            The winner was <span {{bindAttr class='winner.id'}}>{{winner.id}}</span> with a score
+            of {{winner.score}}.
+          {{else}}
+            It was a tie.
+          {{/if}}
+        </div>
+
+        <div id='new-game'>
+          <button {{action reset target="controller"}}>New Game</button>
+        </div>
+
+      {{/if}}
+
+      {{#if hasHistory}}
+        <section id='history'>
+          Played words:
+          <ul>
+            {{#each played}}
+              <li {{bindAttr class="playedBy.id"}}>{{value}}</li>
+            {{/each}}
+          </ul>
+        </section>
+      {{/if}}

@@ -1,0 +1,101 @@
+
+<div class="container">
+	<div class='row'>
+		<div class='col-sm-12 span12'>
+			<h1>
+				veinjs&nbsp;<small>Usage Example</small>
+			</h1>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-sm-12 span12'>
+			<h2>What is veinjs? Why?</h2>
+			<p>veinjs is a library that injects CSS into the document (it's a
+				perfectly legal procedure). Rather than using inline styles, the CSS
+				is being pushed into a dynamically generated stylesheet that's
+				injected into the header.</p>
+			<p>This approach gives us a couple of benefits:</p>
+			<p>
+			<ul>
+				<li><strong>Persistence</strong> - Say you want to dynamically
+					make all your sub headers a certain color. You apply CSS properties
+					with jQuery, and everything looks great. But then, you load some
+					more stuff with AJAX, and you notice that your CSS is useless,
+					because it has been only applied to the elements currently living
+					in DOM. That's when injection can save you headache. Just apply any
+					CSS code once, and it's valid - until the next refresh!</li>
+
+				<li><strong>Performance</strong> - Our minions at jsperf.com
+					tell us that injecting CSS rules for a vast number of elements is
+					VERY fast, check it out for yourself:<br /> <a
+					href="http://jsperf.com/inject-vs-apply/2" target="_blank">http://jsperf.com/inject-vs-apply/2</a></li>
+
+				<li><strong>Media Query Support</strong> - You can inject media
+					queries and work responsive magic with veinjs dynamically.</a></li>
+			</ul>
+			</p>
+		</div>
+	</div>
+
+	<div class='row'>
+		<div class='col-sm-12 span12'>
+			<h2>Media Queries CSS Usage Example</h2>
+		</div>
+	</div>
+
+	<div class='row media-example-canvas'>
+		<div id='friendly-cube'>I'm a friendly cube!</div>
+		<a href='#' class='btn btn-primary' id="media-example-trigger">
+			Click here to inject CSS with media queries into our friendly cube! </a>
+		<p>(if you're on a small screen device, it will turn red. If
+			you're on a big screen device, resize your browser and see the
+			injected media query in action). This is acheived by running the
+			following code:</p>
+		<code>vein.inject([{'@media (max-width: 768px)':
+			['#friendly-cube']}], {'background-color': '#F00'});</code>
+	</div>
+
+	<div class='row'>
+		<div class='col-sm-12 span12'>
+			<h2>Dynamic CSS Usage Example</h2>
+		</div>
+	</div>
+
+	<div class='row example-canvas'>
+		<div class='col-sm-6 span6 jquery-inline'>
+			<h3>jQuery Inline Styles</h3>
+			<div class='loaded-item'>
+				<h4>Title</h4>
+				<p>Lorem ipsum dolor sit amet</p>
+			</div>
+			<div class='loaded-item'>
+				<h4>Title</h4>
+				<p>Lorem ipsum dolor sit amet</p>
+			</div>
+		</div>
+		<div class='col-sm-6 span6 vein-awesomeness'>
+			<h3>veinjs Injection Awesomeness</h3>
+			<div class='loaded-item'>
+				<h4>Title</h4>
+				<p>Lorem ipsum dolor sit amet</p>
+			</div>
+			<div class='loaded-item'>
+				<h4>Title</h4>
+				<p>Lorem ipsum dolor sit amet</p>
+			</div>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='run-example col-sm-12 span12'>
+			<button type="button"
+				class="btn center-block btn-primary run-example-button">Run
+				Example</button>
+			<button type="button"
+				class="btn center-block btn-primary next-button">Next</button>
+			<a href="https://github.com/israelidanny/veinjs" type="button"
+				class="btn center-block btn-success github-button">This is
+				awesome. Get me to the Github repo!</a>
+		</div>
+	</div>
+
+</div>

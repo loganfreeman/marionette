@@ -1,0 +1,73 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+	<Order>
+		<!-- In Town, use Waypoint to Fields of Slaughter -->
+		<If condition="Me.IsInTown">
+			<LogMessage questId="101758" stepId="1" output="Using Waypoint to Fields of Slaughter" />
+			<UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="4" />
+		</If>
+		<!-- At Fields of Slaughter Waypoint, Zig Zag North -->
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 3452, 610, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 1" />
+			<SafeMoveTo questId="101758" stepId="1" x="3254" y="815" z="0" statusText="Clearing to Fos pt 1" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 3254, 815, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 2" />
+			<SafeMoveTo questId="101758" stepId="1" x="2977" y="834" z="0" statusText="Clearing to Fos pt 2" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 2977, 834, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 3" />
+			<SafeMoveTo questId="101758" stepId="1" x="3443" y="393" z="0" statusText="Clearing to Fos pt 3" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 3443, 393, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 4" />
+			<SafeMoveTo questId="101758" stepId="1" x="3361" y="244" z="0" statusText="Clearing to Fos pt 4" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 3361, 244, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 5" />
+			<SafeMoveTo questId="101758" stepId="1" x="3361" y="244" z="0" statusText="Clearing to Fos pt 5" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 3361, 244, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 6" />
+			<SafeMoveTo questId="101758" stepId="1" x="2873" y="466" z="0" statusText="Clearing to Fos pt 6" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 2873, 466, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to FoS pt 7" />
+			<SafeMoveTo questId="101758" stepId="1" x="2875" y="711" z="0" statusText="Clearing to Fos pt 7" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<!-- Start Rakkis Crossing -->
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 2875, 711, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Moving to Rakkis Crossing Entrance" />
+			<SafeMoveTo questId="101758" stepId="1" x="2663" y="608" z="0" statusText="Moving to Rakkis Crossing Entrance" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 2633, 608, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to Rakkis pt 1" />
+			<SafeMoveTo questId="101758" stepId="1" x="2663" y="608" z="0" statusText="Clearing to Rakkis pt 1" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 2663, 608, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to Rakkis pt 2 (WP)" />
+			<SafeMoveTo questId="101758" stepId="1" x="947" y="602" z="0" statusText="Clearing to Rakkis pt 2 (WP)" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+		</If>
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 947, 602, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing to Rakkis pt 3 (check for Underbridge)" />
+			<SafeMoveTo questId="101758" stepId="1" x="633" y="609" z="0" statusText="Clearing to Rakkis pt 3 (check for Underbridge)" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+		</If>
+		<!-- Rakkis Failsafe -->
+		<If condition="CurrentLevelAreaId == 69504">
+			<LogMessage questId="101758" stepId="1" output="Fail Safe Clearing to Rakkis pt 3 (check for Underbridge)" />
+			<SafeMoveTo questId="101758" stepId="1" x="633" y="609" z="0" statusText="Clearing to Rakkis pt 3 (check for last Elites)" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+			<SafeMoveTo questId="101758" stepId="1" x="713" y="576" z="0" statusText="Clearing to Rakkis pt 3 (check for Underbridge)" pathPrecision="50" unsafeRandomDistance="15" allowLongDistance="True" timeout="600" />
+		</If>
+		<!-- Underbridge Portal is NOT Present -->
+		<If condition="CurrentWorldId == 95804 and ActorExistsAt(Me.ActorSNO, 677, 619, 0, 300)">
+			<LogMessage output="Finished clearing Rakkis Crossing, returning to Town" />
+			<WaitTimer questId="101758" stepId="1"  waitTime="2000" />
+			<UseTownPortal questId="101758" stepId="1" statusText="Finished clearing Rakkis Crossing, returning to Town" />
+		</If>
+		<LogMessage output="Loading next profile..." />
+		<LoadProfile profile="Act3LoadRandom.xml" />
+	</Order>
+</Profile>

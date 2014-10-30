@@ -1,0 +1,15 @@
+.parser-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+#parsed {
+	height: 200px;
+	width: 100%;
+}
+
+#parse {
+	position: absolute;
+	left: 5px;
+	top: 25px;
+}

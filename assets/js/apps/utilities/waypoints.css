@@ -1,0 +1,293 @@
+.inner {
+	width: 460px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+h1,h2,h3,h4 {
+	font-family: "PT Serif", serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 53px;
+	color: #444a50;
+}
+
+h2 {
+	text-align: center;
+	background: #6a6272;
+	color: #eae2f2;
+	font-size: 24px;
+}
+
+pre {
+	white-space: pre-wrap;
+	font-size: 14px;
+	background: #fff;
+	padding: 10px;
+}
+
+.header {
+	margin-bottom: 24px;
+}
+
+.dials {
+	overflow: hidden;
+}
+
+.dial {
+	float: left;
+	width: 140px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.dial.first {
+	margin-left: 0;
+}
+
+.dial h3 {
+	font-weight: bold;
+	margin: 0;
+}
+
+.dial ul {
+	background: #fff;
+	border: 1px solid #eae2f2;
+	padding: 25px 0 114px 0;
+	height: 1px;
+	overflow-y: scroll;
+	margin: 0;
+}
+
+.dial ul:before {
+	content: "";
+	border: 10px solid #555;
+	width: 1px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	bottom: 105px;
+	left: 0;
+	z-index: 3;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+}
+
+.dial li {
+	height: 20px;
+	line-height: 20px;
+	padding: 10px 10px 10px 20px;
+	border-bottom: 1px solid #ddd;
+	font-size: 20px;
+}
+
+.dial li:first-child {
+	border-top: 1px solid #ddd;
+}
+
+.text-color-dial li {
+	color: #fff;
+}
+
+li[data-value="8px"] {
+	font-size: 8px;
+}
+
+li[data-value="9px"] {
+	font-size: 9px;
+}
+
+li[data-value="10px"] {
+	font-size: 10px;
+}
+
+li[data-value="11px"] {
+	font-size: 11px;
+}
+
+li[data-value="12px"] {
+	font-size: 12px;
+}
+
+li[data-value="13px"] {
+	font-size: 13px;
+}
+
+li[data-value="14px"] {
+	font-size: 14px;
+}
+
+li[data-value="#000"] {
+	background: #000;
+}
+
+li[data-value="#222"] {
+	background: #222;
+}
+
+li[data-value="#444"] {
+	background: #444;
+}
+
+li[data-value="#666"] {
+	background: #666;
+}
+
+li[data-value="#888"] {
+	background: #888;
+}
+
+li[data-value="#aaa"] {
+	background: #aaa;
+}
+
+.indicator {
+	position: absolute;
+	bottom: 115px;
+	left: 0;
+	height: 1px;
+	width: 120px;
+	background: red;
+}
+
+#example-target {
+	margin-top: 32px;
+}
+
+#lcol {
+	float: left;
+	width: 300px;
+}
+
+#rcol {
+	float: right;
+	width: 120px;
+}
+
+#rcol h2 {
+	font-weight: bold;
+}
+
+#rcol ul {
+	list-style: disc;
+	margin: 8px 0 24px 24px;
+}
+
+#rcol p {
+	font-size: 12px;
+}
+
+.ad-unit {
+	padding: 10px;
+	margin: 16px 0;
+	border: 1px solid #444a50;
+	text-transform: uppercase;
+	color: #eae2f2;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background: #6a6272;
+}
+
+.ad-unit.active {
+	background: #444a50;
+}
+
+#rcol .ad-unit {
+	line-height: 1.5;
+	height: 50px;
+	padding: 100px 0;
+}
+
+#rcol .ad-unit.short {
+	padding: 25px 0;
+}
+
+.popup {
+	position: absolute;
+	background: #eae2f2;
+	font-size: 11px;
+	padding: 20px 5px 5px 5px;
+	border-radius-: 5px 5px 0 0;
+}
+
+#article-finished {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	width: 400px;
+	padding-top: 5px;
+	-webkit-transition: right 700ms ease-in-out;
+	-moz-transition: right 700ms ease-in-out;
+	-o-transition: right 700ms ease-in-out;
+	-ms-transition: right 700ms ease-in-out;
+	transition: right 700ms ease-in-out;
+}
+
+#article-finished.hiding {
+	right: -420px;
+}
+
+#article-finished a {
+	color: #444a50;
+	text-decoration: underline;
+}
+
+.close {
+	background: #444a50;
+	color: #fff;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	width: 14px;
+	display: block;
+	text-decoration: none;
+	font-size: 8px;
+	border-radius: 4px;
+}
+
+.infinite-container {
+	width: 480px;
+	margin-left: -20px;
+	overflow: hidden;
+	position: relative;
+}
+
+.infinite-container.infinite-loading:after {
+	content: "Loading...";
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	background: #6a6272;
+	color: #eae2f2;
+}
+
+.infinite-item {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background: #444a50;
+	margin: 20px 0 20px 20px;
+}
+
+.infinite-item:nth-child(3n) {
+	background: #6a6272;
+}
+
+.infinite-item:nth-child(3n+1) {
+	background: #eae2f2;
+}
+
+.infinite-more-link {
+	visibility: hidden;
+}

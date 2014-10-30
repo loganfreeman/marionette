@@ -1,0 +1,419 @@
+/* element */
+.element {
+	width: 80px;
+	height: 90px;
+	margin: 5px;
+	background: #DDD;
+	float: left;
+	position: relative;
+	padding: 5px;
+}
+
+.element>* {
+	margin: 0;
+}
+
+.element .number {
+	right: 5px;
+	top: 5px;
+	position: absolute;
+}
+
+.element .symbol {
+	font-size: 30px;
+	left: 5px;
+	top: 5px;
+	color: white;
+}
+
+.element .name {
+	font-size: 14px;
+}
+
+.element .weight {
+	font-size: 14px;
+}
+
+.element.alkali {
+	background: #F00;
+	background: hsl(0, 100%, 50%);
+}
+
+.element.alkaline-earth {
+	background: #F80;
+	background: hsl(36, 100%, 50%);
+}
+
+.element.lanthanoid {
+	background: #FF0;
+	background: hsl(72, 100%, 50%);
+}
+
+.element.actinoid {
+	background: #0F0;
+	background: hsl(108, 100%, 50%);
+}
+
+.element.transition {
+	background: #0F8;
+	background: hsl(144, 100%, 50%);
+}
+
+.element.post-transition {
+	background: #0FF;
+	background: hsl(180, 100%, 50%);
+}
+
+.element.metalloid {
+	background: #08F;
+	background: hsl(216, 100%, 50%);
+}
+
+.element.other.nonmetal {
+	background: #00F;
+	background: hsl(252, 100%, 50%);
+}
+
+.element.halogen {
+	background: #F0F;
+	background: hsl(288, 100%, 50%);
+}
+
+.element.noble-gas {
+	background: #F08;
+	background: hsl(324, 100%, 50%);
+}
+
+#stamped .stamp1 {
+	width: 30%;
+	height: 100px;
+	left: 30%;
+	bottom: 20px;
+}
+
+#stamped .stamp2 {
+	width: 200px;
+	height: 50px;
+	left: 20px;
+	bottom: 50px;
+}
+
+.item {
+	width: 60px;
+	height: 60px;
+	float: left;
+	border: 1px solid;
+	background: #09F;
+}
+
+.item.w2 {
+	width: 120px;
+}
+
+.item.w3 {
+	width: 180px;
+}
+
+.item.h2 {
+	height: 100px;
+}
+
+.item.h3 {
+	height: 160px;
+}
+
+.item.h4 {
+	height: 220px;
+}
+
+.item.h5 {
+	height: 280px;
+}
+
+.wow:first-child {
+	visibility: hidden;
+}
+
+#wow {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#wow section {
+	height: 300px;
+	margin: 60px 0;
+}
+
+.section--purple {
+	background-color: #9b59b6;
+}
+
+.section--blue {
+	background-color: #3498db;
+}
+
+.section--green {
+	background-color: #2ecc71;
+}
+
+#nested {
+	background-color: #e1e1e1;
+	color: #fff;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.box {
+	background-color: #ff4499;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	-moz-transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	-ms-transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	-o-transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	transition: all 300ms cubic-bezier(1.000, 0.000, 0.000, 1.000);
+	/* easeInOutExpo */
+	-webkit-transition-property: left, right, top;
+	-moz-transition-property: left, right, top;
+	-ms-transition-property: left, right, top;
+	-o-transition-property: left, right, top;
+	transition-property: left, right, top;
+}
+
+#container {
+	background: red;
+}
+
+.size21,.size22,.size23,.twocols {
+	background: #ccc
+}
+
+.size31,.size32,.size33,.threecols {
+	background: #ff9999
+}
+
+a.btn {
+	margin-right: 1px;
+	line-height: 30px;
+	height: 30px;
+	cursor: pointer;
+	display: inline-block;
+	width: 75px;
+	color: red;
+}
+
+.pillbox {
+	border: 1px solid #bbb;
+	margin-bottom: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	width: 251px;
+}
+
+.container>div,.container>table {
+	margin: 20px;
+}
+
+.tree {
+	width: 430px;
+	height: 350px;
+}
+
+.static-loader {
+	margin-left: 30px;
+}
+
+.step-content {
+	border: 1px solid #D4D4D4;
+	border-top: 0;
+	border-radius: 0 0 4px 4px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+/* Gridster styles */
+.gridster {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.gridster .gs-w {
+	background: #FFF;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.gridster .player {
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gridster .gs-w.try {
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	background-position: 37px -169px;
+}
+
+.gridster .preview-holder {
+	border: none !important;
+	border-radius: 0 !important;
+	background: rgba(255, 255, 255, .2) !important;
+}
+
+h1.fitext {
+	background: rgba(0, 0, 0, 0.2);
+	text-align: center;
+	color: #fff;
+	font: 95px/1 "Impact";
+	text-transform: uppercase;
+	display: block;
+	text-shadow: #253e45 -1px 1px 0, #253e45 -2px 2px 0, #d45848 -3px 3px 0,
+		#d45848 -4px 4px 0;
+	margin: 5% auto 5%;
+}
+
+.demo {
+	padding: 50px;
+	border: 1px solid #ccc;
+	font-weight: bold;
+	color: red;
+	background: #d0d0d0;
+	font-size: 20px;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.demo h1 {
+	font-size: 72px;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+}
+
+.char2,#demo2 .word2,.line2 {
+	color: orange;
+}
+
+.char3,.word3,.line3 {
+	color: yellow;
+}
+
+.char4,.line4 {
+	color: blue;
+}
+
+.char5 {
+	color: green;
+}
+
+.char6 {
+	color: indigo;
+}
+
+.char7 {
+	color: violet;
+}
+
+div#webfonts-container {
+	background-color: #fff;
+	padding: 20px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 12pt;
+}
+
+#webfonts-container input,textarea {
+	font-size: 12pt;
+	width: 95%;
+	padding: 10px;
+}
+
+#webfonts-container textarea {
+	height: 100px;
+}
+
+div.fontselector {
+	float: right;
+}
+
+p.Unifraktur {
+	font-family: UnifrakturMaguntia, arial, serif;
+}
+
+.webfonts-exclude {
+	font-family: monospace;
+}
+
+.cufon h1,h2,h3,h4,h5,h6 {
+	background: #CCCCCC;
+	color: #D1D1D1;
+	font-size: 30pt;
+	line-height: 30pt;
+	margin: 1em 0;
+	padding: 20px;
+}
+
+.cufon h3 {
+	background: #CCCCFF;
+	color: #fff;
+}
+
+.cufon h4 {
+	background: #CCCCFF;
+	color: #ffa800;
+}
+
+#source-code {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+}
+
+#source-code:target {
+	display: block;
+	z-index: 1000000;
+}
+
+#source-code pre {
+	padding: 20px;
+	font: 14px/1.6 Monaco, Courier, MonoSpace;
+	margin: 50px auto;
+	background: rgba(255, 255, 255, 0.8);
+	color: white;
+	width: 80%;
+	height: 80%;
+	overflow: auto;
+}
+
+#source-code pre a,#source-code pre a span {
+	text-decoration: none;
+	color: #00ccff !important;
+}
+
+#x {
+	position: absolute;
+	top: 30px;
+	left: 10%;
+	margin-left: -41px;
+}
+
+.button {
+	background: #00ccff;
+	padding: 10px 20px;
+	color: white;
+	text-decoration: none;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}

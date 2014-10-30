@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Let's learn Ember.js</title>
+    <link rel="stylesheet" href="css/foundation.min.css" />
+        <link rel="stylesheet" href="css/autosuggest.css" />
+        <link rel="stylesheet" href="css/default.css" />
+    
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/handlebars.js"></script>
+    <script src="js/vendor/ember/lib/main.js"></script>
+    <script src="js/vendor/ember-data/lib/main.js"></script>
+    <script src="js/vendor/modernizr.foundation.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/vendor/foundation.app.js"></script>
+    <script src="js/app/app.js"></script>
+    <script src="js/app/router.js"></script>
+    <script src="js/app/store.js"></script>
+    <script src="js/app/routes/bookmarks.js"></script>
+    <script src="js/app/controllers/bookmarks_controller.js"></script>
+    <script src="js/app/controllers/bookmark_controller.js"></script>
+    <script src="js/app/controllers/flash.js"></script>
+    <script src="js/app/models/bookmark.js"></script>
+    <script src="js/app/views/alert.js"></script>
+    <script src="js/app/views/flash.js"></script>
+    <script src="js/app/controllers/demo-template.js"></script>
+    <script src="js/app/views/flash_list.js"></script>
+    <script src="js/app/controllers/flash.js"></script>
+    <!-- Auto suggest start-->
+     <script type="text/javascript" src="js/vendor/ember-autosuggest/lib/display_helper.js"></script>
+    <script type="text/javascript" src="js/vendor/ember-autosuggest/lib/template.js"></script>
+    <script type="text/javascript" src="js/vendor/ember-autosuggest/lib/autosuggest.js"></script>
+    <script type="text/javascript" src="js/vendor/ember-autosuggest/lib/initializers.js"></script>
+    <script src="js/app/controllers/default.js"></script>
+    <script src="js/app/controllers/autosuggest_controller.js"></script>
+    <!-- Auto suggest end -->
+    <!-- jquery UI -->
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    
+  </head>
+
+  <body>
+
+    <script type="text/x-handlebars" data-template-name="bookmark">
+      <h1>{{description}}</h1> 
+
+      <iframe {{bindAttr src="url"}} ></iframe>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="application">
+
+      <div class="container">
+        <nav class="top-bar">
+          <ul>
+            <li class="name">
+              <h1><a href='../index.html'>Home</a></h1>
+            </li>
+            <li>{{#link-to "about"}}About{{/link-to}}
+              <ul>
+                <li>{{#link-to "about.team"}}Team{{/link-to}}</li>
+              </ul>
+            </li>
+            <li>{{#link-to "autosuggest"}}AutoSuggest{{/link-to}}</li>
+            <li>{{#link-to "bookmarks"}}Bookmarks{{/link-to}}</li>
+            <li>{{#link-to "demotemplate"}}Template demonstration{{/link-to}}</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container">
+        {{view App.FlashListView}}
+        <div class="row">
+          {{outlet}}
+        </div>
+      </div>
+
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="bookmarks">
+      <h1>Listing bookmarks</h1>
+
+      <p>
+        <button class="button" {{action "pop"}}>Pop an alert</button>
+      </p>
+
+      <table class="twelve">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>URL</th>
+          </tr>
+        </thead>
+        {{#each bookmark in controller}}
+          <tr>
+            <td>{{#link-to "bookmark" bookmark}}{{bookmark.name}}{{/link-to}}</td>
+            <td>{{bookmark.url}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="_alert">
+      {{view.message}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="index">
+      <h1>Welcome to Ember.js!</h1>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about">
+      <h1>Ember + BootStrap</h1>
+      {{outlet}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="contact">
+      <h1>Please contact us!</h1>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about/team">
+      <h2>Here's our team!</h2>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="demotemplate">
+      <h2>Template demonstration</h2>
+      {{partial "if" }}
+      {{partial "loop"}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="_if">
+      <p>
+        <button {{action "toggle"}} {{bindAttr class=":button booleanValue:success:alert"}}>Toggle booleanValue</button>
+
+        {{#if booleanValue}}
+        You're seeing this because the <code>booleanValue</code> is <strong>true</strong>.
+        {{else}}
+        Oops, it seems <code>booleanValue</code> is <strong>false or null</strong>.
+        {{/if}}
+      </p>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="_loop">
+      <ol>
+        {{#each person in list}}
+          {{#with person}}
+            <li>{{name}}</li>
+          {{/with}}
+        {{else}}
+          <li>There is no one in the list.</li>
+        {{/each}}
+      </ol>
+    </script>
+    
+    <script type="text/x-handlebars" data-template-name="autosuggest">
+    <h1>Demo</h1>
+    <h2>Default</h2>
+    <div class="tags">
+      <label>Tags:</label> {{auto-suggest source=model destination=tags minChars=0}}
+    </div>
+    <pre>
+      <code>
+&#123;&#123;auto-suggest source=model destination=tags minChars=0&#125;&#125;
+      </code>
+    </pre>
+
+    <hr/>
+
+    <h2>filter and search on a different property other than name.</h2>
+    <div class="tags">
+      <label>Cars:</label> {{auto-suggest source=controller.cars destination=controller.carsOwned searchPath="make" minChars=0}}
+    </div>
+    <pre>
+      <code>
+&#123;&#123;auto-suggest source=controller.cars destination=controller.carsOwned searchPath="make" minChars=0&#125;&#125;
+      </code>
+    </pre>
+    <hr/>
+
+    <h2>Prepend custom content to results and selections.</h2>
+    <div class="tags">
+      <label>Cars:</label> {{#auto-suggest source=controller.employees destination=controller.chosenEmployees searchPath="fullName" minChars=0}}
+                              <img src="img/small_avatar.png" {{bind-attr alt="fullName"}}/>
+                           {{/auto-suggest}}
+    </div>
+    <pre>
+      <code>
+&#123;&#123;#auto-suggest source=controller.employees destination=controller.chosenEmployees searchPath="fullName" minChars=0&#125;&#125;
+  &lt;img src="img/small_avatar.png"&#123;&#123;bind-attr alt="fullName"&#125;&#125;
+&#123;&#123;/auto-suggest&#125;&#125;
+      </code>
+    </pre>
+
+    <hr/>
+
+    <h2>Query an Ember-Data model.</h2>
+    <div class="tags">
+      <label>Cars:</label> {{auto-suggest source=App.Employee destination=controller.dsChosenEmployees searchPath="fullName" minChars=0}}
+    </div>
+    <pre>
+      <code>
+&#123;&#123;auto-suggest source=App.Employee destination=controller.dsChosenEmployees searchPath="fullName" minChars=0&#125;&#125;
+      </code>
+    </pre>
+    <p>This will call findQuery with an expression created from the <b>searchPath</b>.  In the above example, that would be:
+      <pre>
+        <code>
+store.find('employee', {fullName: '&lt;query&gt;'});
+        </code>
+      </pre>
+    <hr/>
+
+    <h2>filter on computed property that returns a promise.</h2>
+    <div class="tags">
+      <label>Cars:</label> {{auto-suggest source=controller.employees destination=controller.chosenEmployees searchPath="fullName" minChars=0}}
+    </div>
+    <pre>
+      <code>
+&#123;&#123;auto-suggest source=controller.employees destination=controller.chosenEmployees searchPath="fullName" minChars=0&#125;&#125;
+      </code>
+    </pre>
+
+    <hr/>
+
+  </script>
+  </body>
+</html>

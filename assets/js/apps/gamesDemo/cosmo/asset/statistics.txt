@@ -1,0 +1,55 @@
+
+----------------------
+-     STATISTICS     -
+----------------------
+
+
+stage1 (13.333 Points):
+=======
+
+Ship:             1
+Points:    ~ 10.000
+Destroyed:      103
+Missed:          34
+Rating:      75.00%
+
+
+stage2 (26.666 Points):
+=======
+
+Ship:             2
+Points:    ~ 30.000
+Destroyed:      187
+Missed:          62
+Rating:      75.00%
+
+
+stage3 (26.666 Points):
+=======
+
+Ship:             3
+Points:    ~ 50.000
+Destroyed:      150
+Missed:          50
+Rating:      75.00%
+
+
+TODO: stage4 (33.333 Points):
+=======
+
+Ship:             4
+Points:    ~ 75.000
+Destroyed:        -
+Missed:           -
+Rating:      75.00%
+
+
+TODO: stage5 (33.333 Points):
+=======
+
+Ship:             5
+Points:   ~ 100.000
+Destroyed:        -
+Missed:           -
+Rating:      75.00%
+

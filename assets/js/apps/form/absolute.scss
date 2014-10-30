@@ -1,0 +1,43 @@
+.absolute {
+ li {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background:
+    linear-gradient(
+      rgba(255,0,0,0.4),
+      rgba(255,0,0,0.4)
+    ),
+    url(http://placekitten.com/g/100/100);
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  line-height: 100px;
+  font-weight: bold;
+  border: 1px solid white;
+}
+li:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+li:nth-child(2) {
+  top: 100px;
+  left: 0;
+}
+li:nth-child(3) {
+  top: 200px;
+  left: 0;
+}
+li:nth-child(4) {
+  top: 0;
+  left: 100px;
+}
+li:nth-child(5) {
+  top: 100px;
+  left: 100px;
+}
+li:nth-child(6) {
+  top: 200px;
+  left: 100px;
+}
+}

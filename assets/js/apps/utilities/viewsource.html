@@ -1,0 +1,27 @@
+
+<div id="page-wrap">
+
+	<h1>Fancy View Source Button</h1>
+
+	<p>Click a link, see the source of the page. Click the X or press
+		the back button to close. This uses jQuery and CSS3.</p>
+
+	<a class="button" href="#source-code" id="view-source">Fancy View
+		Source</a>
+
+	<h1>Primitive Version</h1>
+
+	<p>Only works in Firefox and Chrome. Maybe others, but definitely
+		not Safari or Opera.</p>
+
+	<a class="button"
+		onClick='window.location="view-source:" + window.location.href'>Primitive
+		View Source</a>
+
+	<div id="source-code">
+		<a href="#" id="x"><img
+			src="http://css-tricks.com/examples/ViewSourceButton/images/x.png"
+			alt="close"></a>
+	</div>
+
+</div>

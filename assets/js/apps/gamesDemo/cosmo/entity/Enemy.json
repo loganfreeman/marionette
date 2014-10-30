@@ -1,0 +1,38 @@
+{
+
+	"width":  64,
+	"height": 64,
+
+	"states": {
+
+		"default":  {
+			"width":     64,
+			"height":    64,
+			"animation": false,
+			"weapons":   [ 0, 1, 0 ],
+			"speed":     50
+		},
+
+		"level1": {
+			"width":     84,
+			"height":    58,
+			"animation": false,
+			"weapons":   [ 1, 0, 1 ],
+			"speed":     50
+		}
+
+	},
+
+	"map": {
+
+		"default": [
+			{ "x":   0, "y":   0, "w": 120, "h": 120 }
+		],
+
+		"level1": [
+			{ "x":   0, "y": 120, "w": 120, "h": 120 }
+		]
+
+	}
+
+} 

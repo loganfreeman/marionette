@@ -1,0 +1,246 @@
+<!-- TEMPLATE -->
+<svg width="100px" height="100px" viewBox="0 0 100 100"
+	class="hardcore-hide">
+  <circle id="template" cx="50" cy="50" r="50">
+</svg>
+
+<!-- USE TEMPLATE SEVERAL TIMES -->
+<svg viewBox="0 0 100 100" class="circle circle-1">
+  <use xlink:href="#template">
+</svg>
+
+<svg viewBox="0 0 100 100" class="circle circle-2">
+  <use xlink:href="#template">
+</svg>
+
+<svg viewBox="0 0 100 100" class="circle circle-3">
+  <use xlink:href="#template">
+</svg>
+
+<!-- TAB TEMPLATE -->
+<svg height="0" width="0"
+	style="position: absolute; margin-left: -100%;">
+  
+  <defs>
+    
+    <filter id='shadow'>
+      <feComponentTransfer in="SourceGraphic">
+        <feFuncR type="discrete" tableValues="0" />
+        <feFuncG type="discrete" tableValues="0" />
+        <feFuncB type="discrete" tableValues="0" />
+      </feComponentTransfer>
+      <feGaussianBlur stdDeviation="1" />
+       <feComponentTransfer>
+	<feFuncA type="linear" slope="0.2" /></feComponentTransfer>
+      <feOffset dx="5" dy="1" result="shadow" />
+      <feComposite in="SourceGraphic" />
+    </filter>
+        
+    <linearGradient id="tab-1-bg" x1="0%" y1="0%" x2="0%" y2="65%">
+      <stop offset="0%" style="stop-color: rgba(136, 195, 229, 1.0);" />
+      <stop offset="100%" style="stop-color: rgba(118, 160, 192, 1.0);" />
+    </linearGradient>
+    
+    <linearGradient id="tab-2-bg" x1="0%" y1="0%" x2="0%" y2="65%">
+      <stop offset="0%" style="stop-color: rgba(149, 190, 233, 1.0);" />
+      <stop offset="100%" style="stop-color: rgba(112, 153, 213, 1.0);" />
+    </linearGradient>
+    
+    <linearGradient id="tab-3-bg" x1="0%" y1="0%" x2="0%" y2="65%">
+      <stop offset="0%" style="stop-color: rgba(61, 149, 218, 1.0);" />
+      <stop offset="100%" style="stop-color: rgba(43, 130, 197, 1.0);" />
+    </linearGradient>
+    
+    <linearGradient id="tab-4-bg" x1="0%" y1="0%" x2="0%" y2="65%">
+      <stop offset="0%" style="stop-color: rgba(72, 204, 243, 1.0);" />
+      <stop offset="100%" style="stop-color: rgba(71, 194, 243, 1.0);" />
+    </linearGradient>
+      
+  </defs>
+  
+  <path id="tab-shape" class="tab-shape"
+		d="M116.486,29.036c-23.582-8-14.821-29-42.018-29h-62.4C5.441,0.036,0,5.376,0,12.003v28.033h122v-11H116.486
+			z">
+  
+</svg>
+
+<nav role="navigation" class="main-navigation">
+	<ul>
+		<li class="tab-1 active" data-bg-color="rgba(118, 160, 192, 1.0)">
+			<a href="#home"> <span>Home</span> <svg viewBox="0 0 122 40">
+           <use xlink:href="#tab-shape"></use>
+        </svg>
+		</a>
+		</li>
+		<li class="tab-2" data-bg-color="rgba(112, 153, 213, 1.0)"><a
+			href="#about"> <span>About</span> <svg viewBox="0 0 122 40">
+          <use xlink:href="#tab-shape"></use>
+        </svg>
+		</a></li>
+		<li class="tab-3" data-bg-color="rgba(43, 130, 197, 1.0)"><a
+			href="#clients"> <span>Clients</span> <svg viewBox="0 0 122 40">
+          <use xlink:href="#tab-shape"></use>
+        </svg>
+		</a></li>
+		<li class="tab-4" data-bg-color="rgba(71, 194, 243, 1.0)"><a
+			href="#contact"> <span>Contact</span> <svg viewBox="0 0 122 40">
+          <use xlink:href="#tab-shape"></use>
+        </svg>
+		</a></li>
+	</ul>
+</nav>
+
+<div class="main-content">
+	<article class="article">
+		<h2>An Article Right Here, Boss.</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+			totam cumque ad repellendus ab ea repellat aperiam accusantium labore
+			officia est culpa fugiat eaque magnam a. Labore molestias ea at
+			maiores inventore veritatis cupiditate cum doloribus quisquam eum et
+			asperiores!</p>
+	</article>
+</div>
+
+<svg width="100%" height="100%" viewBox="0 0 95 50"
+	xmlns="http://www.w3.org/2000/svg">
+  <g stroke="green" fill="white" stroke-width="5">
+    <circle cx="25" cy="25" r="15" />
+    <circle cx="40" cy="25" r="15" />
+    <circle cx="55" cy="25" r="15" />
+    <circle cx="70" cy="25" r="15" />
+  </g>
+</svg>
+
+
+<h1>
+	OSX-style Disk Usage
+	<xmp>..using html5 <meter></xmp>
+</h1>
+
+<p>
+	Macintosh HD <span class="free-space">64.54 GB free out of
+		120.47 GB</span>
+</p>
+
+<meter value="55.93" min="0" max="120.47" title="GB">
+	<div class="meter-gauge">
+		<span style="width: 46.42%;">Disk Usage - 55.93GB out of 120GB</span>
+	</div>
+</meter>
+
+<ul class="swatch">
+	<li class="swatch__elem">Audio <span class="used-space">670.5
+			MB</span></li>
+	<li class="swatch__elem">Movies <span class="used-space">10.1
+			GB</span></li>
+	<li class="swatch__elem">Photos <span class="used-space">25.19
+			GB</span></li>
+	<li class="swatch__elem">Apps <span class="used-space">19.31
+			GB</span></li>
+	<li class="swatch__elem">Other <span class="used-space">660.5
+			MB</span></li>
+</ul>
+
+
+<section>
+	<p style='overflow: hidden'>
+		<img src="assets/js/apps/form/zooprax.png" data-src="zooprax.png"
+			class="tinycentered zoopraximg">
+	</p>
+	<p>Muybridge had discovered how to bottle movement, and like any
+		good inventor, he did experiments to see if he could reanimate his
+		frozen horses. Muybridge’s first attempts to set time in motion were
+		to print the high-speed photographs radially on a glass disc and spin
+		it while it was lit from behind. He called it a zoopraxiscope.</p>
+</section>
+
+<section>
+    <p style='overflow: hidden; position: relative'>
+		<img src="assets/js/apps/form/zooprax.png" data-src="zooprax.png"
+			class="tinycentered spin">
+	</p>
+		<p>Muybridge had discovered how to bottle movement, and like any
+		good inventor, he did experiments to see if he could reanimate his
+		frozen horses. Muybridge’s first attempts to set time in motion were
+		to print the high-speed photographs radially on a glass disc and spin
+		it while it was lit from behind. He called it a zoopraxiscope.</p>
+</section>
+
+
+<div id="page-wrap">
+		
+	   <h1 id="logo" class="run-animation">
+        Fancy Logo Click me
+     </h1>
+     
+     	   <h1 id="logo2" class="run-animation">
+        Fancy Logo Click me Not Working
+     </h1>
+	
+	</div>
+	
+	
+<div id="cc">
+  <span id="cc-button" ><button><abbr title="Closed Captioning">CC</abbr> Click to caption</button></span>
+  <span id="cc-text" style="display: none;"  tabindex="0">Begin speaking. Click to stop.</span>
+</div>
+
+<article>
+  <h1>HTML5 Closed Captioning</h1>
+  
+  <ol>
+    <li>Open this page in Chrome desktop (25+)</li>
+    <li>Click button to begin captioning</li>
+    <li>Allow use of microphone</li>
+    <li>Begin talking. May need to pause occasionaly.</li>
+    <li>Click to caption stop</li>
+  </ol>
+</article>
+
+<p>Here is the live example of the above code.<br />
+  We have some <span data-descr="collection of words and punctuation">text</span> here with a few
+  <span data-descr="small popups which also hide again">tooltips</span>.<br />
+  Dont be shy, hover over to take a <span data-descr="not to be taken literally">look</span>.
+</p>
+
+<ul class='beforedemo'>
+  <li>Buy milk</li>
+  <li>Take the dog for a walk</li>
+  <li>Exercise</li>
+  <li>Write code</li>
+  <li>Play music</li>
+  <li>Relax</li>
+</ul>
+
+<div id="slider">
+  <input checked="" type="radio" name="slider" id="slide1" selected="false">
+  <input type="radio" name="slider" id="slide2" selected="false">
+  <input type="radio" name="slider" id="slide3" selected="false">
+  <input type="radio" name="slider" id="slide4" selected="false">
+  <div id="slides">
+    <div id="overflow">
+      <div class="inner">
+        <article>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/rock.jpg">
+        </article>
+        
+        <article>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/grooves.jpg">
+        </article>
+        
+        <article>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/arch.jpg">
+        </article>
+        
+        <article>
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/sunset.jpg">
+        </article>      
+      </div>
+    </div>
+  </div>
+  <label for="slide1"></label>
+  <label for="slide2"></label>
+  <label for="slide3"></label>
+  <label for="slide4"></label>
+</div>
+

@@ -1,0 +1,51 @@
+.exprBldrMain {
+  position: relative;
+  width: 500px;
+}
+
+.exprBldrMain .exprOuter {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bbb;
+  padding: 5px 0;
+  background-color: white;
+  border: 1px solid #eee;
+}
+
+.exprBldrMain .exprInner input {
+  width: 70px;
+}
+
+.exprBldrMain .exprInner input.subExprActive {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.exprBldrMain .exprInner {
+  margin: 0 auto;
+}
+
+.exprBldrMain .bldrBottom {
+  padding-top: 10px;
+  height:100%;
+  overflow:hidden;
+}
+
+.exprBldrMain .select2-results .select2-disabled {
+  display: none;
+}
+
+.exprBldrMain .input-group-addon.input-small:last-child {
+  padding-left: 0;
+}
+
+.exprBldrMain .input-group-addon:not(:first-child):not(:last-child) {
+  border-left: 0;
+  border-right: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.exprBldrMain .helpDescription {
+  display: block;
+}

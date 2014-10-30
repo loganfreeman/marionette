@@ -1,0 +1,35 @@
+<div class='zip-demo'>
+	<div id="zip-container">
+		<h1>
+			<a href="../">zip.js</a> <span class="small"></span>
+		</h1>
+
+		<div class="description">
+			A JavaScript library to zip and unzip files
+			<hr>
+		</div>
+
+		<h2>Create a zip file demo</h2>
+
+		<ol id="demo-container">
+			<li><label> <span class="form-label">choose
+						temporary storage</span> <select id="creation-method-input">
+						<option value="Blob">RAM</option>
+						<option value="File">HDD</option>
+				</select>
+			</label></li>
+			<li><label> <span class="form-label">add files
+						into the zip</span> <input type="file" multiple id="file-input">
+			</label></li>
+			<li><span class="form-label">view zip content</span>
+				<ul id="file-list">
+				</ul></li>
+			<li><label> <span class="form-label">set zip file
+						name</span> <input type="text" id="filename-input" value="Example.zip">
+			</label></li>
+			<li><span class="form-label">download the zip file</span> <a
+				id="download-button" href="#">Download</a></li>
+		</ol>
+
+	</div>
+</div>

@@ -1,0 +1,514 @@
+
+<div id="content">
+
+	<div class="entry">
+		<h3>jquery.chained.js</h3>
+		<form>
+			<select id="mark" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select id="series" name="series">
+				<option value="">--</option>
+
+				<option value="series-1" class="bmw">1 series</option>
+				<option value="series-3" class="bmw">3 series</option>
+				<option value="series-5" class="bmw">5 series</option>
+				<option value="series-6" class="bmw">6 series</option>
+				<option value="series-7" class="bmw">7 series</option>
+
+				<option value="a1" class="audi">A1</option>
+				<option value="a3" class="audi">A3</option>
+				<option value="s3" class="audi">S3</option>
+				<option value="a4" class="audi">A4</option>
+				<option value="s4" class="audi">S4</option>
+				<option value="a5" class="audi">A5</option>
+				<option value="s5" class="audi">S5</option>
+				<option value="a6" class="audi">A6</option>
+				<option value="s6" class="audi" selected="selected">S6</option>
+				<option value="rs6" class="audi">RS6</option>
+				<option value="a8" class="audi">A8</option>
+			</select> <select id="model" name="model">
+				<option value="">--</option>
+
+				<option value="3-doors" class="series-1">3 doors</option>
+				<option value="5-doors" class="series-1">5 doors</option>
+				<option value="coupe" class="series-1 series-3 series-6">Coupe</option>
+				<option value="cabrio" class="series-1 series-3 series-6">Cabrio</option>
+				<option value="sedan" class="series-3 series-5 series-7">Sedan</option>
+				<option value="touring" class="series-3 series-5">Touring</option>
+				<option value="gran-tourismo" class="series-5">Gran
+					Tourismo</option>
+
+				<option value="sedan" class="a1 a3 s3 a4 s4 a6 s6 rs6">Sedan</option>
+				<option value="sportback" class="a3 s3 a5 s5">Sportback</option>
+				<option value="cabriolet" class="a3 a5 s5">Cabriolet</option>
+				<option value="avant" class="a4 s4 a6 s6 rs6">Avant</option>
+				<option value="allroad" class="a4 a6">Allroad</option>
+				<option value="coupe" class="a5 s5">Coupe</option>
+			</select> <select id="engine" name="engine">
+				<option value="">--</option>
+				<option value="25-petrol" class="series-3 a3 a4">2.5 petrol</option>
+				<option value="30-petrol"
+					class="series-3 series-5 series-6 a3 a4 a5">3.0 petrol</option>
+				<option value="30-diesel" class="series-3\sedan series-5\sedan a5">3.0
+					diesel</option>
+			</select>
+
+			<button id="button" type="submit">Button</button>
+
+		</form>
+
+		<form>
+			<select id="a" name="a">
+				<option value="a1">a1</option>
+				<option value="a2">a2</option>
+				<option value="a3">a3</option>
+			</select> <select id="b" name="b">
+				<option value="b1">b1</option>
+				<option value="b2">b2</option>
+				<option value="b3">b3</option>
+			</select> <select id="c" name="c">
+				<option value="">--</option>
+				<option value="a1" class="a1">anything starting a1</option>
+				<option value="a1b1" class="a1\b1">a1b1</option>
+				<option value="a1b1_a1b2" class="a1\b1 a1\b2">a1b1 or a1b2</option>
+				<option value="a2b2" class="a2\b2">a2b2</option>
+				<option value="a2b3" class="a2\b3">a2b3</option>
+			</select>
+		</form>
+
+	</div>
+
+	<div class="entry">
+		<h3>Multiple jquery.chained.js</h3>
+		<form>
+			<select class="mark" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series" name="series">
+				<option value="">--</option>
+
+				<option value="series-1" class="bmw">1 series</option>
+				<option value="series-3" class="bmw">3 series</option>
+				<option value="series-5" class="bmw">5 series</option>
+				<option value="series-6" class="bmw">6 series</option>
+				<option value="series-7" class="bmw">7 series</option>
+
+				<option value="a1" class="audi">A1</option>
+				<option value="a3" class="audi">A3</option>
+				<option value="s3" class="audi">S3</option>
+				<option value="a4" class="audi">A4</option>
+				<option value="s4" class="audi">S4</option>
+				<option value="a5" class="audi">A5</option>
+				<option value="s5" class="audi">S5</option>
+				<option value="a6" class="audi">A6</option>
+				<option value="s6" class="audi">S6</option>
+				<option value="rs6" class="audi">RS6</option>
+				<option value="a8" class="audi">A8</option>
+			</select> <select class="model" name="model">
+				<option value="">--</option>
+
+				<option value="3-doors" class="series-1">3 doors</option>
+				<option value="5-doors" class="series-1">5 doors</option>
+				<option value="coupe" class="series-1 series-3 series-6">Coupe</option>
+				<option value="cabrio" class="series-1 series-3 series-6">Cabrio</option>
+				<option value="sedan" class="series-3 series-5 series-7">Sedan</option>
+				<option value="touring" class="series-3 series-5">Touring</option>
+				<option value="gran-tourismo" class="series-5">Gran
+					Tourismo</option>
+
+				<option value="sedan" class="a1 a3 s3 a4 s4 a6 s6 rs6">Sedan</option>
+				<option value="sportback" class="a3 s3 a5 s5">Sportback</option>
+				<option value="cabriolet" class="a3 a5 s5">Cabriolet</option>
+				<option value="avant" class="a4 s4 a6 s6 rs6">Avant</option>
+				<option value="allroad" class="a4 a6">Allroad</option>
+				<option value="coupe" class="a5 s5">Coupe</option>
+			</select> <select class="engine" name="engine">
+				<option value="">--</option>
+				<option value="25-petrol" class="series-3 a3 a4">2.5 petrol</option>
+				<option value="30-petrol"
+					class="series-3 series-5 series-6 a3 a4 a5">3.0 petrol</option>
+				<option value="30-diesel" class="series-3\sedan series-5\sedan a5">3.0
+					diesel</option>
+			</select>
+		</form>
+		<form>
+			<select class="mark" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series" name="series">
+				<option value="">--</option>
+
+				<option value="series-1" class="bmw">1 series</option>
+				<option value="series-3" class="bmw">3 series</option>
+				<option value="series-5" class="bmw">5 series</option>
+				<option value="series-6" class="bmw">6 series</option>
+				<option value="series-7" class="bmw">7 series</option>
+
+				<option value="a1" class="audi">A1</option>
+				<option value="a3" class="audi">A3</option>
+				<option value="s3" class="audi">S3</option>
+				<option value="a4" class="audi">A4</option>
+				<option value="s4" class="audi">S4</option>
+				<option value="a5" class="audi">A5</option>
+				<option value="s5" class="audi">S5</option>
+				<option value="a6" class="audi">A6</option>
+				<option value="s6" class="audi">S6</option>
+				<option value="rs6" class="audi">RS6</option>
+				<option value="a8" class="audi">A8</option>
+			</select> <select class="model" name="model">
+				<option value="">--</option>
+
+				<option value="3-doors" class="series-1">3 doors</option>
+				<option value="5-doors" class="series-1">5 doors</option>
+				<option value="coupe" class="series-1 series-3 series-6">Coupe</option>
+				<option value="cabrio" class="series-1 series-3 series-6">Cabrio</option>
+				<option value="sedan" class="series-3 series-5 series-7">Sedan</option>
+				<option value="touring" class="series-3 series-5">Touring</option>
+				<option value="gran-tourismo" class="series-5">Gran
+					Tourismo</option>
+
+				<option value="sedan" class="a1 a3 s3 a4 s4 a6 s6 rs6">Sedan</option>
+				<option value="sportback" class="a3 s3 a5 s5">Sportback</option>
+				<option value="cabriolet" class="a3 a5 s5">Cabriolet</option>
+				<option value="avant" class="a4 s4 a6 s6 rs6">Avant</option>
+				<option value="allroad" class="a4 a6">Allroad</option>
+				<option value="coupe" class="a5 s5">Coupe</option>
+			</select> <select class="engine" name="engine">
+				<option value="">--</option>
+				<option value="25-petrol" class="series-3 a3 a4">2.5 petrol</option>
+				<option value="30-petrol"
+					class="series-3 series-5 series-6 a3 a4 a5">3.0 petrol</option>
+				<option value="30-diesel" class="series-3\sedan series-5\sedan a5">3.0
+					diesel</option>
+			</select>
+		</form>
+		<form>
+			<select class="mark" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series" name="series">
+				<option value="">--</option>
+
+				<option value="series-1" class="bmw">1 series</option>
+				<option value="series-3" class="bmw">3 series</option>
+				<option value="series-5" class="bmw">5 series</option>
+				<option value="series-6" class="bmw">6 series</option>
+				<option value="series-7" class="bmw">7 series</option>
+
+				<option value="a1" class="audi">A1</option>
+				<option value="a3" class="audi">A3</option>
+				<option value="s3" class="audi">S3</option>
+				<option value="a4" class="audi">A4</option>
+				<option value="s4" class="audi">S4</option>
+				<option value="a5" class="audi">A5</option>
+				<option value="s5" class="audi">S5</option>
+				<option value="a6" class="audi">A6</option>
+				<option value="s6" class="audi">S6</option>
+				<option value="rs6" class="audi">RS6</option>
+				<option value="a8" class="audi">A8</option>
+			</select> <select class="model" name="model">
+				<option value="">--</option>
+
+				<option value="3-doors" class="series-1">3 doors</option>
+				<option value="5-doors" class="series-1">5 doors</option>
+				<option value="coupe" class="series-1 series-3 series-6">Coupe</option>
+				<option value="cabrio" class="series-1 series-3 series-6">Cabrio</option>
+				<option value="sedan" class="series-3 series-5 series-7">Sedan</option>
+				<option value="touring" class="series-3 series-5">Touring</option>
+				<option value="gran-tourismo" class="series-5">Gran
+					Tourismo</option>
+
+				<option value="sedan" class="a1 a3 s3 a4 s4 a6 s6 rs6">Sedan</option>
+				<option value="sportback" class="a3 s3 a5 s5">Sportback</option>
+				<option value="cabriolet" class="a3 a5 s5">Cabriolet</option>
+				<option value="avant" class="a4 s4 a6 s6 rs6">Avant</option>
+				<option value="allroad" class="a4 a6">Allroad</option>
+				<option value="coupe" class="a5 s5">Coupe</option>
+			</select> <select class="engine" name="engine">
+				<option value="">--</option>
+				<option value="25-petrol" class="series-3 a3 a4">2.5 petrol</option>
+				<option value="30-petrol"
+					class="series-3 series-5 series-6 a3 a4 a5">3.0 petrol</option>
+				<option value="30-diesel" class="series-3\sedan series-5\sedan a5">3.0
+					diesel</option>
+			</select>
+
+
+		</form>
+	</div>
+
+	<div class="entry">
+		<h3>jquery.chained.remote.js</h3>
+		<form>
+			<select id="mark-remote" data-variable="bar" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select id="series-remote" name="series">
+				<option value="">--</option>
+			</select> <select id="model-remote" name="model">
+				<option value="">--</option>
+			</select> <select id="engine-remote" name="engine">
+				<option value="">--</option>
+			</select>
+
+			<button id="button-remote" type="submit">Button</button>
+
+		</form>
+
+		<form>
+			<select id="a-remote" name="a">
+				<option value="a1">a1</option>
+				<option value="a2">a2</option>
+				<option value="a3">a3</option>
+			</select> <select id="b-remote" name="b">
+				<option value="b1">b1</option>
+				<option value="b2">b2</option>
+				<option value="b3">b3</option>
+			</select> <select id="c-remote" name="c">
+				<option value="">--</option>
+			</select>
+		</form>
+
+	</div>
+
+	<div class="entry">
+		<h3>Multiple jquery.chained.remote.js</h3>
+		<form>
+			<select class="mark-remote" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series-remote" name="series">
+				<option value="">--</option>
+			</select> <select class="model-remote" name="model">
+				<option value="">--</option>
+			</select> <select class="engine-remote" name="engine">
+				<option value="">--</option>
+			</select>
+
+			<button id="button-remote" type="submit">Button</button>
+		</form>
+		<form>
+			<select class="mark-remote" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series-remote" name="series">
+				<option value="">--</option>
+			</select> <select class="model-remote" name="model">
+				<option value="">--</option>
+			</select> <select class="engine-remote" name="engine">
+				<option value="">--</option>
+			</select>
+
+			<button id="button-remote" type="submit">Button</button>
+		</form>
+		<form>
+			<select class="mark-remote" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series-remote" name="series">
+				<option value="">--</option>
+			</select> <select class="model-remote" name="model">
+				<option value="">--</option>
+			</select> <select class="engine-remote" name="engine">
+				<option value="">--</option>
+			</select>
+
+			<button id="button-remote" type="submit">Button</button>
+		</form>
+		<form>
+			<select class="mark-remote" name="mark">
+				<option value="">--</option>
+				<option value="bmw">BMW</option>
+				<option value="audi">Audi</option>
+			</select> <select class="series-remote" name="series">
+				<option value="">--</option>
+			</select> <select class="model-remote" name="model">
+				<option value="">--</option>
+			</select> <select class="engine-remote" name="engine">
+				<option value="">--</option>
+			</select>
+
+			<button id="button-remote" type="submit">Button</button>
+		</form>
+
+	</div>
+
+	<div id="sidebar"></div>
+
+</div>
+<div class="placeholder row center">
+	<form action="" method="POST">
+		<ul>
+			<li><label for="text-input">Name</label> <input type="text"
+				name="text-input" value="" /></li>
+			<li><label for="text-input">Name with placeholder</label> <input
+				type="text" name="text-input" value="" placeholder="Your name" /></li>
+		</ul>
+	</form>
+	<textarea class='expanding' placeholder="Enter Some Text"
+		style="margin: 0px; box-sizing: border-box; width: 100%; position: absolute; top: 0px; left: 0px; height: 100%; resize: none; overflow: auto; max-height: 8em;"></textarea>
+
+</div>
+
+
+<div class="row">
+	<ul id='demo' class='offset2 arrow_box'>
+		<li class=''>
+			<h3>File Input</h3>
+
+			<p>You can access files that users select via an
+				input[type=file]. Try it out below:</p>
+			<form id='file-form' method="post" enctype="multipart/form-data">
+				<input type="hidden" name="extra-data" multiple /> <input
+					type="file" id="file-input" name="file-input" multiple />
+			</form>
+
+		</li>
+		<li class="">
+			<h3>Drop Zone</h3>
+
+			<p id='dropzone'>
+				Drag and drop files from your desktop here (or select them from the
+				input above).<br /> They will be read in browser.<br /> <img
+					src='assets/js/apps/form/arrow.png' width='50' /><br />
+			</p>
+
+		</li>
+		<li class="">
+			<h3>Clipboard</h3>
+			<p>In some browsers, you can paste images onto a page. Go ahead
+				and 'print screen' then press Ctrl+V to try that out!</p>
+			<p>
+				Doesn't work in Firefox (as of version 30). Follow <a
+					href="https://bugzilla.mozilla.org/show_bug.cgi?id=891247">this
+					Firefox bug</a> for progress on implementation.
+			</p>
+		</li>
+	</ul>
+</div>
+
+<form id="myform">
+	<p>
+		<label for="">Click on a field</label> <input data-progression
+			type="text"
+			data-helper="Help users through forms by prividing helpful hinters"
+			name="name" value="" placeholder="">
+	</p>
+
+	<p>
+		<label for="">Helps provide a better user experience</label> <input
+			data-progression type="text"
+			data-helper="Tracks users progress when filling in forms"
+			name="email" value="" placeholder="">
+	</p>
+
+
+
+	<p>
+		<label for="">Another Field</label> <input data-progression
+			type="text" data-helper="The tooltip is fully customisable"
+			name="mytel" value="" placeholder="">
+	</p>
+
+
+
+
+	<p>
+		<label for="">Another Field</label> <input data-progression
+			type="text" data-helper="And can be positioned left or right"
+			name="mytel" value="" placeholder="">
+	</p>
+
+
+
+	<p>
+		<label for="">Telephone Number</label>
+		<textarea data-progression name=""
+			data-helper="Either the helper text or progress bar can be turned off"></textarea>
+	</p>
+
+	<p>
+		<input type="submit" class="button" name="" value="Lets Go!"
+			placeholder="">
+	</p>
+
+
+</form>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800px" height="300px"
+	viewBox="0 0 800 300">
+
+  <text x="25" y="55" font-family="'Lucida Grande', sans-serif"
+		font-size="32">
+
+    Regular ol' text here. Hi.
+
+  </text>
+  
+  <rect x="25" y="80" width="50" height="50" fill="red" />
+    
+  <rect x="105" y="80" width="50" height="50" fill="blue" />
+
+</svg>
+<div id='svgDemo'>
+	<div>
+	<input type="checkbox" id="size"> <label for="size">Size</label>
+	 <input checked type="checkbox" id="fonts"> <label
+		for="fonts">Fonts</label>
+	</div>
+
+	<div class="col">
+		<div class="ad">
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				width="400px" height="327px" viewBox="0 0 400 327"
+				enable-background="new 0 0 400 327" xml:space="preserve">
+<rect fill="#DEF2FD" width="400" height="327" />
+<polygon opacity="0.2" fill="#7DACDC" enable-background="new    "
+					points="0,327 200,173.797 400,327 " />
+<polygon opacity="0.2" fill="#7DACDC" enable-background="new    "
+					points="91,327 291,280.292 491,327 " />
+<polygon opacity="0.2" fill="#7DACDC" enable-background="new    "
+					points="-101,327 99,201 299,327 " />
+<g>
+	<text transform="matrix(1 0 0 1 38.5483 114.1104)" fill="#016082"
+					class="script on" font-size="97.8796">Mountain</text>
+	<text transform="matrix(1 0 0 1 121.5 57.875)" fill="#0093C0"
+					class="sans on" font-size="29.7691">GRAVES</text>
+	
+		<text transform="matrix(1 0 0 1 41.5005 141.4561)" fill="#0093C0"
+					class="sans on" font-size="14.5332" letter-spacing="10">BLUEGRASS FESTIVAL</text>
+</g>
+</svg>
+		</div>
+	</div>
+</div>
+
+<ul class="flex-container">
+  <li class="flex-item">1</li>
+  <li class="flex-item">2</li>
+  <li class="flex-item">3</li>
+  <li class="flex-item">4</li>
+  <li class="flex-item">5</li>
+  <li class="flex-item">6</li>
+</ul>
+
+<div class="flexwrapper">
+  <header class="flexheader">Header</header>
+  <article class="flexmain">
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+  </article>
+  <aside class="aside aside-1">Aside 1</aside>
+  <aside class="aside aside-2">Aside 2</aside>
+  <footer class="flexfooter">Footer</footer>
+</div>

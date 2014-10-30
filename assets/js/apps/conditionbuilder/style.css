@@ -1,0 +1,7 @@
+.seperator {
+	border-right: 2px solid brown;
+}
+
+input[type="text"] {
+	margin-bottom : 0 !important;
+}

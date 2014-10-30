@@ -1,0 +1,26 @@
+.tags{
+  display: table;
+  box-sizing: border-box;
+  width: 550px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.tags label{
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+  cursor: default;
+  width: 40px;
+}
+
+.tags .autosuggest{
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+  padding: 4px 0;
+}
+
+div.alert-box {
+	color: #803333;
+}

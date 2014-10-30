@@ -1,0 +1,24 @@
+<div class="row">
+	<h2>This is a map with WMS and XYZ layers</h2>
+</div>
+<div class="row">
+	<p>
+		<leaflet center="berlin" layers="layers" markers="markers"
+			height="480px" width="640px"></leaflet>
+	</p>
+</div>
+<div class="row">
+	<h3>Be careful with WMS layers:</h3>
+	<p>
+	<div class="alert alert-warning">Most WMS layers (that are more
+		intended for GIS applications than for slippy maps) do not use the
+		EPSG:3857 (EPSG:900913) Spherical Mercator projection. This will lead
+		to error in the map and you won't see anything. Although you set the
+		srs option in the layer, Leaflet won't reproject it (as almost do all
+		map viewers).</div>
+	<div class="alert alert-warning">At this moment the EPSG:3857
+		projection is the only supported by the leaflet directive. If you need
+		other SRSs please consider contributing to the project including in
+		the directive support for the Proj4 Leaflet plugin</div>
+	</p>
+</div>

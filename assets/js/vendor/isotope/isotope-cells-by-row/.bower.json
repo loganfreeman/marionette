@@ -1,0 +1,27 @@
+{
+  "name": "isotope-cells-by-row",
+  "main": "cells-by-row.js",
+  "version": "0.1.2",
+  "authors": [
+    "David DeSandro"
+  ],
+  "description": "cellsByRow layout mode for Isotope",
+  "dependencies": {
+    "isotope": ">=2.0.0-beta.6"
+  },
+  "keywords": [
+    "layout",
+    "mode",
+    "isotope"
+  ],
+  "homepage": "https://github.com/metafizzy/isotope-cells-by-row",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "86e4ea88bd07d85cfe4c6f7fff403006d47f8792"
+  },
+  "_source": "git://github.com/metafizzy/isotope-cells-by-row.git",
+  "_target": "*",
+  "_originalSource": "metafizzy/isotope-cells-by-row"
+}

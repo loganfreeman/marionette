@@ -1,0 +1,11 @@
+{
+   "foods": [
+      {"name":"aubergine",    "colour":"purple"},
+      {"name":"apple",        "colour":"red"},
+      {"name":"nuts",         "colour":"brown"}
+   ],
+   "badThings": [
+      {"name":"poison",       "colour":"pink"},
+      {"name":"broken_glass", "colour":"green"}
+   ]
+}

@@ -1,0 +1,1 @@
+            <a href="#" id="tourney<%=id %>"><%= title %></a>

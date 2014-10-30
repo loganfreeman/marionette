@@ -1,0 +1,47 @@
+<Profile>
+  <Name>R-A3</Name>
+  <KillMonsters>True</KillMonsters>
+	<PickupLoot>True</PickupLoot>
+	<GameParams quest="101758" step="1" act="A3" resumeFromSave="False" isPrivate="True" numGames="-1" />
+	<Order>
+		<!-- In Town, use Waypoint to Stonefort -->
+		<If condition="Me.IsInTown">
+			<LogMessage questId="101758" stepId="1" output="Using Waypoint to Stonefort Clear pt 1" />
+			<UseWaypoint questId="101758" stepId="1" actorId="6442" x="402" y="414" z="1" waypointNumber="1" />
+		</If>		
+		<!-- Move North in Stonefort -->
+		<If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 4271, 4251, -25, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 1" />
+			<SafeMoveTo questId="101758" stepId="1" x="4054" y="3722" z="0" statusText="Clearing Stonefort pt 1" pathPointLimit="250" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 4054, 3722, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 2" />
+			<SafeMoveTo questId="101758" stepId="1" x="3492" y="3773" z="25" statusText="Clearing Stonefort pt 2" pathPointLimit="250" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+    <If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 3492, 3773, 25, 300)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 3" />
+      <SafeMoveTo questId="101758" stepId="1" x="3515" y="3572" z="0"  statusText="Clearing Stonefort pt 3.1" pathPrecision="30" unsafeRandomDistance="15" />
+      <SafeMoveTo questId="101758" stepId="1" x="3508" y="3345" z="0"  statusText="Clearing Stonefort pt 3.2" pathPrecision="30" unsafeRandomDistance="15" straightLinePathing="True" />
+    </If>
+    <If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 3515, 3572, 0, 150)">
+      <LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 3.3" />
+      <SafeMoveTo questId="101758" stepId="1" x="3390" y="3240" z="0" statusText="Clearing Stonefort pt 3.3" pathPrecision="50" unsafeRandomDistance="15" />
+    </If>
+    <If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 3390, 3240, 0, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 4" />
+			<SafeMoveTo questId="101758" stepId="1" x="3179" y="3295" z="25" statusText="Clearing Stonefort pt 4" pathPrecision="50" unsafeRandomDistance="15" />
+		</If>
+		<If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 3179, 3295, 25, 300)">
+			<LogMessage questId="101758" stepId="1" output="Clearing Stonefort pt 5" />
+			<SafeMoveTo questId="101758" stepId="1" x="3262" y="2776" z="0" statusText="Clearing Stonefort pt 5" pathPrecision="15" unsafeRandomDistance="15" />
+		</If>
+		<!-- Stonefort Top, back to town -->
+		<If condition="CurrentWorldId == 93099 and ActorExistsAt(Me.ActorSNO, 3262, 2776, 0, 300)">
+			<WaitTimer questId="101758" stepId="1" waitTime="2000" />
+			<UseTownPortal questId="101758" stepId="1" />		
+		</If>
+		
+		<LogMessage output="Loading next profile..." />
+		<LoadProfile profile="Act3LoadRandom.xml" />
+	</Order>
+</Profile>

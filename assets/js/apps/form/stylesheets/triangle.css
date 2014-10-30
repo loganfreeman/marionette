@@ -1,0 +1,114 @@
+@import url(http://fonts.googleapis.com/css?family=Andika);
+/* line 5, ../sass/triangle.scss */
+.triangle-demo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: tan;
+  border-top: 0 solid #EE7C31;
+  border-left: 0 solid #F5D97B;
+  border-bottom: 0 solid #D94948;
+  border-right: 0 solid #8DB434;
+  transition: 0.8s 0.2s;
+}
+/* line 16, ../sass/triangle.scss */
+.step-1 .triangle-demo {
+  border-top-width: 10px;
+}
+/* line 19, ../sass/triangle.scss */
+.step-2 .triangle-demo {
+  border-left-width: 10px;
+}
+/* line 22, ../sass/triangle.scss */
+.step-3 .triangle-demo {
+  border-right-width: 10px;
+}
+/* line 25, ../sass/triangle.scss */
+.step-4 .triangle-demo {
+  border-bottom-width: 10px;
+}
+/* line 28, ../sass/triangle.scss */
+.step-6 .triangle-demo {
+  background: transparent;
+}
+/* line 31, ../sass/triangle.scss */
+.step-7 .triangle-demo {
+  width: 0;
+  height: 0;
+}
+/* line 34, ../sass/triangle.scss */
+.step-8 .triangle-demo {
+  border-left-color: transparent;
+}
+/* line 37, ../sass/triangle.scss */
+.step-9 .triangle-demo {
+  border-right-color: transparent;
+}
+/* line 40, ../sass/triangle.scss */
+.step-10 .triangle-demo {
+  border-top-color: transparent;
+}
+
+/* line 45, ../sass/triangle.scss */
+.triangle-title {
+  width: 300px;
+  padding: 1rem;
+  color: white;
+  background: #D94948;
+  border-radius: 20px;
+  margin: auto;
+  opacity: 0;
+  transition: 0.8s 0.2s;
+}
+/* line 54, ../sass/triangle.scss */
+.step-11 .triangle-title {
+  opacity: 1;
+}
+
+/* line 61, ../sass/triangle.scss */
+.steps {
+  position: relative;
+  height: 45px;
+}
+/* line 64, ../sass/triangle.scss */
+.steps > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  background: #333;
+  transition: 0.3s;
+}
+/* line 73, ../sass/triangle.scss */
+.steps .step-0 {
+  opacity: 1;
+}
+/* line 76, ../sass/triangle.scss */
+.step-1 .steps .step-1 {
+  opacity: 1;
+}
+/* line 79, ../sass/triangle.scss */
+.step-2 .steps .step-2 {
+  opacity: 1;
+}
+/* line 82, ../sass/triangle.scss */
+.step-5 .steps .step-5 {
+  opacity: 1;
+}
+/* line 85, ../sass/triangle.scss */
+.step-6 .steps .step-6 {
+  opacity: 1;
+}
+/* line 88, ../sass/triangle.scss */
+.step-7 .steps .step-7 {
+  opacity: 1;
+}
+/* line 91, ../sass/triangle.scss */
+.step-8 .steps .step-8 {
+  opacity: 1;
+}
+/* line 94, ../sass/triangle.scss */
+.step-11 .steps .step-11 {
+  opacity: 1;
+}
